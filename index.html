@@ -33,7 +33,6 @@
             line-height: 1.6;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
             color: #fff;
@@ -59,8 +58,15 @@
             font-size: .85rem;
             backdrop-filter: blur(4px);
         }
+        .header .update-time.auto {
+            background: rgba(34,197,94,.25);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
 
-        /* Stats Bar */
         .stats-bar {
             display: flex;
             justify-content: center;
@@ -87,11 +93,41 @@
             margin-top: 2px;
         }
 
-        /* Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px 48px;
+        }
+
+        /* Loading / Error */
+        .status-box {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--text-secondary);
+        }
+        .status-box .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+            margin-bottom: 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .status-box.error {
+            color: #dc2626;
+        }
+        .status-box.error button {
+            margin-top: 12px;
+            padding: 8px 20px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: .9rem;
         }
 
         /* Filter Bar */
@@ -112,9 +148,8 @@
             transition: border-color .2s;
             outline: none;
         }
-        .filter-bar input:focus {
-            border-color: var(--primary);
-        }
+        .filter-bar input:focus { border-color: var(--primary); }
+
         .filter-tags {
             display: flex;
             gap: 8px;
@@ -130,15 +165,9 @@
             transition: all .2s;
             white-space: nowrap;
         }
-        .filter-tag:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        .filter-tag.active {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
+        .filter-tag:hover { border-color: var(--primary); color: var(--primary); }
+        .filter-tag.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
         .result-count {
             font-size: .9rem;
             color: var(--text-secondary);
@@ -146,10 +175,7 @@
         }
 
         /* Job Cards */
-        .job-list {
-            display: grid;
-            gap: 16px;
-        }
+        .job-list { display: grid; gap: 16px; }
         .job-card {
             background: var(--card-bg);
             border-radius: 14px;
@@ -161,15 +187,36 @@
             grid-template-columns: 1fr auto;
             gap: 16px;
             align-items: start;
+            position: relative;
         }
         .job-card:hover {
             box-shadow: var(--shadow-hover);
             transform: translateY(-2px);
             border-color: #cbd5e1;
         }
-        .job-card.hidden {
-            display: none;
+        .job-card.hidden { display: none; }
+        .job-card.new-highlight {
+            border-left: 4px solid #22c55e;
+            background: linear-gradient(135deg, #f0fdf4 0%, #fff 100%);
         }
+
+        .new-badge {
+            position: absolute;
+            top: -8px;
+            right: 16px;
+            background: #22c55e;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: .75rem;
+            font-weight: 700;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
         .job-info h3 {
             font-size: 1.15rem;
             font-weight: 700;
@@ -187,15 +234,6 @@
             flex-wrap: wrap;
             margin-bottom: 10px;
             font-size: .9rem;
-        }
-        .job-meta .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            color: var(--text-secondary);
-        }
-        .job-meta .meta-item .icon {
-            font-size: 1rem;
         }
         .salary-badge {
             display: inline-block;
@@ -221,6 +259,7 @@
             color: #92400e;
             margin-left: 4px;
         }
+
         .location-detail {
             font-size: .85rem;
             color: var(--text-secondary);
@@ -261,20 +300,14 @@
             color: #fff;
             border: none;
         }
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: scale(1.03);
-        }
+        .btn-primary:hover { background: var(--primary-dark); transform: scale(1.03); }
         .btn-outline {
             background: #fff;
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-        .btn-outline:hover {
-            background: #eff6ff;
-        }
+        .btn-outline:hover { background: #eff6ff; }
 
-        /* Map Link */
         .map-link {
             color: var(--primary);
             text-decoration: none;
@@ -283,7 +316,6 @@
         }
         .map-link:hover { text-decoration: underline; }
 
-        /* Section Title */
         .section-title {
             font-size: 1.4rem;
             font-weight: 700;
@@ -296,7 +328,13 @@
         }
         .section-title .emoji { font-size: 1.5rem; }
 
-        /* Footer */
+        .section-title .count {
+            font-size: .85rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-left: auto;
+        }
+
         .footer {
             text-align: center;
             padding: 32px 24px;
@@ -306,27 +344,49 @@
             margin-top: 32px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .header h1 { font-size: 1.5rem; }
-            .job-card {
-                grid-template-columns: 1fr;
-            }
+            .job-card { grid-template-columns: 1fr; }
             .job-actions {
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
+                flex-wrap: wrap;
             }
             .stats-bar { gap: 12px; }
             .stat-item { padding: 12px 18px; min-width: 90px; }
             .stat-item .number { font-size: 1.5rem; }
+            .new-badge { right: 4px; font-size: .7rem; }
         }
 
-        /* Subway line colors */
         .line-4 { background: #00843D; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
         .line-5 { background: #C5003E; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
         .line-21 { background: #8E6B3C; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
+
+        .auto-update-banner {
+            background: linear-gradient(135deg, #ecfdf5 0%, #dbeafe 100%);
+            border: 1px solid #86efac;
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .9rem;
+            flex-wrap: wrap;
+        }
+        .auto-update-banner .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.4); }
+            50% { box-shadow: 0 0 0 8px rgba(34,197,94,0); }
+        }
     </style>
 </head>
 <body>
@@ -335,31 +395,37 @@
 <div class="header">
     <h1>🎬 广州天河黄村附近 · 剪辑/拍摄/装修工作汇总</h1>
     <div class="subtitle">覆盖黄村及地铁2-3站范围（车陂、东圃、三溪、大观南路）| 薪资5000+</div>
-    <div class="update-time">📅 数据更新时间：2026年6月10日</div>
+    <div class="update-time" id="updateBadge">📅 正在加载数据...</div>
 </div>
 
 <!-- Stats -->
 <div class="stats-bar">
     <div class="stat-item">
-        <div class="number" id="totalCount">0</div>
+        <div class="number" id="totalCount">-</div>
         <div class="label">总岗位数</div>
     </div>
     <div class="stat-item">
-        <div class="number" id="clipCount">0</div>
+        <div class="number" id="clipCount">-</div>
         <div class="label">视频剪辑</div>
     </div>
     <div class="stat-item">
-        <div class="number" id="shootCount">0</div>
+        <div class="number" id="shootCount">-</div>
         <div class="label">摄影摄像</div>
     </div>
     <div class="stat-item">
-        <div class="number" id="renoCount">0</div>
+        <div class="number" id="renoCount">-</div>
         <div class="label">装修施工</div>
     </div>
 </div>
 
 <!-- Main Content -->
 <div class="container">
+    <!-- Auto update banner -->
+    <div class="auto-update-banner" id="autoBanner" style="display:none;">
+        <span class="dot"></span>
+        <strong>🤖 自动更新模式</strong>
+        <span>数据由 GitHub Actions 每日自动搜集更新（每天8:00 / 18:00）</span>
+    </div>
 
     <!-- Filter -->
     <div class="filter-bar">
@@ -373,25 +439,13 @@
     </div>
     <div class="result-count" id="resultCount"></div>
 
-    <!-- 黄村直达区域 -->
-    <h2 class="section-title"><span class="emoji">📍</span> 黄村直达（黄村地铁站周边 / 步行/骑行可达）</h2>
-    <div class="job-list" id="huangcunList"></div>
-
-    <!-- 地铁1-2站 -->
-    <h2 class="section-title"><span class="emoji">🚇</span> 地铁1-2站范围（车陂 / 大观南路）</h2>
-    <div class="job-list" id="nearby1List"></div>
-
-    <!-- 地铁2-3站 -->
-    <h2 class="section-title"><span class="emoji">🚇</span> 地铁2-3站范围（东圃 / 三溪 / 棠东）</h2>
-    <div class="job-list" id="nearby2List"></div>
-
-    <!-- 天河区其他 -->
-    <h2 class="section-title"><span class="emoji">🏙️</span> 天河区其他（地铁可达、通勤便利）</h2>
-    <div class="job-list" id="tianheList"></div>
-
-    <!-- 装修类 -->
-    <h2 class="section-title"><span class="emoji">🔨</span> 装修施工类岗位</h2>
-    <div class="job-list" id="renoList"></div>
+    <!-- Content area -->
+    <div id="contentArea">
+        <div class="status-box">
+            <div class="spinner"></div>
+            <p>正在加载招聘数据...</p>
+        </div>
+    </div>
 </div>
 
 <!-- Footer -->
@@ -402,448 +456,134 @@
 </div>
 
 <script>
-// ============ 工作数据 ============
-const jobs = [
-    // ---- 黄村直达 ----
-    {
-        title: '剪辑师（拍剪一体）',
-        company: '京韦（广州）服饰有限公司',
-        salary: '6000-8000元/月',
-        category: '剪辑',
-        location: '天河区黄村三联路16号B栋四楼G4099',
-        subway: '黄村站',
-        subwayLines: ['4','21'],
-        subwayDistance: '步行约10分钟',
-        area: 'huangcun',
-        link: 'https://www.kmlqrcw.com/company/c195710183.html',
-        requirements: '1年以下经验，大专学历，内衣类目/抖音短视频/信息流',
-        tags: ['接受经验少']
-    },
-    {
-        title: '摄像师（纯拍摄）',
-        company: '京韦（广州）服饰有限公司',
-        salary: '9000-11000元/月',
-        category: '拍摄',
-        location: '天河区黄村三联路16号B栋四楼G4099',
-        subway: '黄村站',
-        subwayLines: ['4','21'],
-        subwayDistance: '步行约10分钟',
-        area: 'huangcun',
-        link: 'https://www.kmlqrcw.com/company/c195710183.html',
-        requirements: '1-3年经验，摄影相关专业，口播/微剧情/布光',
-        tags: ['高薪']
-    },
-    {
-        title: '急招-视频剪辑',
-        company: '广州聚蜂文化传媒有限公司',
-        salary: '5000-10000元/月',
-        category: '剪辑',
-        location: '天河区黄村福元南路4号3308',
-        subway: '黄村站',
-        subwayLines: ['4','21'],
-        subwayDistance: '步行约12分钟',
-        area: 'huangcun',
-        link: 'https://shuifu.ynztrcw.com/job/310829026.html',
-        requirements: '1年以下，接受应届大学生，会剪映/PR',
-        tags: ['应届可投', '门槛低']
-    },
-    {
-        title: '短视频拍摄剪辑',
-        company: '广州林叁金咨询服务有限公司',
-        salary: '6000-8000元/月',
-        category: '拍摄',
-        location: '天河区黄村荔苑路9号自编17号1层C1760房',
-        subway: '黄村站',
-        subwayLines: ['4','21'],
-        subwayDistance: '步行约15分钟',
-        area: 'huangcun',
-        link: 'https://m.gdgzrcw.com/job/332823381.html',
-        requirements: '1-3年经验，自带拍摄设备，有直播经验加分',
-        tags: ['IP人设打造']
-    },
+// ============ 全局状态 ============
+let allJobs = [];
+let currentFilter = 'all';
 
-    // ---- 地铁1-2站：车陂 ----
-    {
-        title: '摄影/摄像专员',
-        company: '广州天奕传媒有限公司',
-        salary: '6000-9000元/月',
-        category: '拍摄',
-        location: '天河区车陂地铁站附近',
-        subway: '车陂站',
-        subwayLines: ['4'],
-        subwayDistance: '距黄村1站地铁',
-        area: 'nearby1',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/169942613.html',
-        requirements: '周末双休、弹性工作制（10:00-19:00）、社保公积金',
-        tags: ['双休', '福利好']
-    },
-    {
-        title: '影视后期制作',
-        company: '广州造迹文化传播有限公司',
-        salary: '3000-5000元/月',
-        category: '剪辑',
-        location: '天河区车陂街道',
-        subway: '车陂站',
-        subwayLines: ['4'],
-        subwayDistance: '距黄村1站地铁',
-        area: 'nearby1',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '应届生可投，门槛低',
-        tags: ['应届可投'],
-        note: '薪资偏低，适合积累经验'
-    },
+// ============ 区域配置 ============
+const areaConfig = {
+    'huangcun':    { title: '📍 黄村直达（黄村地铁站周边 / 步行骑行可达）', order: 1 },
+    'nearby1':     { title: '🚇 地铁1-2站范围（车陂 / 大观南路）', order: 2 },
+    'nearby2':     { title: '🚇 地铁2-3站范围（东圃 / 三溪 / 棠东）', order: 3 },
+    'tianhe':      { title: '🏙️ 天河区其他（地铁可达、通勤便利）', order: 4 },
+    'reno':        { title: '🔨 装修施工类岗位', order: 5 },
+};
 
-    // ---- 地铁1-2站：大观南路 ----
-    {
-        title: '视频后期剪辑与制作',
-        company: '广州龙创天地科技有限公司',
-        salary: '5000-7000元/月',
-        category: '剪辑',
-        location: '天河区软件路11号F栋',
-        subway: '大观南路站',
-        subwayLines: ['21'],
-        subwayDistance: '距黄村1站地铁',
-        area: 'nearby1',
-        link: 'http://mp.weixin.qq.com/s?__biz=MzU4OTgwNjAxMg==&mid=2247486242&idx=1&sn=9d45a9bb958f00ee9c2c3f5528dc8936',
-        requirements: '五险一金+双休，招2名',
-        tags: ['双休', '五险一金']
-    },
+// ============ 加载数据 ============
+async function loadJobs() {
+    const contentArea = document.getElementById('contentArea');
+    try {
+        // 尝试从 jobs.json 加载
+        const response = await fetch('jobs.json?' + Date.now()); // cache-bust
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        allJobs = data.jobs || [];
 
-    // ---- 地铁2-3站：东圃 ----
-    {
-        title: '视频拍摄剪辑',
-        company: '广州趣派网络科技有限公司',
-        salary: '6000-8000元/月',
-        category: '拍摄',
-        location: '天河区东圃（近地铁5号线东圃站）',
-        subway: '东圃站',
-        subwayLines: ['5'],
-        subwayDistance: '距黄村约2-3站（换乘）',
-        area: 'nearby2',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/169942613.html',
-        requirements: '1年+经验，化妆品行业优先',
-        tags: ['行业专项']
-    },
-    {
-        title: '4S店新媒体运营/剪拍',
-        company: '广东大华盛世投资集团',
-        salary: '5000-8000元/月',
-        category: '拍摄',
-        location: '天河区东圃（4S店）',
-        subway: '东圃站',
-        subwayLines: ['5'],
-        subwayDistance: '距黄村约2-3站（换乘）',
-        area: 'nearby2',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/168381472.html',
-        requirements: '无需经验/1年+，汽车行业',
-        tags: ['无需经验', '汽车行业']
-    },
+        // 更新头部显示
+        updateHeaderBadge(data);
 
-    // ---- 地铁2-3站：三溪 ----
-    {
-        title: '摄影师/摄影助理',
-        company: '广州上之商业（单农）',
-        salary: '6000-12000元/月·13薪',
-        category: '拍摄',
-        location: '天河区（近三溪地铁站）',
-        subway: '三溪站',
-        subwayLines: ['5'],
-        subwayDistance: '距黄村约2-3站',
-        area: 'nearby2',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '1年+经验，13薪',
-        tags: ['13薪', '高薪']
-    },
+        // 加载成功，渲染页面
+        renderAllSections();
+        updateStats();
 
-    // ---- 天河区其他 ----
-    {
-        title: '摄影剪辑师',
-        company: '广州智汇产业运营管理',
-        salary: '9000-12000元/月',
-        category: '拍摄',
-        location: '天河区（近地铁）',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '1年+经验',
-        tags: ['高薪']
-    },
-    {
-        title: '资深摄影剪辑师',
-        company: '广州智汇产业运营管理',
-        salary: '10000-12000元/月',
-        category: '拍摄',
-        location: '天河区（近地铁）',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '3年+经验',
-        tags: ['高薪', '资深岗']
-    },
-    {
-        title: '摄影师/后期/视频剪辑',
-        company: '广东路卡服装集团',
-        salary: '9000+元/月',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '应届可投，服装行业',
-        tags: ['应届可投', '高薪']
-    },
-    {
-        title: '影视后期制作',
-        company: '广东东田教育集团',
-        salary: '5000-8000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/',
-        requirements: '应届生可投，教育行业',
-        tags: ['应届可投', '教育行业']
-    },
-    {
-        title: '视频广告剪辑师',
-        company: '广州顺维科技有限公司',
-        salary: '6000-8000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://www.yupao.com/qiye/job/1952212438766346272.html',
-        requirements: '3-5年经验，大专，信息流广告',
-        tags: ['资深岗']
-    },
-    {
-        title: '短视频拍摄剪辑',
-        company: '广州市儒韵数码科技有限公司',
-        salary: '8000-13000元/月',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://m.gdgzrcw.com/job/338701860.html',
-        requirements: '1-3年经验，中专+',
-        tags: ['高薪', '学历宽松']
-    },
-    {
-        title: '视频剪辑师（双休+7小时工作制）',
-        company: '众诚（广州）商务服务有限公司',
-        salary: '6000-11000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://m.gdgzrcw.com/job/338110695.html',
-        requirements: '1-3年经验，优秀应届可破格，双休+7小时',
-        tags: ['双休', '7小时', '福利好']
-    },
-    {
-        title: '剪辑师（AI方向）',
-        company: '广州光合映像传媒广告有限公司',
-        salary: '6000-12000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://lufeng.swsrcw.com/company/c213089579.html',
-        requirements: '1-3年经验，本科，AI剪辑方向',
-        tags: ['AI方向', '高薪']
-    },
-    {
-        title: '短视频拍摄运营助理',
-        company: '广州钩子科技有限公司',
-        salary: '6000-7000元/月',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://www.yupao.com/qiye/job/211794885.html',
-        requirements: '经验不限，运营+拍摄',
-        tags: ['无需经验', '运营综合']
-    },
-    {
-        title: '短视频拍摄剪辑专员',
-        company: '广州莱恩文化有限公司',
-        salary: '5000-7000元/月',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/166389375.html',
-        requirements: '1年+，大专',
-        tags: ['门槛适中']
-    },
-    {
-        title: '摄影师/摄像师/剪辑师（招30人）',
-        company: '广州朝越文化传播有限公司',
-        salary: '面议',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://www.gdjnrck.com/company/company-comment-23689-1.htm',
-        requirements: '招30人，规模大，岗位多',
-        tags: ['大量招聘']
-    },
-    {
-        title: '剪辑专员（双休）',
-        company: '广州天登文化有限公司',
-        salary: '4000-5000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/170323422.html',
-        requirements: '无需经验，应届可投，中专+',
-        tags: ['应届可投', '双休'],
-        note: '薪资略低于5000，但双休+无经验要求'
-    },
-    {
-        title: '短视频剪辑/助理（双休）',
-        company: '广州天登文化有限公司',
-        salary: '3000-5000元/月',
-        category: '剪辑',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'https://msearch.51job.com/jobs/guangzhou-thq/170256867.html',
-        requirements: '无需经验，中专+，双休',
-        tags: ['应届可投', '双休'],
-        note: '薪资偏低，助理岗适合入门'
-    },
-    {
-        title: '摄影剪辑师',
-        company: '广东黄金铺集团有限公司',
-        salary: '面议',
-        category: '拍摄',
-        location: '天河区',
-        subway: '天河区',
-        subwayLines: [],
-        subwayDistance: '天河商圈范围内',
-        area: 'tianhe',
-        link: 'http://coal.36hjob.com/Mo/Job/Detail/HkZwh',
-        requirements: '2年+经验',
-        tags: ['集团企业']
-    },
-
-    // ---- 装修施工类 ----
-    {
-        title: '装修木工（铝塑板）',
-        company: '个人招工（林先生）',
-        salary: '300-500元/天（约9000-15000元/月）',
-        category: '装修',
-        location: '天河区车陂雅景大广场',
-        subway: '车陂站',
-        subwayLines: ['4'],
-        subwayDistance: '距黄村1站地铁',
-        area: 'reno',
-        link: 'https://m.gzzcrcw.com/job/383412338.html',
-        requirements: '矮墙/假梁/招牌贴铝塑板，阳角折边，招1-2人',
-        tags: ['日结', '高薪']
-    },
-    {
-        title: '泥瓦工（地面找平）',
-        company: '广州市福艺装饰有限公司',
-        salary: '面议（包工）',
-        category: '装修',
-        location: '天河区车陂',
-        subway: '车陂站',
-        subwayLines: ['4'],
-        subwayDistance: '距黄村1站地铁',
-        area: 'reno',
-        link: 'https://www.quanzhi.com/job/67831e2984c47b20c5c90e58',
-        requirements: '地面找平约75平方，包工',
-        tags: ['包工']
-    },
-    {
-        title: '装修木工/电焊工',
-        company: '个人招工（老魏）',
-        salary: '日结，面议',
-        category: '装修',
-        location: '天河区黄村',
-        subway: '黄村站',
-        subwayLines: ['4','21'],
-        subwayDistance: '黄村范围内',
-        area: 'reno',
-        link: 'http://www.jgjapp.com/guangzhoujob/zhuangxiumugong/121101451.html',
-        requirements: '焊铁架、封木板，包工，日结',
-        tags: ['日结', '黄村本地']
-    },
-    {
-        title: '建筑/装修工人（月结）',
-        company: '广州安置科技有限公司',
-        salary: '5000-9000元/月',
-        category: '装修',
-        location: '天河区桃园西路3号',
-        subway: '东圃站',
-        subwayLines: ['5'],
-        subwayDistance: '距黄村约2-3站',
-        area: 'reno',
-        link: 'https://m.58.com/gz/zpfangchanjianzhu/60451698398270x.shtml',
-        requirements: '3-5年经验，持电工/焊工/施工员证优先，包吃+五险一金',
-        tags: ['五险一金', '包吃', '月结稳定']
+        console.log('✅ 数据加载成功：' + allJobs.length + ' 个岗位，更新时间：' + data.updateTime);
+    } catch (err) {
+        console.warn('⚠️ 无法加载 jobs.json，尝试使用内嵌数据：', err.message);
+        // 降级：加载内嵌的备份数据
+        loadFallbackData();
     }
-];
+}
 
-// ============ 渲染函数 ============
+function updateHeaderBadge(data) {
+    const badge = document.getElementById('updateBadge');
+    const banner = document.getElementById('autoBanner');
+
+    const updateTime = data.updateTime || '';
+    const method = data.updateMethod || 'manual';
+
+    // 格式化时间
+    let timeStr = updateTime;
+    try {
+        const d = new Date(updateTime);
+        if (!isNaN(d.getTime())) {
+            timeStr = d.toLocaleString('zh-CN', {
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit'
+            });
+        }
+    } catch(e) {}
+
+    if (method === 'auto' || method === 'github-actions') {
+        badge.className = 'update-time auto';
+        badge.innerHTML = '🤖 自动更新 · ' + timeStr + ' · 每日8:00/18:00刷新';
+        banner.style.display = 'flex';
+    } else {
+        badge.className = 'update-time';
+        badge.innerHTML = '📅 数据更新时间：' + timeStr;
+    }
+}
+
+// ============ 降级：使用内嵌数据 ============
+function loadFallbackData() {
+    // 内嵌的备选数据（当 jobs.json 不可用时使用）
+    allJobs = [
+        {id:"f001",title:"剪辑师（拍剪一体）",company:"京韦（广州）服饰有限公司",salary:"6000-8000元/月",category:"剪辑",location:"天河区黄村三联路16号B栋四楼G4099",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约10分钟",area:"huangcun",link:"https://www.kmlqrcw.com/company/c195710183.html",requirements:"1年以下经验，大专学历",tags:["接受经验少"],isNew:false,verified:true},
+        {id:"f002",title:"摄像师（纯拍摄）",company:"京韦（广州）服饰有限公司",salary:"9000-11000元/月",category:"拍摄",location:"天河区黄村三联路16号",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约10分钟",area:"huangcun",link:"https://www.kmlqrcw.com/company/c195710183.html",requirements:"1-3年经验",tags:["高薪"],isNew:false,verified:true},
+        {id:"f003",title:"急招-视频剪辑",company:"广州聚蜂文化传媒有限公司",salary:"5000-10000元/月",category:"剪辑",location:"天河区黄村福元南路4号3308",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约12分钟",area:"huangcun",link:"https://shuifu.ynztrcw.com/job/310829026.html",requirements:"接受应届大学生",tags:["应届可投","门槛低"],isNew:false,verified:true},
+        {id:"f004",title:"摄影/摄像专员",company:"广州天奕传媒有限公司",salary:"6000-9000元/月",category:"拍摄",location:"天河区车陂地铁站附近",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"nearby1",link:"https://msearch.51job.com/jobs/guangzhou-thq/169942613.html",requirements:"周末双休、弹性工作制",tags:["双休","福利好"],isNew:false,verified:true},
+        {id:"f005",title:"装修木工（铝塑板）",company:"个人招工（林先生）",salary:"300-500元/天（约9000-15000元/月）",category:"装修",location:"天河区车陂雅景大广场",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"reno",link:"https://m.gzzcrcw.com/job/383412338.html",requirements:"矮墙/假梁/招牌贴铝塑板",tags:["日结","高薪"],isNew:false,verified:true},
+        {id:"f006",title:"建筑/装修工人（月结）",company:"广州安置科技有限公司",salary:"5000-9000元/月",category:"装修",location:"天河区桃园西路3号",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"reno",link:"https://m.58.com/gz/zpfangchanjianzhu/60451698398270x.shtml",requirements:"3-5年经验，包吃+五险一金",tags:["五险一金","包吃","月结稳定"],isNew:false,verified:true}
+    ];
+
+    document.getElementById('updateBadge').innerHTML = '⚠️ 离线模式（显示备份数据）· 请上传 jobs.json 以获取完整数据';
+    document.getElementById('updateBadge').className = 'update-time';
+
+    renderAllSections();
+    updateStats();
+}
+
+// ============ 渲染 ============
 function createJobCard(job) {
-    const categoryTag = job.category === '剪辑' ? 'tag-clip' :
-                        job.category === '拍摄' ? 'tag-shoot' : 'tag-reno';
+    const categoryClass = job.category === '剪辑' ? 'tag-clip' :
+                          job.category === '拍摄' ? 'tag-shoot' : 'tag-reno';
     const categoryLabel = job.category;
 
-    const subwayLinesHTML = job.subwayLines.map(l => `<span class="line-${l}">${l}号线</span>`).join(' ');
+    const subwayLinesHTML = (job.subwayLines || []).map(l =>
+        `<span class="line-${l}">${l}号线</span>`
+    ).join(' ');
 
-    const tagsHTML = job.tags.map(t => `<span class="tag tag-subway">${t}</span>`).join('');
+    const tagsHTML = (job.tags || []).map(t =>
+        `<span class="tag tag-subway">${t}</span>`
+    ).join('');
+
+    const newBadgeHTML = job.isNew ? '<span class="new-badge">🆕 新</span>' : '';
+    const newClass = job.isNew ? ' new-highlight' : '';
 
     const mapQuery = encodeURIComponent(job.location);
     const mapURL = `https://uri.amap.com/search?keyword=${mapQuery}`;
 
-    // Build search link
-    const searchKeyword = encodeURIComponent(`${job.company} ${job.title}`);
-    const searchLinks = {
-        '51job': `https://search.51job.com/list/030200,000000,0000,00,9,99,${encodeURIComponent(job.title)},2,1.html`,
-        'zhilian': `https://www.zhaopin.com/sou/?keyword=${encodeURIComponent(job.title + ' ' + job.company.split('（')[0])}`,
-        'boss': `https://www.zhipin.com/web/geek/job?query=${encodeURIComponent(job.title)}&city=101280100`,
-    };
+    const searchKeyword = encodeURIComponent(job.title);
+    const bossLink = `https://www.zhipin.com/web/geek/job?query=${searchKeyword}&city=101280100`;
+    const job51Link = `https://search.51job.com/list/030200,000000,0000,00,9,99,${searchKeyword},2,1.html`;
 
-    const noteHTML = job.note ? `<div style="margin-top:6px;font-size:.8rem;color:#f59e0b;">⚠️ ${job.note}</div>` : '';
+    const noteHTML = job.note ?
+        `<div style="margin-top:6px;font-size:.8rem;color:#f59e0b;">⚠️ ${job.note}</div>` : '';
+
+    const unverifiedHTML = !job.verified ?
+        '<span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">待核实</span>' : '';
+
+    // 如果没有直链，用搜索链接代替
+    const directLink = job.link && job.link.startsWith('http') ? job.link : bossLink;
 
     return `
-    <div class="job-card" data-category="${job.category}" data-area="${job.area}">
+    <div class="job-card${newClass}" data-category="${job.category}" data-area="${job.area}">
+        ${newBadgeHTML}
         <div class="job-info">
             <h3>
                 ${job.title}
-                <span class="tag ${categoryTag}">${categoryLabel}</span>
+                <span class="tag ${categoryClass}">${categoryLabel}</span>
                 ${tagsHTML}
+                ${unverifiedHTML}
             </h3>
             <div class="company">🏢 ${job.company}</div>
             <div class="job-meta">
@@ -862,53 +602,67 @@ function createJobCard(job) {
             ${noteHTML}
         </div>
         <div class="job-actions">
-            <a href="${job.link}" target="_blank" class="btn btn-primary" title="直接访问招聘页面">🔗 去投递</a>
-            <a href="${searchLinks.boss}" target="_blank" class="btn btn-outline" title="在BOSS直聘搜索">BOSS直聘</a>
-            <a href="${searchLinks['51job']}" target="_blank" class="btn btn-outline" title="在前程无忧搜索">前程无忧</a>
+            <a href="${directLink}" target="_blank" class="btn btn-primary" title="访问招聘页面">🔗 去投递</a>
+            <a href="${bossLink}" target="_blank" class="btn btn-outline" title="在BOSS直聘搜索">BOSS直聘</a>
+            <a href="${job51Link}" target="_blank" class="btn btn-outline" title="在前程无忧搜索">前程无忧</a>
             <a href="${mapURL}" target="_blank" class="btn btn-outline" title="查看地图位置">📍 地图</a>
         </div>
     </div>`;
 }
 
-function renderAllJobs() {
-    const sections = {
-        'huangcun': document.getElementById('huangcunList'),
-        'nearby1': document.getElementById('nearby1List'),
-        'nearby2': document.getElementById('nearby2List'),
-        'tianhe': document.getElementById('tianheList'),
-        'reno': document.getElementById('renoList'),
-    };
+function renderAllSections() {
+    const contentArea = document.getElementById('contentArea');
 
-    // Clear
-    Object.values(sections).forEach(s => s.innerHTML = '');
-
-    // Render
-    jobs.forEach(job => {
-        const html = createJobCard(job);
-        if (sections[job.area]) {
-            sections[job.area].insertAdjacentHTML('beforeend', html);
-        }
+    // 按区域分组
+    const grouped = {};
+    allJobs.forEach(job => {
+        const area = job.area || 'tianhe';
+        if (!grouped[area]) grouped[area] = [];
+        grouped[area].push(job);
     });
 
+    // 按 order 排序区域
+    const sortedAreas = Object.keys(grouped).sort((a, b) => {
+        return (areaConfig[a]?.order || 99) - (areaConfig[b]?.order || 99);
+    });
+
+    let html = '';
+
+    sortedAreas.forEach(area => {
+        const config = areaConfig[area];
+        const title = config ? config.title : '🏙️ 其他岗位';
+        const jobs = grouped[area];
+
+        html += `<h2 class="section-title"><span class="emoji">${title.slice(0,2)}</span> ${title.slice(2)} <span class="count">${jobs.length}个岗位</span></h2>`;
+        html += '<div class="job-list" data-area="' + area + '">';
+        jobs.forEach(job => {
+            html += createJobCard(job);
+        });
+        html += '</div>';
+    });
+
+    contentArea.innerHTML = html;
     updateStats();
 }
 
+// ============ 统计 ============
 function updateStats() {
     const visibleCards = document.querySelectorAll('.job-card:not(.hidden)');
-    const visibleJobs = [...visibleCards].map(c => ({
-        category: c.dataset.category
-    }));
+    const total = allJobs.length;
 
-    document.getElementById('totalCount').textContent = visibleJobs.length;
-    document.getElementById('clipCount').textContent = visibleJobs.filter(j => j.category === '剪辑').length;
-    document.getElementById('shootCount').textContent = visibleJobs.filter(j => j.category === '拍摄').length;
-    document.getElementById('renoCount').textContent = visibleJobs.filter(j => j.category === '装修').length;
-    document.getElementById('resultCount').textContent = `共显示 ${visibleJobs.length} 个岗位`;
+    // 计算各分类
+    const clipJobs = allJobs.filter(j => j.category === '剪辑').length;
+    const shootJobs = allJobs.filter(j => j.category === '拍摄').length;
+    const renoJobs = allJobs.filter(j => j.category === '装修').length;
+
+    document.getElementById('totalCount').textContent = total;
+    document.getElementById('clipCount').textContent = clipJobs;
+    document.getElementById('shootCount').textContent = shootJobs;
+    document.getElementById('renoCount').textContent = renoJobs;
+    document.getElementById('resultCount').textContent = `共 ${visibleCards.length} 个岗位（总计 ${total} 个）`;
 }
 
-// ============ 筛选逻辑 ============
-let currentFilter = 'all';
-
+// ============ 筛选 ============
 function applyFilters() {
     const searchText = document.getElementById('searchInput').value.toLowerCase();
 
@@ -919,47 +673,47 @@ function applyFilters() {
         const matchFilter = currentFilter === 'all' || category === currentFilter;
         const matchSearch = !searchText || cardText.includes(searchText);
 
-        if (matchFilter && matchSearch) {
-            card.classList.remove('hidden');
-        } else {
-            card.classList.add('hidden');
-        }
+        card.classList.toggle('hidden', !(matchFilter && matchSearch));
     });
 
-    // 同时控制 section 标题的显隐
-    const sections = ['huangcunList', 'nearby1List', 'nearby2List', 'tianheList', 'renoList'];
-    sections.forEach(id => {
-        const container = document.getElementById(id);
-        const sectionTitle = container.parentElement.querySelector('.section-title');
-        if (!sectionTitle) return;
-        const visibleCards = container.querySelectorAll('.job-card:not(.hidden)');
-        // 找上一个 h2 兄弟
-        const prevH2 = container.previousElementSibling;
+    // 控制区域标题
+    document.querySelectorAll('.job-list').forEach(list => {
+        const area = list.dataset.area;
+        const visibleCards = list.querySelectorAll('.job-card:not(.hidden)');
+        const prevH2 = list.previousElementSibling;
+
         if (prevH2 && prevH2.tagName === 'H2') {
             prevH2.style.display = visibleCards.length === 0 ? 'none' : '';
+            // 更新计数
+            const countSpan = prevH2.querySelector('.count');
+            if (countSpan) {
+                countSpan.textContent = visibleCards.length + '个岗位';
+            }
         }
-        container.style.display = visibleCards.length === 0 ? 'none' : '';
+        list.style.display = visibleCards.length === 0 ? 'none' : '';
     });
 
     updateStats();
 }
 
-// Event Listeners
+// ============ 事件绑定 ============
 document.getElementById('searchInput').addEventListener('input', applyFilters);
 
 document.querySelectorAll('.filter-tag').forEach(tag => {
     tag.addEventListener('click', () => {
         document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
         tag.classList.add('active');
-        currentFilter = tag.dataset.filter === 'all' ? 'all' :
-                        tag.dataset.filter === '剪辑' ? '剪辑' :
-                        tag.dataset.filter === '拍摄' ? '拍摄' : '装修';
+
+        const filter = tag.dataset.filter;
+        currentFilter = filter === 'all' ? 'all' :
+                        filter === '剪辑' ? '剪辑' :
+                        filter === '拍摄' ? '拍摄' : '装修';
         applyFilters();
     });
 });
 
-// Initial render
-renderAllJobs();
+// ============ 初始化 ============
+loadJobs();
 </script>
 
 </body>
