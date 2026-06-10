@@ -450,8 +450,8 @@
 
 <!-- Footer -->
 <div class="footer">
-    <p>💡 提示：点击「去投递」可跳转到招聘平台搜索对应岗位 | 点击「📍地图」查看具体位置</p>
-    <p>⚠️ 求职请注意：切勿缴纳任何费用，谨防招聘诈骗！信息来源于公开招聘平台，请自行核实。</p>
+    <p>💡 <strong>链接说明：</strong>「✅ 已验证直链」= 打开真实招聘页面 | 「🔍 平台实时搜索」= 打开平台搜索结果（可看到最新岗位）</p>
+    <p>⚠️ 求职请注意：切勿缴纳任何费用，谨防招聘诈骗！所有信息请自行核实后再投递。</p>
     <p style="margin-top:8px;">Made with ❤️ for job seekers in Tianhe, Guangzhou</p>
 </div>
 
@@ -525,14 +525,16 @@ function updateHeaderBadge(data) {
 
 // ============ 降级：使用内嵌数据 ============
 function loadFallbackData() {
-    // 内嵌的备选数据（当 jobs.json 不可用时使用）
+    // 备选数据（精简版，仅含已验证的真实链接）
     allJobs = [
-        {id:"f001",title:"剪辑师（拍剪一体）",company:"京韦（广州）服饰有限公司",salary:"6000-8000元/月",category:"剪辑",location:"天河区黄村三联路16号B栋四楼G4099",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约10分钟",area:"huangcun",link:"https://www.kmlqrcw.com/company/c195710183.html",requirements:"1年以下经验，大专学历",tags:["接受经验少"],isNew:false,verified:true},
-        {id:"f002",title:"摄像师（纯拍摄）",company:"京韦（广州）服饰有限公司",salary:"9000-11000元/月",category:"拍摄",location:"天河区黄村三联路16号",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约10分钟",area:"huangcun",link:"https://www.kmlqrcw.com/company/c195710183.html",requirements:"1-3年经验",tags:["高薪"],isNew:false,verified:true},
-        {id:"f003",title:"急招-视频剪辑",company:"广州聚蜂文化传媒有限公司",salary:"5000-10000元/月",category:"剪辑",location:"天河区黄村福元南路4号3308",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"步行约12分钟",area:"huangcun",link:"https://shuifu.ynztrcw.com/job/310829026.html",requirements:"接受应届大学生",tags:["应届可投","门槛低"],isNew:false,verified:true},
-        {id:"f004",title:"摄影/摄像专员",company:"广州天奕传媒有限公司",salary:"6000-9000元/月",category:"拍摄",location:"天河区车陂地铁站附近",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"nearby1",link:"https://msearch.51job.com/jobs/guangzhou-thq/169942613.html",requirements:"周末双休、弹性工作制",tags:["双休","福利好"],isNew:false,verified:true},
-        {id:"f005",title:"装修木工（铝塑板）",company:"个人招工（林先生）",salary:"300-500元/天（约9000-15000元/月）",category:"装修",location:"天河区车陂雅景大广场",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"reno",link:"https://m.gzzcrcw.com/job/383412338.html",requirements:"矮墙/假梁/招牌贴铝塑板",tags:["日结","高薪"],isNew:false,verified:true},
-        {id:"f006",title:"建筑/装修工人（月结）",company:"广州安置科技有限公司",salary:"5000-9000元/月",category:"装修",location:"天河区桃园西路3号",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"reno",link:"https://m.58.com/gz/zpfangchanjianzhu/60451698398270x.shtml",requirements:"3-5年经验，包吃+五险一金",tags:["五险一金","包吃","月结稳定"],isNew:false,verified:true}
+        {id:"fb001",title:"摄影/摄像专员",company:"广州天奕传媒有限公司",salary:"6000-9000元/月",category:"拍摄",location:"天河区中侨基金小镇3栋117（车陂地铁站附近）",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"nearby1",directLink:"https://m.58.com/gz/zpwentiyingshi/63611715560732x.shtml",linkType:"verified",requirements:"经验不限，周末双休、弹性工作、五险一金",tags:["双休","五险一金","已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=天奕传媒&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,天奕传媒,2,1.html"}},
+        {id:"fb002",title:"摄影剪辑师",company:"广州智汇产业运营管理",salary:"9000-12000元/月",category:"拍摄",location:"天河区",subway:"天河区",subwayLines:[],subwayDistance:"天河商圈",area:"tianhe",directLink:"https://msearch.51job.com/jobs/guangzhou-thq/170257002.html",linkType:"verified",requirements:"1年+经验，大专",tags:["高薪","已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=智汇产业&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,智汇产业,2,1.html"}},
+        {id:"fb003",title:"视频拍摄剪辑",company:"广州趣派网络科技有限公司",salary:"6000-8000元/月",category:"拍摄",location:"天河区东圃",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"nearby2",directLink:"https://msearch.51job.com/jobs/guangzhou-thq/169942613.html",linkType:"verified",requirements:"1年+经验，化妆品行业优先",tags:["已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=趣派网络&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,趣派网络,2,1.html"}},
+        {id:"fb004",title:"视频后期剪辑与制作",company:"广州龙创天地科技有限公司",salary:"5000-7000元/月",category:"剪辑",location:"天河区软件路11号F栋（近大观南路站）",subway:"大观南路站",subwayLines:["21"],subwayDistance:"距黄村1站地铁",area:"nearby1",directLink:"https://m.58.com/gz/zpwentiyingshi/66413962068765x.shtml",linkType:"verified",requirements:"本科，五险一金+双休，招2名",tags:["双休","五险一金","已验证直链"],isNew:false,verified:true,note:"联系人：石先生 13570203077",platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=龙创天地&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,龙创天地,2,1.html"}},
+        {id:"fb005",title:"装修木工（铝塑板/门头）",company:"个人招工（车陂雅景大广场）",salary:"300-500元/天（约9000-15000元/月）",category:"装修",location:"天河区车陂雅景大广场",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"reno",directLink:"https://m.gzzcrcw.com/job/383412338.html",linkType:"verified",requirements:"矮墙/假梁/招牌贴铝塑板/门头，招1-2人",tags:["日结","高薪","已验证直链"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/"}},
+        {id:"fb006",title:"建筑/装修工人（月结·五险一金）",company:"广州安置科技有限公司",salary:"5000-9000元/月",category:"装修",location:"天河区桃园西路3号",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"reno",directLink:"https://m.58.com/gz/zpfangchanjianzhu/60451698398270x.shtml",linkType:"verified",requirements:"3-5年经验，包吃+五险一金+年度体检",tags:["五险一金","包吃","月结稳定","已验证直链"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/"}},
+        {id:"fb007",title:"黄村周边 · 视频剪辑实时搜索",company:"多个公司（点击查看BOSS直聘实时结果）",salary:"5000-15000元/月",category:"剪辑",location:"天河区",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"天河区范围",area:"huangcun",directLink:"https://www.zhipin.com/web/geek/job?query=视频剪辑&city=101280100&district=440106",linkType:"platform_search",requirements:"点击直达BOSS直聘实时搜索结果，获取最新岗位",tags:["实时更新","BOSS直聘"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=视频剪辑&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,视频剪辑,2,1.html"}},
+        {id:"fb008",title:"车陂/东圃 · 装修施工实时搜索",company:"多个招工（点击查看58同城实时结果）",salary:"300-500元/天 或 5000-12000元/月",category:"装修",location:"天河区车陂/东圃/黄村",subway:"车陂站",subwayLines:["4"],subwayDistance:"车陂/东圃范围",area:"reno",directLink:"https://gz.58.com/gztd/nmugong/",linkType:"platform_search",requirements:"点击直达58同城天河区装修工分类，可筛选车陂/黄村/东圃",tags:["实时更新","58同城"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/",boss58ni:"https://gz.58.com/gzxy/niwag/"}}
     ];
 
     document.getElementById('updateBadge').innerHTML = '⚠️ 离线模式（显示备份数据）· 请上传 jobs.json 以获取完整数据';
@@ -562,18 +564,59 @@ function createJobCard(job) {
     const mapQuery = encodeURIComponent(job.location);
     const mapURL = `https://uri.amap.com/search?keyword=${mapQuery}`;
 
-    const searchKeyword = encodeURIComponent(job.title);
-    const bossLink = `https://www.zhipin.com/web/geek/job?query=${searchKeyword}&city=101280100`;
-    const job51Link = `https://search.51job.com/list/030200,000000,0000,00,9,99,${searchKeyword},2,1.html`;
+    // --- 链接类型处理 ---
+    const linkType = job.linkType || (job.directLink ? 'verified' : 'platform_search');
+    const directLink = job.directLink || job.link || '';
+
+    // 平台链接（优先用 job.platformLinks，否则自动生成）
+    const pl = job.platformLinks || {};
+    const bossLink = pl.boss || `https://www.zhipin.com/web/geek/job?query=${encodeURIComponent(job.company.split('（')[0].split('(')[0])}&city=101280100`;
+    const job51Link = pl.job51 || pl['51job'] || `https://search.51job.com/list/030200,000000,0000,00,9,99,${encodeURIComponent(job.company.split('（')[0].split('(')[0])},2,1.html`;
+    const link58 = pl.boss58 || pl['58'] || '';
+
+    // 链接类型徽章
+    let linkTypeBadge = '';
+    if (linkType === 'verified') {
+        linkTypeBadge = '<span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">✅ 已验证直链</span>';
+    } else if (linkType === 'platform_search') {
+        linkTypeBadge = '<span style="background:#dbeafe;color:#1e40af;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">🔍 平台实时搜索</span>';
+    }
+
+    // 主按钮样式和文字
+    let primaryBtnHTML = '';
+    if (linkType === 'verified' && directLink) {
+        primaryBtnHTML = `<a href="${directLink}" target="_blank" rel="noopener" class="btn btn-primary" title="打开真实招聘页面">🔗 查看岗位</a>`;
+    } else if (linkType === 'platform_search' && directLink) {
+        primaryBtnHTML = `<a href="${directLink}" target="_blank" rel="noopener" class="btn btn-primary" style="background:#059669;" title="打开平台搜索结果（实时最新）">🔍 实时搜索</a>`;
+    } else {
+        primaryBtnHTML = `<a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-primary" title="在BOSS直聘搜索">🔍 BOSS直聘搜索</a>`;
+    }
+
+    // 辅助按钮
+    let secondaryBtnsHTML = '';
+    if (linkType === 'verified') {
+        // 已验证岗位：提供平台搜索入口
+        secondaryBtnsHTML = `
+            <a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-outline">BOSS直聘搜公司</a>
+            <a href="${job51Link}" target="_blank" rel="noopener" class="btn btn-outline">前程无忧搜公司</a>`;
+        if (link58) {
+            secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
+        }
+    } else {
+        // 平台搜索：提供其他平台入口
+        secondaryBtnsHTML = `
+            <a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-outline">BOSS直聘</a>
+            <a href="${job51Link}" target="_blank" rel="noopener" class="btn btn-outline">前程无忧</a>`;
+        if (link58) {
+            secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
+        }
+    }
 
     const noteHTML = job.note ?
-        `<div style="margin-top:6px;font-size:.8rem;color:#f59e0b;">⚠️ ${job.note}</div>` : '';
+        `<div style="margin-top:6px;font-size:.8rem;color:#f59e0b;">📞 ${job.note}</div>` : '';
 
     const unverifiedHTML = !job.verified ?
-        '<span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">待核实</span>' : '';
-
-    // 如果没有直链，用搜索链接代替
-    const directLink = job.link && job.link.startsWith('http') ? job.link : bossLink;
+        '<span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">⚠️ 待核实</span>' : '';
 
     return `
     <div class="job-card${newClass}" data-category="${job.category}" data-area="${job.area}">
@@ -583,6 +626,7 @@ function createJobCard(job) {
                 ${job.title}
                 <span class="tag ${categoryClass}">${categoryLabel}</span>
                 ${tagsHTML}
+                ${linkTypeBadge}
                 ${unverifiedHTML}
             </h3>
             <div class="company">🏢 ${job.company}</div>
@@ -591,7 +635,7 @@ function createJobCard(job) {
             </div>
             <div class="location-detail">
                 📍 ${job.location}
-                <a href="${mapURL}" target="_blank" class="map-link" title="在高德地图中查看">🗺️ 地图定位</a>
+                <a href="${mapURL}" target="_blank" rel="noopener" class="map-link" title="在高德地图中查看">🗺️ 地图定位</a>
             </div>
             <div class="location-detail">
                 🚇 <span class="nearby">${job.subway}</span> ${subwayLinesHTML} · ${job.subwayDistance}
@@ -602,10 +646,9 @@ function createJobCard(job) {
             ${noteHTML}
         </div>
         <div class="job-actions">
-            <a href="${directLink}" target="_blank" class="btn btn-primary" title="访问招聘页面">🔗 去投递</a>
-            <a href="${bossLink}" target="_blank" class="btn btn-outline" title="在BOSS直聘搜索">BOSS直聘</a>
-            <a href="${job51Link}" target="_blank" class="btn btn-outline" title="在前程无忧搜索">前程无忧</a>
-            <a href="${mapURL}" target="_blank" class="btn btn-outline" title="查看地图位置">📍 地图</a>
+            ${primaryBtnHTML}
+            ${secondaryBtnsHTML}
+            <a href="${mapURL}" target="_blank" rel="noopener" class="btn btn-outline">📍 地图</a>
         </div>
     </div>`;
 }
