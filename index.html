@@ -364,6 +364,103 @@
         .line-5 { background: #C5003E; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
         .line-21 { background: #8E6B3C; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
 
+        /* ===== 实时职位搜索台 ===== */
+        .live-hub {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #2563eb 100%);
+            border-radius: 16px;
+            padding: 24px 22px;
+            margin-bottom: 22px;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(30,58,95,.25);
+        }
+        .live-hub .hub-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+        .live-hub .hub-head h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin: 0;
+        }
+        .live-hub .live-dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: #22c55e; box-shadow: 0 0 0 0 rgba(34,197,94,.6);
+            animation: pulse-dot 1.6s infinite;
+        }
+        .live-hub .hub-sub {
+            font-size: .88rem;
+            opacity: .85;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+        .live-hub .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+        .hub-cat {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 12px;
+            padding: 16px 14px;
+            transition: all .2s;
+        }
+        .hub-cat:hover {
+            background: rgba(255,255,255,.14);
+            transform: translateY(-2px);
+        }
+        .hub-cat .cat-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .hub-cat .cat-desc {
+            font-size: .78rem;
+            opacity: .75;
+            margin-bottom: 12px;
+        }
+        .hub-cat .plat-row {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .hub-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            color: #1e293b;
+            text-decoration: none;
+            padding: 9px 13px;
+            border-radius: 8px;
+            font-size: .86rem;
+            font-weight: 600;
+            transition: all .15s;
+        }
+        .hub-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,.2);
+        }
+        .hub-btn .arrow { font-size: 1rem; opacity: .5; }
+        .hub-btn.boss { border-left: 4px solid #00bebd; }
+        .hub-btn.job51 { border-left: 4px solid #ff704f; }
+        .hub-btn.c58 { border-left: 4px solid #ffd100; }
+        .live-hub .hub-foot {
+            margin-top: 16px;
+            font-size: .8rem;
+            opacity: .8;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .live-hub .hub-grid { grid-template-columns: 1fr; }
+        }
+
         .auto-update-banner {
             background: linear-gradient(135deg, #ecfdf5 0%, #dbeafe 100%);
             border: 1px solid #86efac;
@@ -420,11 +517,58 @@
 
 <!-- Main Content -->
 <div class="container">
-    <!-- Auto update banner -->
-    <div class="auto-update-banner" id="autoBanner" style="display:none;">
+    <!-- ===== 实时职位搜索台（永远最新）===== -->
+    <div class="live-hub">
+        <div class="hub-head">
+            <span class="live-dot"></span>
+            <h2>🔥 实时职位搜索台</h2>
+        </div>
+        <div class="hub-sub">
+            点击下方按钮，直达各招聘平台的<strong>实时搜索结果</strong>（已自动定位「广州天河区」）。
+            这里看到的永远是<strong>当前最新</strong>在招岗位 —— 平台更新，你点开就是最新的，无需等待。
+        </div>
+        <div class="hub-grid">
+            <!-- 剪辑 -->
+            <div class="hub-cat">
+                <div class="cat-title">✂️ 视频剪辑</div>
+                <div class="cat-desc">后期 / 剪辑师 / 短视频</div>
+                <div class="plat-row">
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/yingshizhizuo/?key=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91">58同城 <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <!-- 拍摄 -->
+            <div class="hub-cat">
+                <div class="cat-title">📷 摄影摄像</div>
+                <div class="cat-desc">摄影师 / 摄像师 / 拍摄</div>
+                <div class="plat-row">
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/sheying/?key=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F">58同城 <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <!-- 装修 -->
+            <div class="hub-cat">
+                <div class="cat-title">🔨 装修施工</div>
+                <div class="cat-desc">木工 / 泥瓦工 / 水电油漆</div>
+                <div class="plat-row">
+                    <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/zhuangxiu/?key=%E8%A3%85%E4%BF%AE%E5%B7%A5">58同城 木工/泥瓦 <span class="arrow">→</span></a>
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E8%A3%85%E4%BF%AE&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://www.yupao.com/zhaogong/?cityId=440100&keyword=%E8%A3%85%E4%BF%AE">鱼泡网 招工 <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="hub-foot">
+            💡 提示：手机上点按钮会跳转到对应 App 或网页版，建议先登录账号，看到合适的可直接在线沟通。
+        </div>
+    </div>
+
+    <!-- 已验证岗位说明 -->
+    <div class="auto-update-banner" id="autoBanner" style="display:flex;">
         <span class="dot"></span>
-        <strong>🤖 自动更新模式</strong>
-        <span>数据由 GitHub Actions 每日自动搜集更新（每天8:00 / 18:00）</span>
+        <strong>📌 下方精选岗位</strong>
+        <span>以下是人工核实过的具体岗位（带真实链接），作为「实时搜索台」的补充。更新时间见页面顶部。</span>
     </div>
 
     <!-- Filter -->
@@ -513,14 +657,16 @@ function updateHeaderBadge(data) {
         }
     } catch(e) {}
 
+    // 诚实显示模式
     if (method === 'auto' || method === 'github-actions') {
         badge.className = 'update-time auto';
-        badge.innerHTML = '🤖 自动更新 · ' + timeStr + ' · 每日8:00/18:00刷新';
+        badge.innerHTML = '🔄 自动检查更新 · ' + timeStr;
         banner.style.display = 'flex';
     } else {
         badge.className = 'update-time';
-        badge.innerHTML = '📅 数据更新时间：' + timeStr;
+        badge.innerHTML = '📅 岗位数据更新时间：' + timeStr + ' · 🔍 上方搜索台随时最新';
     }
+    if (banner) banner.style.display = 'flex';
 }
 
 // ============ 降级：使用内嵌数据 ============
@@ -537,7 +683,7 @@ function loadFallbackData() {
         {id:"fb008",title:"车陂/东圃 · 装修施工实时搜索",company:"多个招工（点击查看58同城实时结果）",salary:"300-500元/天 或 5000-12000元/月",category:"装修",location:"天河区车陂/东圃/黄村",subway:"车陂站",subwayLines:["4"],subwayDistance:"车陂/东圃范围",area:"reno",directLink:"https://gz.58.com/gztd/nmugong/",linkType:"platform_search",requirements:"点击直达58同城天河区装修工分类，可筛选车陂/黄村/东圃",tags:["实时更新","58同城"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/",boss58ni:"https://gz.58.com/gzxy/niwag/"}}
     ];
 
-    document.getElementById('updateBadge').innerHTML = '⚠️ 离线模式（显示备份数据）· 请上传 jobs.json 以获取完整数据';
+    document.getElementById('updateBadge').innerHTML = '⚠️ 离线模式（显示备份数据）· 🔍 上方搜索台仍然可用 · 请上传 jobs.json 获取完整数据';
     document.getElementById('updateBadge').className = 'update-time';
 
     renderAllSections();
