@@ -1,43 +1,196 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>广州天河黄村附近 - 剪辑/拍摄/装修工作汇总</title>
+    <title>广州天河黄村附近 - 剪辑/拍摄最新工作</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-secondary: #64748b;
-            --border: #e2e8f0;
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --bg: #080a14;
+            --card-bg: rgba(18, 15, 28, .88);
+            --text: #f8fafc;
+            --text-secondary: #b8c1d9;
+            --border: rgba(255,255,255,.14);
             --tag-clip: #dbeafe;
             --tag-clip-text: #1e40af;
             --tag-shoot: #fce7f3;
             --tag-shoot-text: #9d174d;
-            --tag-reno: #dcfce7;
-            --tag-reno-text: #166534;
-            --salary: #059669;
-            --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
-            --shadow-hover: 0 10px 25px rgba(0,0,0,.1);
+            --salary: #5eead4;
+            --shadow: 0 16px 50px rgba(0,0,0,.28);
+            --shadow-hover: 0 24px 70px rgba(8,13,35,.42);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: var(--bg);
+            background: #080a14;
             color: var(--text);
             line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .liquid-ether-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 15%, rgba(82,39,255,.34), transparent 32%),
+                radial-gradient(circle at 82% 24%, rgba(255,159,252,.28), transparent 30%),
+                radial-gradient(circle at 50% 82%, rgba(56,189,248,.18), transparent 36%),
+                #080a14;
+        }
+        .liquid-ether-bg canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: .82;
+            filter: saturate(1.35);
+        }
+        .liquid-ether-bg .strands-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            mix-blend-mode: screen;
+            opacity: .9;
+        }
+        .liquid-ether-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background:
+                linear-gradient(to bottom, rgba(8,10,20,.08), rgba(8,10,20,.76)),
+                radial-gradient(circle at center, transparent 0 32%, rgba(8,10,20,.58) 100%);
+            pointer-events: none;
+        }
+
+        .card-nav-container {
+            position: sticky;
+            top: 16px;
+            z-index: 30;
+            width: min(92%, 860px);
+            margin: 16px auto -4px;
+        }
+        .card-nav {
+            height: 60px;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,.16);
+            background: rgba(255,255,255,.9);
+            box-shadow: 0 18px 50px rgba(0,0,0,.22);
+            backdrop-filter: blur(18px);
+            transition: height .38s cubic-bezier(.22,1,.36,1);
+        }
+        .card-nav.open { height: 248px; }
+        .card-nav-top {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px 8px 16px;
+            position: relative;
+        }
+        .hamburger-menu {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            gap: 5px;
+            cursor: pointer;
+            color: #111827;
+            border: 0;
+            background: transparent;
+        }
+        .hamburger-lines {
+            display: grid;
+            gap: 6px;
+        }
+        .hamburger-line {
+            width: 28px;
+            height: 2px;
+            background: currentColor;
+            transition: transform .24s ease;
+        }
+        .card-nav.open .hamburger-line:first-child { transform: translateY(4px) rotate(45deg); }
+        .card-nav.open .hamburger-line:last-child { transform: translateY(-4px) rotate(-45deg); }
+        .nav-logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #111827;
+            font-weight: 800;
+            letter-spacing: 0;
+            white-space: nowrap;
+        }
+        .card-nav-cta-button {
+            height: 42px;
+            border: 0;
+            border-radius: 9px;
+            padding: 0 16px;
+            color: #fff;
+            background: #111827;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .card-nav-content {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            padding: 8px;
+            opacity: 0;
+            transform: translateY(18px);
+            pointer-events: none;
+            transition: opacity .28s ease, transform .34s ease;
+        }
+        .card-nav.open .card-nav-content {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .nav-card {
+            min-height: 156px;
+            border-radius: 11px;
+            padding: 14px 16px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .nav-card-label {
+            font-size: 1.2rem;
+            font-weight: 750;
+        }
+        .nav-card-links {
+            display: grid;
+            gap: 4px;
+        }
+        .nav-card-link {
+            color: inherit;
+            text-decoration: none;
+            font-size: .92rem;
+            opacity: .9;
+        }
+        .nav-card-link:hover { opacity: 1; text-decoration: underline; }
+
+        .page-shell {
+            position: relative;
+            z-index: 1;
         }
 
         .header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            background:
+                linear-gradient(135deg, rgba(18,15,28,.86) 0%, rgba(37,99,235,.36) 100%);
             color: #fff;
-            padding: 48px 24px;
+            padding: 56px 24px 44px;
             text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            backdrop-filter: blur(14px);
         }
         .header h1 {
             font-size: 2.2rem;
@@ -76,11 +229,12 @@
         }
         .stat-item {
             text-align: center;
-            background: var(--card-bg);
+            background: rgba(255,255,255,.86);
             border-radius: 12px;
             padding: 16px 28px;
             box-shadow: var(--shadow);
             min-width: 120px;
+            color: #111827;
         }
         .stat-item .number {
             font-size: 2rem;
@@ -89,7 +243,7 @@
         }
         .stat-item .label {
             font-size: .85rem;
-            color: var(--text-secondary);
+            color: #64748b;
             margin-top: 2px;
         }
 
@@ -142,11 +296,13 @@
             flex: 1;
             min-width: 240px;
             padding: 12px 18px;
-            border: 2px solid var(--border);
+            border: 1px solid rgba(255,255,255,.18);
             border-radius: 10px;
             font-size: 1rem;
             transition: border-color .2s;
             outline: none;
+            background: rgba(255,255,255,.9);
+            color: #111827;
         }
         .filter-bar input:focus { border-color: var(--primary); }
 
@@ -158,12 +314,13 @@
         .filter-tag {
             padding: 8px 16px;
             border-radius: 20px;
-            border: 2px solid var(--border);
-            background: #fff;
+            border: 1px solid rgba(255,255,255,.18);
+            background: rgba(255,255,255,.9);
             cursor: pointer;
             font-size: .9rem;
             transition: all .2s;
             white-space: nowrap;
+            color: #1e293b;
         }
         .filter-tag:hover { border-color: var(--primary); color: var(--primary); }
         .filter-tag.active { background: var(--primary); color: #fff; border-color: var(--primary); }
@@ -175,26 +332,83 @@
         }
 
         /* Job Cards */
-        .job-list { display: grid; gap: 16px; }
-        .job-card {
+        .job-list { display: grid; gap: 18px; }
+        .border-glow-card {
+            --edge-proximity: 0;
+            --cursor-angle: 45deg;
+            --edge-sensitivity: 30;
+            --color-sensitivity: calc(var(--edge-sensitivity) + 20);
+            --border-radius: 18px;
+            --glow-padding: 34px;
+            --cone-spread: 25;
+            --card-bg: rgba(18, 15, 28, .9);
+            position: relative;
+            border-radius: var(--border-radius);
+            isolation: isolate;
+            transform: translate3d(0, 0, .01px);
+            overflow: clip;
             background: var(--card-bg);
-            border-radius: 14px;
+            box-shadow: rgba(0,0,0,.16) 0 2px 4px, rgba(0,0,0,.16) 0 8px 20px, rgba(0,0,0,.22) 0 24px 55px;
+        }
+        .border-glow-card::before,
+        .border-glow-card::after,
+        .border-glow-card > .edge-light {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            transition: opacity .25s ease-out;
+            z-index: -1;
+        }
+        .border-glow-card:not(:hover)::before,
+        .border-glow-card:not(:hover)::after,
+        .border-glow-card:not(:hover) > .edge-light {
+            opacity: 0;
+            transition: opacity .75s ease-in-out;
+        }
+        .border-glow-card::before {
+            border: 1px solid transparent;
+            background: linear-gradient(var(--card-bg) 0 100%) padding-box, radial-gradient(at 80% 55%, #c084fc 0, transparent 50%) border-box, radial-gradient(at 69% 34%, #f472b6 0, transparent 50%) border-box, radial-gradient(at 8% 6%, #38bdf8 0, transparent 50%) border-box, linear-gradient(#7c3aed 0 100%) border-box;
+            opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+            mask-image: conic-gradient(from var(--cursor-angle) at center, black calc(var(--cone-spread) * 1%), transparent calc((var(--cone-spread) + 15) * 1%), transparent calc((100 - var(--cone-spread) - 15) * 1%), black calc((100 - var(--cone-spread)) * 1%));
+        }
+        .border-glow-card::after {
+            background: radial-gradient(at 80% 55%, #c084fc 0, transparent 50%), radial-gradient(at 69% 34%, #f472b6 0, transparent 50%), radial-gradient(at 8% 6%, #38bdf8 0, transparent 50%);
+            opacity: calc(.35 * (var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+            mix-blend-mode: soft-light;
+        }
+        .border-glow-card > .edge-light {
+            inset: calc(var(--glow-padding) * -1);
+            pointer-events: none;
+            z-index: 1;
+            mask-image: conic-gradient(from var(--cursor-angle) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%);
+            opacity: calc((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity)));
+            mix-blend-mode: plus-lighter;
+        }
+        .border-glow-card > .edge-light::before {
+            content: "";
+            position: absolute;
+            inset: var(--glow-padding);
+            border-radius: inherit;
+            box-shadow: inset 0 0 0 1px hsl(190deg 90% 72% / 90%), inset 0 0 18px 0 hsl(190deg 90% 72% / 28%), 0 0 24px 2px hsl(190deg 90% 72% / 28%), 0 0 54px 4px hsl(280deg 90% 72% / 16%);
+        }
+        .border-glow-inner { position: relative; z-index: 2; }
+        .job-card {
+            background: transparent;
+            border-radius: 18px;
             padding: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
             transition: all .25s;
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 16px;
             align-items: start;
             position: relative;
+            color: #f8fafc;
         }
         .job-card:hover {
-            box-shadow: var(--shadow-hover);
             transform: translateY(-2px);
-            border-color: #cbd5e1;
         }
-        .job-card.hidden { display: none; }
+        .border-glow-card.hidden { display: none; }
         .job-card.new-highlight {
             border-left: 4px solid #22c55e;
             background: linear-gradient(135deg, #f0fdf4 0%, #fff 100%);
@@ -221,7 +435,7 @@
             font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 4px;
-            color: #0f172a;
+            color: #f8fafc;
         }
         .job-info .company {
             color: var(--text-secondary);
@@ -237,7 +451,7 @@
         }
         .salary-badge {
             display: inline-block;
-            background: #ecfdf5;
+            background: rgba(20,184,166,.14);
             color: var(--salary);
             font-weight: 700;
             padding: 4px 12px;
@@ -253,7 +467,6 @@
         }
         .tag-clip { background: var(--tag-clip); color: var(--tag-clip-text); }
         .tag-shoot { background: var(--tag-shoot); color: var(--tag-shoot-text); }
-        .tag-reno { background: var(--tag-reno); color: var(--tag-reno-text); }
         .tag-subway {
             background: #fef3c7;
             color: #92400e;
@@ -302,11 +515,19 @@
         }
         .btn-primary:hover { background: var(--primary-dark); transform: scale(1.03); }
         .btn-outline {
-            background: #fff;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            background: rgba(255,255,255,.08);
+            color: #dbeafe;
+            border: 1px solid rgba(219,234,254,.34);
         }
-        .btn-outline:hover { background: #eff6ff; }
+        .btn-outline:hover { background: rgba(219,234,254,.16); }
+        .btn .btn-hint {
+            display: block;
+            font-size: .68rem;
+            line-height: 1.1;
+            opacity: .72;
+            font-weight: 500;
+            margin-top: 2px;
+        }
 
         .map-link {
             color: var(--primary);
@@ -321,10 +542,11 @@
             font-weight: 700;
             margin: 32px 0 16px;
             padding-bottom: 8px;
-            border-bottom: 3px solid var(--primary);
+            border-bottom: 1px solid rgba(255,255,255,.18);
             display: flex;
             align-items: center;
             gap: 8px;
+            color: #fff;
         }
         .section-title .emoji { font-size: 1.5rem; }
 
@@ -345,14 +567,27 @@
         }
 
         @media (max-width: 768px) {
+            .card-nav-container { top: 10px; width: 92%; }
+            .card-nav.open { height: 316px; }
+            .card-nav-content { grid-template-columns: 1fr; }
+            .nav-card { min-height: 72px; }
+            .card-nav-cta-button { display: none; }
+            .nav-logo { position: static; transform: none; }
             .header h1 { font-size: 1.5rem; }
             .job-card { grid-template-columns: 1fr; }
+            .border-glow-card { --glow-padding: 0px; }
             .job-actions {
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
                 width: 100%;
                 flex-wrap: wrap;
+            }
+            .btn {
+                flex: 1 1 calc(50% - 8px);
+                min-width: 132px;
+                padding: 10px 12px;
+                white-space: normal;
             }
             .stats-bar { gap: 12px; }
             .stat-item { padding: 12px 18px; min-width: 90px; }
@@ -398,7 +633,7 @@
         }
         .live-hub .hub-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px;
         }
         .hub-cat {
@@ -472,6 +707,7 @@
             gap: 10px;
             font-size: .9rem;
             flex-wrap: wrap;
+            color: #0f172a;
         }
         .auto-update-banner .dot {
             width: 10px;
@@ -488,18 +724,61 @@
 </head>
 <body>
 
+<div class="liquid-ether-bg" aria-hidden="true">
+    <canvas id="liquidCanvas"></canvas>
+</div>
+
+<div class="card-nav-container">
+    <nav class="card-nav" id="cardNav" aria-label="快速导航">
+        <div class="card-nav-top">
+            <button class="hamburger-menu" id="navToggle" type="button" aria-label="打开导航" aria-expanded="false">
+                <span class="hamburger-lines">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </span>
+            </button>
+            <div class="nav-logo">黄村剪辑 / 拍摄岗位</div>
+            <button class="card-nav-cta-button" type="button" onclick="document.getElementById('searchInput')?.focus()">搜索岗位</button>
+        </div>
+        <div class="card-nav-content">
+            <div class="nav-card" style="background:#1B1722;color:#fff;">
+                <div class="nav-card-label">岗位</div>
+                <div class="nav-card-links">
+                    <a class="nav-card-link" href="#contentArea">查看已核验岗位 ↗</a>
+                    <a class="nav-card-link" href="#searchInput">搜索公司/地点 ↗</a>
+                </div>
+            </div>
+            <div class="nav-card" style="background:#2F293A;color:#fff;">
+                <div class="nav-card-label">筛选</div>
+                <div class="nav-card-links">
+                    <a class="nav-card-link" href="#contentArea" data-nav-filter="剪辑">视频剪辑 ↗</a>
+                    <a class="nav-card-link" href="#contentArea" data-nav-filter="拍摄">摄影摄像 ↗</a>
+                </div>
+            </div>
+            <div class="nav-card" style="background:#17324D;color:#fff;">
+                <div class="nav-card-label">安全</div>
+                <div class="nav-card-links">
+                    <a class="nav-card-link" href="#autoBanner">每日核验规则 ↗</a>
+                    <a class="nav-card-link" href="#contentArea">只投递来源页 ↗</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<main class="page-shell">
 <!-- Header -->
 <div class="header">
-    <h1>🎬 广州天河黄村附近 · 剪辑/拍摄/装修工作汇总</h1>
-    <div class="subtitle">覆盖黄村及地铁2-3站范围（车陂、东圃、三溪、大观南路）| 薪资5000+</div>
-    <div class="update-time" id="updateBadge">📅 正在加载数据...</div>
+    <h1>广州天河黄村附近 · 剪辑/拍摄最新工作</h1>
+    <div class="subtitle">只保留视频剪辑、摄影摄像岗位；范围扩展到黄村地铁约2-5站可达，每天核验具体岗位来源页</div>
+    <div class="update-time" id="updateBadge">正在加载今日数据...</div>
 </div>
 
 <!-- Stats -->
 <div class="stats-bar">
     <div class="stat-item">
         <div class="number" id="totalCount">-</div>
-        <div class="label">总岗位数</div>
+        <div class="label">具体岗位</div>
     </div>
     <div class="stat-item">
         <div class="number" id="clipCount">-</div>
@@ -509,300 +788,390 @@
         <div class="number" id="shootCount">-</div>
         <div class="label">摄影摄像</div>
     </div>
-    <div class="stat-item">
-        <div class="number" id="renoCount">-</div>
-        <div class="label">装修施工</div>
-    </div>
 </div>
 
 <!-- Main Content -->
 <div class="container">
-    <!-- ===== 实时职位搜索台（永远最新）===== -->
     <div class="live-hub">
         <div class="hub-head">
             <span class="live-dot"></span>
-            <h2>🔥 实时职位搜索台</h2>
+            <h2>实时职位搜索台</h2>
         </div>
         <div class="hub-sub">
-            点击下方按钮，直达各招聘平台的<strong>实时搜索结果</strong>（已自动定位「广州天河区」）。
-            这里看到的永远是<strong>当前最新</strong>在招岗位 —— 平台更新，你点开就是最新的，无需等待。
+            下方每张卡片都是具体招聘岗位，包含公司、薪资、地点和来源链接。范围覆盖黄村、车陂、珠吉、东圃、冼村等短通勤区域，投递前请打开来源核验是否仍在招。
         </div>
         <div class="hub-grid">
-            <!-- 剪辑 -->
             <div class="hub-cat">
-                <div class="cat-title">✂️ 视频剪辑</div>
-                <div class="cat-desc">后期 / 剪辑师 / 短视频</div>
+                <div class="cat-title">视频剪辑</div>
+                <div class="cat-desc">后期 / PR / AE / 短视频</div>
                 <div class="plat-row">
-                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
-                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
                     <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/yingshizhizuo/?key=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91">58同城 <span class="arrow">→</span></a>
                 </div>
             </div>
-            <!-- 拍摄 -->
             <div class="hub-cat">
-                <div class="cat-title">📷 摄影摄像</div>
-                <div class="cat-desc">摄影师 / 摄像师 / 拍摄</div>
+                <div class="cat-title">摄影摄像</div>
+                <div class="cat-desc">摄影师 / 摄像师 / 拍剪一体</div>
                 <div class="plat-row">
-                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
-                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%20%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
                     <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/sheying/?key=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F">58同城 <span class="arrow">→</span></a>
-                </div>
-            </div>
-            <!-- 装修 -->
-            <div class="hub-cat">
-                <div class="cat-title">🔨 装修施工</div>
-                <div class="cat-desc">木工 / 泥瓦工 / 水电油漆</div>
-                <div class="plat-row">
-                    <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/zhuangxiu/?key=%E8%A3%85%E4%BF%AE%E5%B7%A5">58同城 木工/泥瓦 <span class="arrow">→</span></a>
-                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E8%A3%85%E4%BF%AE&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
-                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://www.yupao.com/zhaogong/?cityId=440100&keyword=%E8%A3%85%E4%BF%AE">鱼泡网 招工 <span class="arrow">→</span></a>
                 </div>
             </div>
         </div>
         <div class="hub-foot">
-            💡 提示：手机上点按钮会跳转到对应 App 或网页版，建议先登录账号，看到合适的可直接在线沟通。
+            求职前请在平台内核对发布时间、工作地点、薪资结构和公司认证；不要缴纳任何费用。
         </div>
     </div>
 
-    <!-- 已验证岗位说明 -->
     <div class="auto-update-banner" id="autoBanner" style="display:flex;">
         <span class="dot"></span>
-        <strong>📌 下方精选岗位</strong>
-        <span>以下是人工核实过的具体岗位（带真实链接），作为「实时搜索台」的补充。更新时间见页面顶部。</span>
+        <strong>每日同步</strong>
+        <span>下面只展示当天核验通过的具体岗位；范围含黄村地铁约2-5站可达区域，下架、无法访问或来源不匹配的岗位会自动剔除。</span>
     </div>
 
-    <!-- Filter -->
     <div class="filter-bar">
-        <input type="text" id="searchInput" placeholder="🔍 搜索公司名、岗位、地点...">
+        <input type="text" id="searchInput" placeholder="搜索岗位、平台、地点...">
         <div class="filter-tags">
             <span class="filter-tag active" data-filter="all">全部</span>
-            <span class="filter-tag" data-filter="剪辑">✂️ 视频剪辑</span>
-            <span class="filter-tag" data-filter="拍摄">📷 摄影摄像</span>
-            <span class="filter-tag" data-filter="装修">🔨 装修施工</span>
+            <span class="filter-tag" data-filter="剪辑">视频剪辑</span>
+            <span class="filter-tag" data-filter="拍摄">摄影摄像</span>
         </div>
     </div>
     <div class="result-count" id="resultCount"></div>
 
-    <!-- Content area -->
     <div id="contentArea">
         <div class="status-box">
             <div class="spinner"></div>
-            <p>正在加载招聘数据...</p>
+            <p>正在加载今日招聘入口...</p>
         </div>
     </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-    <p>💡 <strong>链接说明：</strong>「✅ 已验证直链」= 打开真实招聘页面 | 「🔍 平台实时搜索」= 打开平台搜索结果（可看到最新岗位）</p>
-    <p>⚠️ 求职请注意：切勿缴纳任何费用，谨防招聘诈骗！所有信息请自行核实后再投递。</p>
-    <p style="margin-top:8px;">Made with ❤️ for job seekers in Tianhe, Guangzhou</p>
+    <p><strong>来源说明：</strong>卡片主按钮打开具体招聘来源页面，辅助按钮用于到其他平台核验同公司/同岗位。</p>
+    <p>求职请注意：不要缴纳任何费用，不转账，不交押金，先核实公司和岗位真实性。</p>
 </div>
+</main>
 
 <script>
-// ============ 全局状态 ============
 let allJobs = [];
 let currentFilter = 'all';
 
-// ============ 区域配置 ============
+function initCardNav() {
+    const nav = document.getElementById('cardNav');
+    const toggle = document.getElementById('navToggle');
+    if (!nav || !toggle) return;
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        nav.style.height = open ? (window.matchMedia('(max-width: 768px)').matches ? '316px' : '248px') : '60px';
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? '关闭导航' : '打开导航');
+    });
+    document.querySelectorAll('[data-nav-filter]').forEach(link => {
+        link.addEventListener('click', () => {
+            const filter = link.dataset.navFilter;
+            const tag = document.querySelector(`.filter-tag[data-filter="${filter}"]`);
+            if (tag) tag.click();
+            nav.classList.remove('open');
+            nav.style.height = '60px';
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
+function initLiquidBackground() {
+    const canvas = document.getElementById('liquidCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d', { alpha: true });
+    canvas.classList.add('strands-layer');
+
+    const settings = {
+        colors: ['#F97316', '#7C3AED', '#06B6D4'],
+        count: 3,
+        speed: .5,
+        amplitude: 1.3,
+        waviness: 2.7,
+        thickness: .7,
+        glow: 2.6,
+        taper: 3.1,
+        spread: 1,
+        intensity: .6,
+        saturation: 1.5,
+        opacity: 1,
+        scale: 1.5,
+    };
+    let mouse = { x: 0, y: 0, active: false };
+    let rafId = 0;
+
+    function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.max(1, Math.floor(window.innerWidth * dpr));
+        canvas.height = Math.max(1, Math.floor(window.innerHeight * dpr));
+        canvas.style.width = `${window.innerWidth}px`;
+        canvas.style.height = `${window.innerHeight}px`;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    window.addEventListener('resize', resize);
+    window.addEventListener('pointermove', e => {
+        mouse = {
+            x: (e.clientX / Math.max(window.innerWidth, 1) - .5) * 2,
+            y: (e.clientY / Math.max(window.innerHeight, 1) - .5) * 2,
+            active: true,
+        };
+    }, { passive: true });
+    resize();
+
+    function hexToRgb(hex) {
+        const clean = hex.replace('#', '');
+        const value = parseInt(clean.length === 3 ? clean.split('').map(ch => ch + ch).join('') : clean, 16);
+        return {
+            r: (value >> 16) & 255,
+            g: (value >> 8) & 255,
+            b: value & 255,
+        };
+    }
+
+    function colorAt(index, t, alpha = 1) {
+        const palette = settings.colors.map(hexToRgb);
+        const color = palette[index % palette.length];
+        const pulse = .82 + Math.sin(t * .0004 + index * 1.7) * .18;
+        const sat = settings.saturation;
+        const gray = color.r * .2126 + color.g * .7152 + color.b * .0722;
+        const r = Math.round((gray + (color.r - gray) * sat) * pulse);
+        const g = Math.round((gray + (color.g - gray) * sat) * pulse);
+        const b = Math.round((gray + (color.b - gray) * sat) * pulse);
+        return `rgba(${Math.min(255, r)}, ${Math.min(255, g)}, ${Math.min(255, b)}, ${alpha})`;
+    }
+
+    function drawStrand({ w, h, i, t, alpha, widthBoost = 1, blur = 0 }) {
+        const centerY = h * (.46 + (i - (settings.count - 1) / 2) * .105 * settings.spread);
+        const amp = h * .06 * settings.amplitude * (1 + i * .08);
+        const freq = settings.waviness * (1.05 + i * .18);
+        const time = t * .001 * settings.speed;
+        const mousePull = mouse.active ? mouse.y * h * .018 : 0;
+        const phase = i * 1.7 + mouse.x * .22;
+        const thickness = Math.max(7, h * .014 * settings.thickness * widthBoost);
+
+        ctx.save();
+        ctx.globalAlpha = settings.opacity;
+        ctx.globalCompositeOperation = 'lighter';
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.shadowColor = colorAt(i, t, .85);
+        ctx.shadowBlur = 24 * settings.glow + blur;
+        ctx.lineWidth = thickness;
+        ctx.strokeStyle = colorAt(i, t, alpha);
+        ctx.beginPath();
+
+        const steps = 130;
+        for (let s = 0; s <= steps; s += 1) {
+            const p = s / steps;
+            const x = (p - .5) * w * settings.scale + w / 2;
+            const uvx = (p - .5) * Math.PI * 2;
+            const taper = Math.pow(Math.max(Math.cos((p - .5) * Math.PI * 1.28), 0), settings.taper);
+            const wave =
+                Math.sin(uvx * freq + time * (1.4 + i * 1.2) + phase) * .6 +
+                Math.sin(uvx * freq * 1.1 - time * (1 + i * .42) + phase * 1.7) * .4;
+            const y = centerY + wave * amp * taper + mousePull * taper;
+            if (s === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    function draw(t) {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        ctx.clearRect(0, 0, w, h);
+
+        const baseGlow = ctx.createRadialGradient(w * .52, h * .5, 0, w * .52, h * .5, Math.max(w, h) * .72);
+        baseGlow.addColorStop(0, 'rgba(124,58,237,.18)');
+        baseGlow.addColorStop(.45, 'rgba(6,182,212,.08)');
+        baseGlow.addColorStop(1, 'rgba(8,10,20,0)');
+        ctx.fillStyle = baseGlow;
+        ctx.fillRect(0, 0, w, h);
+
+        for (let i = 0; i < settings.count; i += 1) {
+            drawStrand({ w, h, i, t, alpha: .12 * settings.intensity, widthBoost: 5.8, blur: 34 });
+            drawStrand({ w, h, i, t, alpha: .26 * settings.intensity, widthBoost: 2.8, blur: 18 });
+            drawStrand({ w, h, i, t, alpha: .88 * settings.intensity, widthBoost: .92, blur: 4 });
+        }
+
+        ctx.globalCompositeOperation = 'source-over';
+        rafId = requestAnimationFrame(draw);
+    }
+    rafId = requestAnimationFrame(draw);
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) cancelAnimationFrame(rafId);
+        else rafId = requestAnimationFrame(draw);
+    });
+}
+
+function initBorderGlow(root = document) {
+    root.querySelectorAll('.border-glow-card').forEach(card => {
+        if (card.dataset.glowReady) return;
+        card.dataset.glowReady = 'true';
+        card.addEventListener('pointermove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const dx = x - cx;
+            const dy = y - cy;
+            const kx = dx === 0 ? Infinity : cx / Math.abs(dx);
+            const ky = dy === 0 ? Infinity : cy / Math.abs(dy);
+            const edge = Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+            let angle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+            if (angle < 0) angle += 360;
+            card.style.setProperty('--edge-proximity', (edge * 100).toFixed(3));
+            card.style.setProperty('--cursor-angle', `${angle.toFixed(3)}deg`);
+        });
+    });
+}
+
 const areaConfig = {
-    'huangcun':    { title: '📍 黄村直达（黄村地铁站周边 / 步行骑行可达）', order: 1 },
-    'nearby1':     { title: '🚇 地铁1-2站范围（车陂 / 大观南路）', order: 2 },
-    'nearby2':     { title: '🚇 地铁2-3站范围（东圃 / 三溪 / 棠东）', order: 3 },
-    'tianhe':      { title: '🏙️ 天河区其他（地铁可达、通勤便利）', order: 4 },
-    'reno':        { title: '🔨 装修施工类岗位', order: 5 },
+    'huangcun': { title: '黄村 / 珠吉 / 车陂附近优先', order: 1 },
+    'nearby1': { title: '地铁1-2站范围（大观南路 / 奥体）', order: 2 },
+    'nearby2': { title: '地铁2-3站范围（车陂 / 珠吉 / 东圃）', order: 3 },
+    'nearby5': { title: '地铁4-5站可达（冼村 / 燕塘等）', order: 4 },
+    'tianhe': { title: '天河区其他（地铁可达）', order: 5 },
 };
 
-// ============ 加载数据 ============
 async function loadJobs() {
-    const contentArea = document.getElementById('contentArea');
     try {
-        // 尝试从 jobs.json 加载
-        const response = await fetch('jobs.json?' + Date.now()); // cache-bust
+        const response = await fetch('jobs.json?' + Date.now());
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const data = await response.json();
-        allJobs = data.jobs || [];
-
-        // 更新头部显示
+        allJobs = (data.jobs || []).filter(job => job.category === '剪辑' || job.category === '拍摄');
         updateHeaderBadge(data);
-
-        // 加载成功，渲染页面
         renderAllSections();
         updateStats();
-
-        console.log('✅ 数据加载成功：' + allJobs.length + ' 个岗位，更新时间：' + data.updateTime);
     } catch (err) {
-        console.warn('⚠️ 无法加载 jobs.json，尝试使用内嵌数据：', err.message);
-        // 降级：加载内嵌的备份数据
-        loadFallbackData();
+        document.getElementById('contentArea').innerHTML = `
+            <div class="status-box error">
+                <p>无法加载 jobs.json：${err.message}</p>
+                <button onclick="location.reload()">重新加载</button>
+            </div>`;
     }
 }
 
 function updateHeaderBadge(data) {
     const badge = document.getElementById('updateBadge');
-    const banner = document.getElementById('autoBanner');
-
-    const updateTime = data.updateTime || '';
-    const method = data.updateMethod || 'manual';
-
-    // 格式化时间
-    let timeStr = updateTime;
+    let timeStr = data.updateTime || '';
     try {
-        const d = new Date(updateTime);
+        const d = new Date(data.updateTime);
         if (!isNaN(d.getTime())) {
             timeStr = d.toLocaleString('zh-CN', {
                 year: 'numeric', month: '2-digit', day: '2-digit',
                 hour: '2-digit', minute: '2-digit'
             });
         }
-    } catch(e) {}
-
-    // 诚实显示模式
-    if (method === 'auto' || method === 'github-actions') {
-        badge.className = 'update-time auto';
-        badge.innerHTML = '🔄 自动检查更新 · ' + timeStr;
-        banner.style.display = 'flex';
-    } else {
-        badge.className = 'update-time';
-        badge.innerHTML = '📅 岗位数据更新时间：' + timeStr + ' · 🔍 上方搜索台随时最新';
-    }
-    if (banner) banner.style.display = 'flex';
+    } catch (e) {}
+    badge.className = 'update-time auto';
+    badge.textContent = `今日同步：${timeStr} · 数据源：每日核验通过的岗位来源页`;
 }
 
-// ============ 降级：使用内嵌数据 ============
-function loadFallbackData() {
-    // 备选数据（精简版，仅含已验证的真实链接）
-    allJobs = [
-        {id:"fb001",title:"摄影/摄像专员",company:"广州天奕传媒有限公司",salary:"6000-9000元/月",category:"拍摄",location:"天河区中侨基金小镇3栋117（车陂地铁站附近）",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"nearby1",directLink:"https://m.58.com/gz/zpwentiyingshi/63611715560732x.shtml",linkType:"verified",requirements:"经验不限，周末双休、弹性工作、五险一金",tags:["双休","五险一金","已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=天奕传媒&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,天奕传媒,2,1.html"}},
-        {id:"fb002",title:"摄影剪辑师",company:"广州智汇产业运营管理",salary:"9000-12000元/月",category:"拍摄",location:"天河区",subway:"天河区",subwayLines:[],subwayDistance:"天河商圈",area:"tianhe",directLink:"https://msearch.51job.com/jobs/guangzhou-thq/170257002.html",linkType:"verified",requirements:"1年+经验，大专",tags:["高薪","已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=智汇产业&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,智汇产业,2,1.html"}},
-        {id:"fb003",title:"视频拍摄剪辑",company:"广州趣派网络科技有限公司",salary:"6000-8000元/月",category:"拍摄",location:"天河区东圃",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"nearby2",directLink:"https://msearch.51job.com/jobs/guangzhou-thq/169942613.html",linkType:"verified",requirements:"1年+经验，化妆品行业优先",tags:["已验证直链"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=趣派网络&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,趣派网络,2,1.html"}},
-        {id:"fb004",title:"视频后期剪辑与制作",company:"广州龙创天地科技有限公司",salary:"5000-7000元/月",category:"剪辑",location:"天河区软件路11号F栋（近大观南路站）",subway:"大观南路站",subwayLines:["21"],subwayDistance:"距黄村1站地铁",area:"nearby1",directLink:"https://m.58.com/gz/zpwentiyingshi/66413962068765x.shtml",linkType:"verified",requirements:"本科，五险一金+双休，招2名",tags:["双休","五险一金","已验证直链"],isNew:false,verified:true,note:"联系人：石先生 13570203077",platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=龙创天地&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,龙创天地,2,1.html"}},
-        {id:"fb005",title:"装修木工（铝塑板/门头）",company:"个人招工（车陂雅景大广场）",salary:"300-500元/天（约9000-15000元/月）",category:"装修",location:"天河区车陂雅景大广场",subway:"车陂站",subwayLines:["4"],subwayDistance:"距黄村1站地铁",area:"reno",directLink:"https://m.gzzcrcw.com/job/383412338.html",linkType:"verified",requirements:"矮墙/假梁/招牌贴铝塑板/门头，招1-2人",tags:["日结","高薪","已验证直链"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/"}},
-        {id:"fb006",title:"建筑/装修工人（月结·五险一金）",company:"广州安置科技有限公司",salary:"5000-9000元/月",category:"装修",location:"天河区桃园西路3号",subway:"东圃站",subwayLines:["5"],subwayDistance:"距黄村约2-3站",area:"reno",directLink:"https://m.58.com/gz/zpfangchanjianzhu/60451698398270x.shtml",linkType:"verified",requirements:"3-5年经验，包吃+五险一金+年度体检",tags:["五险一金","包吃","月结稳定","已验证直链"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/"}},
-        {id:"fb007",title:"黄村周边 · 视频剪辑实时搜索",company:"多个公司（点击查看BOSS直聘实时结果）",salary:"5000-15000元/月",category:"剪辑",location:"天河区",subway:"黄村站",subwayLines:["4","21"],subwayDistance:"天河区范围",area:"huangcun",directLink:"https://www.zhipin.com/web/geek/job?query=视频剪辑&city=101280100&district=440106",linkType:"platform_search",requirements:"点击直达BOSS直聘实时搜索结果，获取最新岗位",tags:["实时更新","BOSS直聘"],isNew:false,verified:true,platformLinks:{boss:"https://www.zhipin.com/web/geek/job?query=视频剪辑&city=101280100",job51:"https://search.51job.com/list/030200,000000,0000,00,9,99,视频剪辑,2,1.html"}},
-        {id:"fb008",title:"车陂/东圃 · 装修施工实时搜索",company:"多个招工（点击查看58同城实时结果）",salary:"300-500元/天 或 5000-12000元/月",category:"装修",location:"天河区车陂/东圃/黄村",subway:"车陂站",subwayLines:["4"],subwayDistance:"车陂/东圃范围",area:"reno",directLink:"https://gz.58.com/gztd/nmugong/",linkType:"platform_search",requirements:"点击直达58同城天河区装修工分类，可筛选车陂/黄村/东圃",tags:["实时更新","58同城"],isNew:false,verified:true,platformLinks:{boss58:"https://gz.58.com/gztd/nmugong/",boss58ni:"https://gz.58.com/gzxy/niwag/"}}
-    ];
-
-    document.getElementById('updateBadge').innerHTML = '⚠️ 离线模式（显示备份数据）· 🔍 上方搜索台仍然可用 · 请上传 jobs.json 获取完整数据';
-    document.getElementById('updateBadge').className = 'update-time';
-
-    renderAllSections();
-    updateStats();
+function getVisitContext() {
+    const ua = navigator.userAgent || '';
+    const smallTouchScreen = window.matchMedia('(max-width: 768px), (pointer: coarse)').matches;
+    return {
+        isWeChat: /MicroMessenger/i.test(ua),
+        isMobile: /Android|iPhone|iPad|iPod|HarmonyOS|Mobile/i.test(ua) || smallTouchScreen,
+    };
 }
 
-// ============ 渲染 ============
+function pickActionLink(job, key, fallback) {
+    const context = getVisitContext();
+    const miniLinks = job.miniProgramLinks || {};
+    const mobileLinks = job.mobilePlatformLinks || {};
+    if (context.isWeChat && miniLinks[key]) return miniLinks[key];
+    if ((context.isWeChat || context.isMobile) && mobileLinks[key]) return mobileLinks[key];
+    return fallback || mobileLinks[key] || miniLinks[key] || '#';
+}
+
+function actionHint(key) {
+    const context = getVisitContext();
+    if (key === 'map') return '';
+    if (context.isWeChat) return '微信内优先移动端';
+    if (context.isMobile) return '手机端';
+    return '';
+}
+
+function actionLink(label, href, className, key) {
+    const safeHref = href || '#';
+    const hint = actionHint(key);
+    return `<a href="${safeHref}" target="_blank" rel="noopener" class="${className}" data-platform-action="${key}">${label}${hint ? `<span class="btn-hint">${hint}</span>` : ''}</a>`;
+}
+
 function createJobCard(job) {
-    const categoryClass = job.category === '剪辑' ? 'tag-clip' :
-                          job.category === '拍摄' ? 'tag-shoot' : 'tag-reno';
-    const categoryLabel = job.category;
-
-    const subwayLinesHTML = (job.subwayLines || []).map(l =>
-        `<span class="line-${l}">${l}号线</span>`
-    ).join(' ');
-
-    const tagsHTML = (job.tags || []).map(t =>
-        `<span class="tag tag-subway">${t}</span>`
-    ).join('');
-
-    const newBadgeHTML = job.isNew ? '<span class="new-badge">🆕 新</span>' : '';
-    const newClass = job.isNew ? ' new-highlight' : '';
-
-    const mapQuery = encodeURIComponent(job.location);
-    const mapURL = `https://uri.amap.com/search?keyword=${mapQuery}`;
-
-    // --- 链接类型处理 ---
-    const linkType = job.linkType || (job.directLink ? 'verified' : 'platform_search');
-    const directLink = job.directLink || job.link || '';
-
-    // 平台链接（优先用 job.platformLinks，否则自动生成）
+    const categoryClass = job.category === '剪辑' ? 'tag-clip' : 'tag-shoot';
+    const subwayLinesHTML = (job.subwayLines || []).map(l => `<span class="line-${l}">${l}号线</span>`).join(' ');
+    const tagsHTML = (job.tags || []).map(t => `<span class="tag tag-subway">${t}</span>`).join('');
+    const mapURL = `https://uri.amap.com/search?keyword=${encodeURIComponent(job.location || '广州天河区黄村')}`;
     const pl = job.platformLinks || {};
-    const bossLink = pl.boss || `https://www.zhipin.com/web/geek/job?query=${encodeURIComponent(job.company.split('（')[0].split('(')[0])}&city=101280100`;
-    const job51Link = pl.job51 || pl['51job'] || `https://search.51job.com/list/030200,000000,0000,00,9,99,${encodeURIComponent(job.company.split('（')[0].split('(')[0])},2,1.html`;
-    const link58 = pl.boss58 || pl['58'] || '';
+    const primaryWebLink = job.directLink || pl.boss || pl.job51 || pl['51job'] || '#';
+    const primaryLink = pickActionLink(job, 'direct', primaryWebLink);
+    const bossLink = pickActionLink(job, 'boss', pl.boss || primaryWebLink);
+    const job51Link = pickActionLink(job, '51job', pl.job51 || pl['51job'] || primaryWebLink);
+    const link58 = pl['58'] || pl.boss58 || '';
+    const freshness = job.lastChecked ? `核验时间：${new Date(job.lastChecked).toLocaleDateString('zh-CN')}` : '已核验';
+    const searchText = [job.title, job.category, job.location, job.subway, job.requirements, job.sourceKeyword, Object.keys(pl).join(' ')].join(' ');
 
-    // 链接类型徽章
-    let linkTypeBadge = '';
-    if (linkType === 'verified') {
-        linkTypeBadge = '<span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">✅ 已验证直链</span>';
-    } else if (linkType === 'platform_search') {
-        linkTypeBadge = '<span style="background:#dbeafe;color:#1e40af;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">🔍 平台实时搜索</span>';
+    let secondaryBtnsHTML = `
+        ${actionLink('BOSS直聘', bossLink, 'btn btn-outline', 'boss')}
+        ${actionLink('前程无忧', job51Link, 'btn btn-outline', '51job')}`;
+    if (link58) {
+        secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
     }
-
-    // 主按钮样式和文字
-    let primaryBtnHTML = '';
-    if (linkType === 'verified' && directLink) {
-        primaryBtnHTML = `<a href="${directLink}" target="_blank" rel="noopener" class="btn btn-primary" title="打开真实招聘页面">🔗 查看岗位</a>`;
-    } else if (linkType === 'platform_search' && directLink) {
-        primaryBtnHTML = `<a href="${directLink}" target="_blank" rel="noopener" class="btn btn-primary" style="background:#059669;" title="打开平台搜索结果（实时最新）">🔍 实时搜索</a>`;
-    } else {
-        primaryBtnHTML = `<a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-primary" title="在BOSS直聘搜索">🔍 BOSS直聘搜索</a>`;
-    }
-
-    // 辅助按钮
-    let secondaryBtnsHTML = '';
-    if (linkType === 'verified') {
-        // 已验证岗位：提供平台搜索入口
-        secondaryBtnsHTML = `
-            <a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-outline">BOSS直聘搜公司</a>
-            <a href="${job51Link}" target="_blank" rel="noopener" class="btn btn-outline">前程无忧搜公司</a>`;
-        if (link58) {
-            secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
-        }
-    } else {
-        // 平台搜索：提供其他平台入口
-        secondaryBtnsHTML = `
-            <a href="${bossLink}" target="_blank" rel="noopener" class="btn btn-outline">BOSS直聘</a>
-            <a href="${job51Link}" target="_blank" rel="noopener" class="btn btn-outline">前程无忧</a>`;
-        if (link58) {
-            secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
-        }
-    }
-
-    const noteHTML = job.note ?
-        `<div style="margin-top:6px;font-size:.8rem;color:#f59e0b;">📞 ${job.note}</div>` : '';
-
-    const unverifiedHTML = !job.verified ?
-        '<span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">⚠️ 待核实</span>' : '';
 
     return `
-    <div class="job-card${newClass}" data-category="${job.category}" data-area="${job.area}">
-        ${newBadgeHTML}
-        <div class="job-info">
+    <div class="border-glow-card" data-category="${job.category}" data-area="${job.area}" data-search="${searchText.toLowerCase()}">
+      <span class="edge-light"></span>
+      <div class="border-glow-inner">
+        <div class="job-card">
+          <div class="job-info">
             <h3>
                 ${job.title}
-                <span class="tag ${categoryClass}">${categoryLabel}</span>
+                <span class="tag ${categoryClass}">${job.category}</span>
                 ${tagsHTML}
-                ${linkTypeBadge}
-                ${unverifiedHTML}
+                <span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">已核验</span>
             </h3>
-            <div class="company">🏢 ${job.company}</div>
+            <div class="company">${job.company || '招聘公司'}</div>
             <div class="job-meta">
-                <span class="salary-badge">💰 ${job.salary}</span>
+                <span class="salary-badge">${job.salary || '薪资面议'}</span>
             </div>
             <div class="location-detail">
-                📍 ${job.location}
-                <a href="${mapURL}" target="_blank" rel="noopener" class="map-link" title="在高德地图中查看">🗺️ 地图定位</a>
+                ${job.location || '广州天河区'}
+                <a href="${mapURL}" target="_blank" rel="noopener" class="map-link" title="在高德地图中查看">地图定位</a>
             </div>
             <div class="location-detail">
-                🚇 <span class="nearby">${job.subway}</span> ${subwayLinesHTML} · ${job.subwayDistance}
+                <span class="nearby">${job.subway || '天河区'}</span> ${subwayLinesHTML} · ${job.subwayDistance || '地铁可达'}
             </div>
             <div class="location-detail" style="margin-top:6px;">
-                📋 ${job.requirements}
+                ${job.requirements || '打开来源页面查看岗位详情。'}
             </div>
-            ${noteHTML}
-        </div>
-        <div class="job-actions">
-            ${primaryBtnHTML}
+            <div class="location-detail" style="margin-top:6px;color:#059669;font-weight:600;">
+                ${freshness}
+            </div>
+          </div>
+          <div class="job-actions">
+            ${actionLink('查看岗位', primaryLink, 'btn btn-primary', 'direct')}
             ${secondaryBtnsHTML}
-            <a href="${mapURL}" target="_blank" rel="noopener" class="btn btn-outline">📍 地图</a>
+            <a href="${mapURL}" target="_blank" rel="noopener" class="btn btn-outline">地图</a>
+          </div>
         </div>
+      </div>
     </div>`;
 }
 
 function renderAllSections() {
     const contentArea = document.getElementById('contentArea');
-
-    // 按区域分组
     const grouped = {};
     allJobs.forEach(job => {
         const area = job.area || 'tianhe';
@@ -810,74 +1179,49 @@ function renderAllSections() {
         grouped[area].push(job);
     });
 
-    // 按 order 排序区域
-    const sortedAreas = Object.keys(grouped).sort((a, b) => {
-        return (areaConfig[a]?.order || 99) - (areaConfig[b]?.order || 99);
-    });
-
+    const sortedAreas = Object.keys(grouped).sort((a, b) => (areaConfig[a]?.order || 99) - (areaConfig[b]?.order || 99));
     let html = '';
-
     sortedAreas.forEach(area => {
-        const config = areaConfig[area];
-        const title = config ? config.title : '🏙️ 其他岗位';
+        const config = areaConfig[area] || { title: '其他入口' };
         const jobs = grouped[area];
-
-        html += `<h2 class="section-title"><span class="emoji">${title.slice(0,2)}</span> ${title.slice(2)} <span class="count">${jobs.length}个岗位</span></h2>`;
-        html += '<div class="job-list" data-area="' + area + '">';
-        jobs.forEach(job => {
-            html += createJobCard(job);
-        });
+        html += `<h2 class="section-title"><span>${config.title}</span> <span class="count">${jobs.length}个岗位</span></h2>`;
+        html += `<div class="job-list" data-area="${area}">`;
+        jobs.forEach(job => { html += createJobCard(job); });
         html += '</div>';
     });
-
-    contentArea.innerHTML = html;
+    contentArea.innerHTML = html || '<div class="status-box">暂无剪辑/拍摄岗位</div>';
+    initBorderGlow(contentArea);
     updateStats();
 }
 
-// ============ 统计 ============
 function updateStats() {
-    const visibleCards = document.querySelectorAll('.job-card:not(.hidden)');
+    const visibleCards = document.querySelectorAll('.border-glow-card:not(.hidden)');
     const total = allJobs.length;
-
-    // 计算各分类
     const clipJobs = allJobs.filter(j => j.category === '剪辑').length;
     const shootJobs = allJobs.filter(j => j.category === '拍摄').length;
-    const renoJobs = allJobs.filter(j => j.category === '装修').length;
-
     document.getElementById('totalCount').textContent = total;
     document.getElementById('clipCount').textContent = clipJobs;
     document.getElementById('shootCount').textContent = shootJobs;
-    document.getElementById('renoCount').textContent = renoJobs;
     document.getElementById('resultCount').textContent = `共 ${visibleCards.length} 个岗位（总计 ${total} 个）`;
 }
 
-// ============ 筛选 ============
 function applyFilters() {
-    const searchText = document.getElementById('searchInput').value.toLowerCase();
-
-    document.querySelectorAll('.job-card').forEach(card => {
+    const searchText = document.getElementById('searchInput').value.trim().toLowerCase();
+    document.querySelectorAll('.border-glow-card').forEach(card => {
         const category = card.dataset.category;
-        const cardText = card.textContent.toLowerCase();
-
+        const cardText = card.dataset.search || '';
         const matchFilter = currentFilter === 'all' || category === currentFilter;
         const matchSearch = !searchText || cardText.includes(searchText);
-
         card.classList.toggle('hidden', !(matchFilter && matchSearch));
     });
 
-    // 控制区域标题
     document.querySelectorAll('.job-list').forEach(list => {
-        const area = list.dataset.area;
-        const visibleCards = list.querySelectorAll('.job-card:not(.hidden)');
+        const visibleCards = list.querySelectorAll('.border-glow-card:not(.hidden)');
         const prevH2 = list.previousElementSibling;
-
         if (prevH2 && prevH2.tagName === 'H2') {
             prevH2.style.display = visibleCards.length === 0 ? 'none' : '';
-            // 更新计数
             const countSpan = prevH2.querySelector('.count');
-            if (countSpan) {
-                countSpan.textContent = visibleCards.length + '个岗位';
-            }
+            if (countSpan) countSpan.textContent = `${visibleCards.length}个岗位`;
         }
         list.style.display = visibleCards.length === 0 ? 'none' : '';
     });
@@ -885,25 +1229,24 @@ function applyFilters() {
     updateStats();
 }
 
-// ============ 事件绑定 ============
 document.getElementById('searchInput').addEventListener('input', applyFilters);
 
 document.querySelectorAll('.filter-tag').forEach(tag => {
     tag.addEventListener('click', () => {
         document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
         tag.classList.add('active');
-
         const filter = tag.dataset.filter;
-        currentFilter = filter === 'all' ? 'all' :
-                        filter === '剪辑' ? '剪辑' :
-                        filter === '拍摄' ? '拍摄' : '装修';
+        currentFilter = filter === 'all' ? 'all' : filter;
         applyFilters();
     });
 });
 
-// ============ 初始化 ============
+initCardNav();
+initLiquidBackground();
 loadJobs();
 </script>
 
 </body>
 </html>
+
+

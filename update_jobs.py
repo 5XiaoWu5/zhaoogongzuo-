@@ -1,448 +1,532 @@
 #!/usr/bin/env python3
 """
-广州天河黄村附近 - 工作数据自动更新脚本
-===========================================
-由 GitHub Actions 每日定时调用，自动搜集最新招聘信息并更新 jobs.json
+Generate and verify concrete job-card data for the static site.
 
-数据来源：
-  - Web 搜索聚合（Bing/Google 搜索）
-  - 招聘平台公开搜索页面
-
-运行方式：
-  python update_jobs.py
-
-输出：
-  - 更新 jobs.json 文件
-  - 追加 update_log.md 日志
+Every scheduled run checks each source job page before writing jobs.json. Jobs
+that are unreachable, clearly expired, or no longer contain the expected title
+and company are removed from the published data.
 """
 
+from __future__ import annotations
+
 import json
-import os
 import re
-import hashlib
-from datetime import datetime, timezone, timedelta
-from typing import Optional
+import urllib.error
+import urllib.request
+from datetime import datetime, timedelta, timezone
+from html import unescape
+from pathlib import Path
+from urllib.parse import quote
 
-# ===================== 配置 =====================
 
-# 搜索关键词列表
-SEARCH_QUERIES = [
-    # 剪辑类
-    "广州天河 黄村 车陂 视频剪辑 招聘 2026",
-    "广州天河 东圃 后期制作 剪辑师 招聘",
-    "广州天河 短视频剪辑 信息流剪辑 招聘 薪资",
-    # 拍摄类
-    "广州天河 黄村 车陂 摄影师 摄像师 招聘 2026",
-    "广州天河 东圃 短视频拍摄 招聘 薪资",
-    # 装修类
-    "广州天河 黄村 车陂 装修工 木工 泥瓦工 招聘",
-    "广州天河 东圃 三溪 装修 施工员 招聘",
-]
-
-# 目标区域关键词
-TARGET_AREAS = [
-    "黄村", "车陂", "东圃", "三溪", "大观南路",
-    "棠东", "天河", "珠村", "前进",
-]
-
-# 目标地铁站
-TARGET_SUBWAYS = [
-    "黄村站", "车陂站", "车陂南站", "东圃站",
-    "三溪站", "大观南路站", "棠东站",
-]
-
-# 岗位分类关键词
-CATEGORY_KEYWORDS = {
-    "剪辑": ["剪辑", "后期", "制作", "PR", "AE", "剪映", "达芬奇", "视频制作", "影视后期"],
-    "拍摄": ["拍摄", "摄影", "摄像", "摄影师", "摄像师", "拍剪", "短视频"],
-    "装修": ["装修", "木工", "泥瓦", "水电", "油漆", "施工", "瓦工", "电焊"],
-}
-
-# jobs.json 文件路径
-JOBS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jobs.json")
-LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "update_log.md")
-
-# 广州时区
+ROOT = Path(__file__).resolve().parent
+JOBS_FILE = ROOT / "jobs.json"
+LOG_FILE = ROOT / "update_log.md"
 TZ_GUANGZHOU = timezone(timedelta(hours=8))
 
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+)
 
-# ===================== 工具函数 =====================
-
-def generate_job_id(job: dict) -> str:
-    """根据公司+岗位+链接生成唯一ID"""
-    raw = (job.get("company", "") + job.get("title", "") + job.get("link", ""))
-    return "j" + hashlib.md5(raw.encode()).hexdigest()[:12]
-
-
-def classify_category(title: str, requirements: str = "") -> str:
-    """根据标题和要求判断岗位分类"""
-    text = (title + " " + requirements).lower()
-    scores = {}
-    for cat, keywords in CATEGORY_KEYWORDS.items():
-        scores[cat] = sum(1 for kw in keywords if kw.lower() in text)
-    if scores:
-        best = max(scores, key=scores.get)
-        if scores[best] > 0:
-            return best
-    return "其他"
+EXPIRED_PATTERNS = [
+    "职位已下线",
+    "职位已关闭",
+    "职位已过期",
+    "职位不存在",
+    "岗位已下架",
+    "招聘已结束",
+    "停止招聘",
+    "页面不存在",
+]
 
 
-def detect_area(location: str, full_text: str = "") -> str:
-    """根据地址判断属于哪个区域"""
-    text = (location + " " + full_text).lower()
-
-    # 黄村直达
-    if any(w in text for w in ["黄村", "三联路", "福元南", "荔苑路"]):
-        return "huangcun"
-
-    # 车陂/大观南路 (1-2站)
-    if any(w in text for w in ["车陂", "大观南", "软件路"]):
-        return "nearby1"
-
-    # 东圃/三溪/棠东 (2-3站)
-    if any(w in text for w in ["东圃", "三溪", "棠东", "桃园西"]):
-        return "nearby2"
-
-    # 装修类单独判断
-    if any(w in text for w in ["装修", "木工", "泥瓦", "施工", "电焊", "瓦工"]):
-        return "reno"
-
-    # 默认天河区
-    return "tianhe"
+def boss_search(keyword: str) -> str:
+    return f"https://www.zhipin.com/web/geek/job?query={quote(keyword)}&city=101280100&district=440106"
 
 
-def find_subway_info(location: str) -> tuple:
-    """匹配地铁站信息"""
-    for subway in TARGET_SUBWAYS:
-        if subway in location:
-            # 返回 (站名, 线路列表)
-            if "黄村" in subway:
-                return ("黄村站", ["4", "21"])
-            elif "车陂南" in subway:
-                return ("车陂南站", ["4", "5"])
-            elif "车陂" in subway:
-                return ("车陂站", ["4"])
-            elif "东圃" in subway:
-                return ("东圃站", ["5"])
-            elif "三溪" in subway:
-                return ("三溪站", ["5"])
-            elif "大观南" in subway:
-                return ("大观南路站", ["21"])
-            elif "棠东" in subway:
-                return ("棠东站", ["21"])
-    return ("天河区", [])
+def job51_search(keyword: str) -> str:
+    return f"https://we.51job.com/pc/search?keyword={quote(keyword)}&jobArea=030200"
 
 
-def parse_salary(text: str) -> str:
-    """从文本中提取薪资信息"""
-    # 尝试匹配常见薪资格式
-    patterns = [
-        r'(\d+[Kk千]-?\d*[Kk千]?)',
-        r'(\d+[-~]\d+[Kk千])',
-        r'(\d+[-~]\d+元/月)',
-        r'(\d+[-~]\d+元/天)',
-        r'(\d+[-~]\d+/月)',  # /月
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, text)
-        if match:
-            return match.group(1)
-    return "面议"
+def zhilian_search(keyword: str) -> str:
+    return f"https://sou.zhaopin.com/?jl=765&kw={quote(keyword)}"
 
 
-def normalize_job(job: dict) -> dict:
-    """标准化一个岗位数据"""
-    # 确保必填字段
-    normalized = {
-        "id": job.get("id", generate_job_id(job)),
-        "title": job.get("title", "未知岗位"),
-        "company": job.get("company", "未知公司"),
-        "salary": job.get("salary", "面议"),
-        "category": job.get("category", classify_category(job.get("title", ""), job.get("requirements", ""))),
-        "location": job.get("location", "广州天河区"),
-        "subway": job.get("subway", "天河区"),
-        "subwayLines": job.get("subwayLines", []),
-        "subwayDistance": job.get("subwayDistance", ""),
-        "area": job.get("area", ""),
-        "link": job.get("link", ""),
-        "requirements": job.get("requirements", ""),
-        "tags": job.get("tags", []),
-        "isNew": job.get("isNew", False),
-        "verified": job.get("verified", False),
-    }
-
-    # 自动补全 area
-    if not normalized["area"]:
-        normalized["area"] = detect_area(normalized["location"])
-
-    # 自动补全地铁信息
-    if normalized["subway"] == "天河区" or not normalized["subwayLines"]:
-        subway, lines = find_subway_info(normalized["location"])
-        if subway != "天河区":
-            normalized["subway"] = subway
-            normalized["subwayLines"] = lines
-
-    return normalized
+def boss_mobile_search(keyword: str) -> str:
+    return f"https://m.zhipin.com/gz/job/?query={quote(keyword)}"
 
 
-# ===================== 数据搜集 =====================
-
-def search_jobs_via_web() -> list:
-    """
-    通过 Web 搜索搜集岗位数据。
-
-    注意：此函数在 GitHub Actions 环境中运行，依赖预置的搜索能力。
-    在实际 GitHub Actions 中，可以调用 Bing Search API 或其他搜索 API。
-
-    这里提供两种模式：
-    1. API 模式（生产环境）- 调用搜索 API 获取结构化结果
-    2. 人工模式（开发环境）- 返回手动搜集的数据作为基准
-
-    GitHub Actions 会设置环境变量 SEARCH_API_KEY 来启用 API 模式。
-    """
-    new_jobs = []
-
-    # 检查是否有搜索 API 可用
-    api_key = os.environ.get("BING_SEARCH_API_KEY") or os.environ.get("SEARCH_API_KEY")
-
-    if api_key:
-        # === API 模式：调用 Bing Search API ===
-        try:
-            import urllib.request
-            import urllib.parse
-
-            for query in SEARCH_QUERIES[:4]:  # 限制请求次数（免费API有配额）
-                try:
-                    url = "https://api.bing.microsoft.com/v7.0/search"
-                    params = urllib.parse.urlencode({"q": query, "count": "10", "mkt": "zh-CN"})
-                    req = urllib.request.Request(url + "?" + params)
-                    req.add_header("Ocp-Apim-Subscription-Key", api_key)
-                    with urllib.request.urlopen(req, timeout=10) as resp:
-                        data = json.loads(resp.read())
-                        for result in data.get("webPages", {}).get("value", []):
-                            job = extract_job_from_search_result(result)
-                            if job:
-                                new_jobs.append(job)
-                except Exception as e:
-                    print(f"  ⚠️ 搜索 '{query[:30]}...' 失败: {e}")
-                    continue
-        except Exception as e:
-            print(f"  ❌ API 搜索异常: {e}")
-
-    # === 始终保留现有数据 + 标记新岗位 ===
-    # 不会完全替换，而是合并新旧数据
-    return new_jobs
+def job51_mobile_search(keyword: str) -> str:
+    return f"https://m.51job.com/search/joblist.php?keyword={quote(keyword)}&jobarea=030200"
 
 
-def extract_job_from_search_result(result: dict) -> Optional[dict]:
-    """从搜索结果条目中提取岗位信息"""
-    title = result.get("name", "")
-    snippet = result.get("snippet", "")
-    url = result.get("url", "")
-
-    # 判断是否与目标岗位相关
-    full_text = title + " " + snippet
-    is_relevant = False
-    for area in TARGET_AREAS:
-        if area in full_text:
-            is_relevant = True
-            break
-
-    if not is_relevant:
-        return None
-
-    # 判断是否包含薪资信息
-    has_salary = any(w in full_text for w in ["元/月", "K", "k", "千", "万", "薪资", "工资"])
-
-    # 提取公司名
-    company = "未知公司"
-    company_patterns = [
-        r'([一-龥（）()]+(?:有限公司|科技|文化|传媒|集团|教育|服饰|服务|装饰))',
-    ]
-    for pat in company_patterns:
-        match = re.search(pat, snippet)
-        if match:
-            company = match.group(1)
-            break
-
-    category = classify_category(title, snippet)
-    area = detect_area(snippet, full_text)
-
-    job = {
-        "title": title[:50] if title else "未知岗位",
-        "company": company,
-        "salary": parse_salary(snippet) if has_salary else "面议",
-        "category": category,
-        "location": extract_location(snippet),
-        "area": area,
-        "link": url,
-        "requirements": snippet[:200] if snippet else "",
-        "tags": [],
-        "isNew": True,
-        "verified": False,
-    }
-
-    return normalize_job(job)
+def zhilian_mobile_link(url: str) -> str:
+    match = re.search(r"/jobdetail/([^/?#]+)\.htm", url)
+    if match:
+        return f"https://m.zhaopin.com/jobs/{match.group(1)}.htm"
+    match = re.search(r"/jobs/([^/?#]+)\.htm", url)
+    if match:
+        return f"https://m.zhaopin.com/jobs/{match.group(1)}.htm"
+    return url
 
 
-def extract_location(text: str) -> str:
-    """从文本中提取地址信息"""
-    # 尝试匹配常见地址格式
-    patterns = [
-        r'天河区[一-龥]+(?:路|街|大道|巷|号)[一-龥\d]*',
-        r'黄村[一-龥]+(?:路|街|大道|巷|号)[一-龥\d]*',
-        r'车陂[一-龥]+(?:路|街|大道|巷|号)[一-龥\d]*',
-    ]
-    for pat in patterns:
-        match = re.search(pat, text)
-        if match:
-            return match.group(0)
-    return "广州天河区"
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", "", unescape(text or "")).lower()
 
 
-# ===================== 数据合并 =====================
+def fetch_page(url: str) -> tuple[int, str, str]:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=18) as resp:
+        raw = resp.read(300_000)
+        charset = resp.headers.get_content_charset() or "utf-8"
+        html = raw.decode(charset, errors="ignore")
+        return resp.status, resp.geturl(), html
 
-def load_existing_jobs() -> tuple:
-    """加载现有的 jobs.json，返回 (jobs_list, metadata)"""
-    if not os.path.exists(JOBS_FILE):
-        return [], {"updateTime": "", "updateMethod": "manual"}
 
+def verify_job(job: dict) -> tuple[bool, str]:
+    url = job["directLink"]
     try:
-        with open(JOBS_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data.get("jobs", []), {
-            "updateTime": data.get("updateTime", ""),
-            "updateMethod": data.get("updateMethod", "manual"),
-        }
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"⚠️ 读取 jobs.json 失败: {e}")
-        return [], {"updateTime": "", "updateMethod": "manual"}
+        status, final_url, html = fetch_page(url)
+    except urllib.error.HTTPError as exc:
+        return False, f"HTTP {exc.code}"
+    except Exception as exc:
+        return False, f"{type(exc).__name__}: {exc}"
+
+    if status < 200 or status >= 300:
+        return False, f"HTTP {status}"
+
+    compact = normalize_text(html)
+    for pattern in EXPIRED_PATTERNS:
+        if normalize_text(pattern) in compact:
+            return False, f"expired marker: {pattern}"
+
+    title_ok = normalize_text(job["title"]) in compact
+    company_ok = normalize_text(job["company"]) in compact
+    if not title_ok or not company_ok:
+        return False, "source page no longer matches title/company"
+
+    return True, f"ok {status} {final_url}"
 
 
-def merge_jobs(existing: list, new_jobs: list) -> list:
-    """
-    合并新旧岗位数据：
-    - 已有岗位保留（不丢失已验证数据）
-    - 新岗位添加（标记 isNew=True, verified=False）
-    - 按 link 去重
-    - 移除超过30天的旧岗位
-    """
-    # 用 link 作为去重key
-    seen_links = set()
-    merged = []
-
-    # 先放入已有岗位
-    for job in existing:
-        link = job.get("link", "")
-        if link and link in seen_links:
-            continue
-        if link:
-            seen_links.add(link)
-        # 保留已有岗位，但清除 isNew 标记（超过7天的不算新）
-        job["isNew"] = False
-        merged.append(job)
-
-    # 再放入新岗位
-    added_count = 0
-    for job in new_jobs:
-        link = job.get("link", "")
-        if link and link in seen_links:
-            continue
-        if link:
-            seen_links.add(link)
-
-        job["isNew"] = True
-        job["verified"] = False
-        # 生成 ID
-        if not job.get("id"):
-            job["id"] = generate_job_id(job)
-
-        merged.append(job)
-        added_count += 1
-
-    print(f"  📊 合并结果：保留 {len(existing)} 个旧岗位 + 新增 {added_count} 个新岗位")
-    print(f"  📊 总计：{len(merged)} 个岗位")
-
-    return merged
-
-
-# ===================== 主流程 =====================
-
-def main():
-    print("=" * 60)
-    print("🔍 广州天河黄村附近 · 工作数据更新脚本")
-    print(f"  运行时间：{datetime.now(TZ_GUANGZHOU).isoformat()}")
-    print("=" * 60)
-
-    # 1. 加载现有数据
-    print("\n📂 加载现有数据...")
-    existing_jobs, metadata = load_existing_jobs()
-    print(f"  现有岗位数：{len(existing_jobs)}")
-    print(f"  上次更新：{metadata['updateTime'] or '无记录'}")
-
-    # 2. 搜索新岗位
-    print("\n🔍 开始搜索新岗位...")
-    new_jobs = search_jobs_via_web()
-
-    if not new_jobs:
-        print("  ℹ️ 本次未发现新岗位（可能搜索API未配置或网络问题）")
-        print("  ℹ️ 将保持现有数据不变，仅更新时间戳")
-
-    # 3. 合并数据
-    print("\n🔄 合并数据...")
-    merged_jobs = merge_jobs(existing_jobs, new_jobs)
-
-    # 4. 写入 jobs.json
-    print("\n💾 写入 jobs.json...")
-    now_str = datetime.now(TZ_GUANGZHOU).isoformat()
-
-    output = {
-        "updateTime": now_str,
-        "updateMethod": "github-actions",
-        "totalCount": len(merged_jobs),
-        "jobs": merged_jobs,
+def make_job(
+    job_id: str,
+    title: str,
+    company: str,
+    salary: str,
+    category: str,
+    location: str,
+    subway: str,
+    subway_lines: list[str],
+    subway_distance: str,
+    area: str,
+    direct_link: str,
+    requirements: str,
+    tags: list[str],
+    source: str,
+    source_published: str,
+    now: str,
+) -> dict:
+    search_keyword = f"{company} {title}"
+    return {
+        "id": job_id,
+        "title": title,
+        "company": company,
+        "salary": salary,
+        "category": category,
+        "location": location,
+        "subway": subway,
+        "subwayLines": subway_lines,
+        "subwayDistance": subway_distance,
+        "area": area,
+        "directLink": direct_link,
+        "linkType": "verified",
+        "requirements": requirements,
+        "tags": tags + [source, "每日核验"],
+        "isNew": source_published in {"3天内", "本周"},
+        "verified": True,
+        "source": source,
+        "sourcePublished": source_published,
+        "lastChecked": now,
+        "verificationStatus": "verified-active",
+        "platformLinks": {
+            "boss": boss_search(search_keyword),
+            "51job": job51_search(search_keyword),
+            "zhilian": zhilian_search(search_keyword),
+        },
+        "mobilePlatformLinks": {
+            "direct": zhilian_mobile_link(direct_link),
+            "boss": boss_mobile_search(search_keyword),
+            "51job": job51_mobile_search(search_keyword),
+            "zhilian": zhilian_mobile_link(direct_link),
+        },
+        "miniProgramLinks": {
+            "direct": "",
+            "boss": "",
+            "51job": "",
+            "zhilian": "",
+        },
     }
 
-    with open(JOBS_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"  ✅ 已写入 {len(merged_jobs)} 个岗位到 jobs.json")
+def candidate_jobs(now: str) -> list[dict]:
+    return [
+        make_job(
+            "job-20260703-001",
+            "短视频拍摄剪辑师13薪（双休）",
+            "广州市雅俗共赏文化传媒有限公司",
+            "9000-13000元/月",
+            "拍摄",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1281652160J40596384804.htm",
+            "1-3年经验，大专；短视频拍摄剪辑岗位，13薪、双休。",
+            ["13薪", "双休", "拍剪一体"],
+            "智联招聘",
+            "上周",
+            now,
+        ),
+        make_job(
+            "job-20260703-002",
+            "Ai漫剧剪辑师助理",
+            "广州汇智云人工智能科技有限公司",
+            "6000-8000元/月",
+            "剪辑",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1525435800J40857563611.htm",
+            "经验不限，大专；AI漫剧剪辑助理，招聘负责人刚在线。",
+            ["经验不限", "AI漫剧", "助理"],
+            "智联招聘",
+            "2周内",
+            now,
+        ),
+        make_job(
+            "job-20260703-003",
+            "短视频制作剪辑助理",
+            "广州汇智云人工智能科技有限公司",
+            "5000-8000元/月",
+            "剪辑",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1525435800J40858756911.htm",
+            "协助完成短视频素材整理与粗剪，适合剪辑助理方向。",
+            ["剪辑助理", "短视频", "本周"],
+            "智联招聘",
+            "上周",
+            now,
+        ),
+        make_job(
+            "job-20260703-004",
+            "信息流短视频剪辑师",
+            "广州用心选供应链有限公司",
+            "6000-8000元/月",
+            "剪辑",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1495809540J40747711801.htm",
+            "1-3年经验，学历不限；信息流短视频剪辑，负责人刚在线。",
+            ["信息流", "短视频", "学历不限"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-005",
+            "摄像师",
+            "ZAKER",
+            "6000-11000元/月",
+            "拍摄",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CC464221920J40810353713.htm",
+            "经验不限，大专；摄像师岗位，发布较新，负责人刚在线。",
+            ["摄像师", "经验不限", "3天内"],
+            "智联招聘",
+            "3天内",
+            now,
+        ),
+        make_job(
+            "job-20260703-006",
+            "影视后期剪辑师",
+            "广州哔然文化科技有限公司",
+            "7000-10000元/月",
+            "剪辑",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1524900740J41012160804.htm",
+            "1-3年经验，学历不限；影视后期剪辑方向。",
+            ["影视后期", "学历不限", "剪辑师"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-007",
+            "影楼摄影助理可接受新人",
+            "广州侬淇科技有限公司",
+            "5000-7000元/月",
+            "拍摄",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1525387210J40856800411.htm",
+            "经验不限，学历不限；影楼摄影助理，可接受新人。",
+            ["摄影助理", "接受新人", "经验不限"],
+            "智联招聘",
+            "上周",
+            now,
+        ),
+        make_job(
+            "job-20260703-008",
+            "TikTok短视频剪辑/拍摄/跨境电商",
+            "广东全球拼购电子商务有限公司",
+            "6000-8000元/月",
+            "拍摄",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1293253300J40866134205.htm",
+            "1-3年经验，大专；TikTok短视频剪辑/拍摄，周末休息。",
+            ["TikTok", "拍摄剪辑", "周末休息"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-009",
+            "视频设计专员（双体）",
+            "广州贤易达信息科技有限公司",
+            "4000-5000元/月",
+            "剪辑",
+            "广州天河区",
+            "天河区",
+            [],
+            "天河区范围，需打开来源核对具体地址",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1498769150J40817298201.htm",
+            "经验不限，学历不限；视频设计专员，偏视频制作与设计。",
+            ["视频设计", "经验不限", "入门"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-010",
+            "视频剪辑实习生",
+            "三到书房(广州)文化传播有限公司",
+            "100-200元/天",
+            "剪辑",
+            "广州天河区汉银广场",
+            "天河区",
+            [],
+            "汉银广场，需打开来源核对通勤",
+            "tianhe",
+            "https://www.zhaopin.com/jobdetail/CCL1511498490J40867280210.htm",
+            "经验不限，学历不限；视频剪辑实习生，适合实习/入门。",
+            ["实习", "汉银广场", "文化传播"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-011",
+            "短视频剪辑师",
+            "广州云芒电媒科技有限公司",
+            "4000-5000元/月",
+            "剪辑",
+            "广州天河区富力盈隆广场",
+            "冼村",
+            ["18"],
+            "黄村地铁约4-5站换乘可达，需打开来源核对通勤路线",
+            "nearby5",
+            "https://www.zhaopin.com/jobdetail/CCL1513938220J40863267902.htm",
+            "经验不限，大专；负责短视频全流程剪辑，适配 TikTok 等平台风格，熟练 PR/剪映优先。",
+            ["短视频", "TikTok", "PR/剪映"],
+            "智联招聘",
+            "6月23日",
+            now,
+        ),
+        make_job(
+            "job-20260703-012",
+            "视频混剪专员",
+            "智绘传媒(广州)有限公司",
+            "6000-8000元/月",
+            "剪辑",
+            "广州市天河区燕岭路89号4楼4027",
+            "兴华 / 燕塘",
+            ["3", "6"],
+            "黄村地铁约4-5站换乘可达，需打开来源核对通勤路线",
+            "nearby5",
+            "https://www.zhaopin.com/jobdetail/CCL1515562090J40839247310.htm",
+            "1-3年经验；负责视频素材整理、混剪、卡点、转场、调色、字幕和平台比例适配。",
+            ["混剪", "剪映", "PR"],
+            "智联招聘",
+            "近期",
+            now,
+        ),
+        make_job(
+            "job-20260703-013",
+            "电商短视频剪辑主管/经理（高薪、双休）",
+            "东莞市科询信息科技有限公司",
+            "20000-35000元/月",
+            "剪辑",
+            "广州天河区联合社区车陂北街28号之一8-2栋111室",
+            "车陂",
+            ["4"],
+            "黄村附近优先：车陂方向，需打开来源核对具体步行距离",
+            "huangcun",
+            "https://www.zhaopin.com/jobdetail/CCL1524925070J40890257513.htm",
+            "3-5年经验；负责信息流广告视频创意、脚本、剪辑合成和团队质量把控，双休。",
+            ["车陂", "高薪", "双休", "主管"],
+            "智联招聘",
+            "6月18日",
+            now,
+        ),
+        make_job(
+            "job-20260703-014",
+            "短视频剪辑师（中级）",
+            "长沙回声网络科技有限公司",
+            "7000-8000元/月",
+            "剪辑",
+            "广州天河区中山大道珠吉路6号佳信商务大厦7楼",
+            "珠吉 / 黄村",
+            ["4"],
+            "黄村附近优先：珠吉方向，需打开来源核对具体地址",
+            "huangcun",
+            "https://www.zhaopin.com/jobdetail/CCL1522602060J40857536610.htm",
+            "3-5年经验；根据素材包完成剪辑、字幕清洗、音频处理、基础调色和动画包装。",
+            ["珠吉", "剪辑", "今日发布"],
+            "智联招聘",
+            "今日",
+            now,
+        ),
+        make_job(
+            "job-20260703-015",
+            "产品摄影助理",
+            "长沙回声网络科技有限公司",
+            "4000-6000元/月",
+            "拍摄",
+            "广州天河区中山大道珠吉路6号佳信商务大厦7楼",
+            "珠吉 / 黄村",
+            ["4"],
+            "黄村附近优先：珠吉方向，需打开来源核对具体地址",
+            "huangcun",
+            "https://www.zhaopin.com/jobdetail/CCL1522602060J40857284710.htm",
+            "经验不限；协助产品拍摄、调色、素材整理归档，偏3C数码产品摄影助理。",
+            ["摄影助理", "产品拍摄", "今日发布"],
+            "智联招聘",
+            "今日",
+            now,
+        ),
+    ]
 
-    # 5. 写入更新日志
-    print("\n📝 写入更新日志...")
-    write_update_log(len(existing_jobs), len(new_jobs), len(merged_jobs))
 
-    print("\n" + "=" * 60)
-    print("✅ 更新完成！")
-    print("=" * 60)
+def build_jobs(now: str) -> tuple[list[dict], list[dict]]:
+    active_jobs: list[dict] = []
+    removed_jobs: list[dict] = []
+    for job in candidate_jobs(now):
+        ok, reason = verify_job(job)
+        job["verificationReason"] = reason
+        if ok:
+            active_jobs.append(job)
+            print(f"ACTIVE  {job['id']} {job['title']} - {reason}")
+        else:
+            removed_jobs.append(
+                {
+                    "id": job["id"],
+                    "title": job["title"],
+                    "company": job["company"],
+                    "directLink": job["directLink"],
+                    "reason": reason,
+                }
+            )
+            print(f"REMOVED {job['id']} {job['title']} - {reason}")
+    return active_jobs, removed_jobs
 
 
-def write_update_log(existing_count: int, new_count: int, total_count: int):
-    """追加更新日志到 update_log.md"""
-    now = datetime.now(TZ_GUANGZHOU)
-    timestamp = now.strftime("%Y-%m-%d %H:%M")
+def write_log(now_dt: datetime, total_count: int, removed_jobs: list[dict]) -> None:
+    timestamp = now_dt.strftime("%Y-%m-%d %H:%M")
+    removed_text = "无"
+    if removed_jobs:
+        removed_text = "\n".join(
+            f"- {job['title']} / {job['company']}：{job['reason']}" for job in removed_jobs
+        )
 
-    log_entry = f"""
+    entry = f"""
 ## {timestamp} 自动更新
 
 | 项目 | 数值 |
 |------|------|
-| 更新方式 | GitHub Actions 自动运行 |
-| 原有岗位 | {existing_count} |
-| 新增岗位 | {new_count} |
-| 更新后总数 | {total_count} |
+| 更新方式 | GitHub Actions 每日核验 |
+| 数据策略 | 具体岗位卡片 + 来源页有效性检查 |
+| 行业范围 | 剪辑、拍摄 |
+| 保留岗位数 | {total_count} |
+| 剔除岗位数 | {len(removed_jobs)} |
+
+剔除明细：
+
+{removed_text}
 
 """
+    if LOG_FILE.exists():
+        with LOG_FILE.open("a", encoding="utf-8") as f:
+            f.write(entry)
+    else:
+        with LOG_FILE.open("w", encoding="utf-8") as f:
+            f.write("# 更新日志\n\n> 记录每日自动核验 jobs.json 的结果。\n")
+            f.write(entry)
 
-    # 追加写入
-    mode = "a" if os.path.exists(LOG_FILE) else "w"
-    with open(LOG_FILE, mode, encoding="utf-8") as f:
-        if mode == "w":
-            f.write("# 更新日志\n\n> 记录每次自动更新的详细信息\n")
-            f.write(f"> 创建时间：{now.strftime('%Y-%m-%d')}\n\n")
-        f.write(log_entry)
 
-    print(f"  ✅ 更新日志已追加到 update_log.md")
+def main() -> None:
+    now_dt = datetime.now(TZ_GUANGZHOU)
+    now = now_dt.isoformat(timespec="seconds")
+    jobs, removed_jobs = build_jobs(now)
+    output = {
+        "updateTime": now,
+        "updateMethod": "github-actions-daily-verified-job-cards",
+        "totalCount": len(jobs),
+        "removedCount": len(removed_jobs),
+        "dataNote": "本站仅保留剪辑/拍摄行业。每次自动更新都会打开来源页核验；无法访问、疑似下架、或页面不再匹配岗位/公司的卡片会自动剔除。",
+        "sources": ["智联招聘", "BOSS直聘搜索", "前程无忧搜索"],
+        "removedJobs": removed_jobs,
+        "jobs": jobs,
+    }
+    JOBS_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_log(now_dt, len(jobs), removed_jobs)
+    print(
+        f"Updated {JOBS_FILE.name}: {len(jobs)} active job cards, "
+        f"{len(removed_jobs)} removed at {now}"
+    )
 
 
 if __name__ == "__main__":
