@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>广州天河黄村附近 - 剪辑/拍摄最新工作</title>
+    <title>广州天河黄村附近 - 剪辑/拍摄/入境游销售最新工作</title>
     <style>
         :root {
             --primary: #7c3aed;
@@ -253,6 +253,21 @@
             min-width: 120px;
             color: #111827;
         }
+        .stat-item.stat-action {
+            border: 0;
+            cursor: pointer;
+            font: inherit;
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+        .stat-item.stat-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 58px rgba(82,39,255,.34);
+            background: rgba(255,255,255,.94);
+        }
+        .stat-item.stat-action:focus-visible {
+            outline: 2px solid rgba(64,255,170,.9);
+            outline-offset: 4px;
+        }
         .stat-item .number {
             font-size: 2rem;
             font-weight: 800;
@@ -346,6 +361,202 @@
             font-size: .9rem;
             color: var(--text-secondary);
             margin-bottom: 16px;
+        }
+
+        .job-folders {
+            margin: 28px 0 24px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+        .folder-card {
+            --folder-color: #5227FF;
+            --folder-back-color: #431ad4;
+            border: 1px solid rgba(255,255,255,.16);
+            background: rgba(18,15,28,.76);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            min-height: 210px;
+            cursor: pointer;
+            text-align: left;
+            display: grid;
+            grid-template-rows: 112px auto;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(0,0,0,.24);
+            transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+        }
+        .folder-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 70% 18%, rgba(255,255,255,.12), transparent 30%);
+            pointer-events: none;
+        }
+        .folder-card:hover,
+        .folder-card.active {
+            transform: translateY(-5px);
+            border-color: rgba(94,234,212,.45);
+            box-shadow: 0 26px 70px rgba(82,39,255,.34);
+        }
+        .folder-card:focus-visible {
+            outline: 2px solid rgba(64,255,170,.9);
+            outline-offset: 4px;
+        }
+        .folder-stage {
+            height: 112px;
+            display: grid;
+            place-items: center;
+            transform: scale(.92);
+            transform-origin: center;
+        }
+        .folder-shape {
+            position: relative;
+            width: 100px;
+            height: 80px;
+            transition: transform .22s ease;
+        }
+        .folder-card:hover .folder-shape,
+        .folder-card.active .folder-shape {
+            transform: translateY(-8px);
+        }
+        .folder-back {
+            position: absolute;
+            inset: 0;
+            background: var(--folder-back-color);
+            border-radius: 0 10px 10px 10px;
+        }
+        .folder-back::after {
+            content: "";
+            position: absolute;
+            bottom: 98%;
+            left: 0;
+            width: 30px;
+            height: 10px;
+            background: var(--folder-back-color);
+            border-radius: 5px 5px 0 0;
+        }
+        .folder-paper {
+            position: absolute;
+            z-index: 2;
+            bottom: 10%;
+            left: 50%;
+            width: 70%;
+            height: 80%;
+            border-radius: 10px;
+            background: #e6e6e6;
+            transform: translate(-50%, 10%);
+            transition: transform .3s ease-in-out, height .3s ease-in-out;
+        }
+        .folder-paper:nth-child(2) {
+            background: #f2f2f2;
+            width: 80%;
+            height: 70%;
+        }
+        .folder-paper:nth-child(3) {
+            background: #fff;
+            width: 90%;
+            height: 60%;
+        }
+        .folder-card:hover .folder-paper,
+        .folder-card.active .folder-paper {
+            transform: translate(-50%, 0);
+        }
+        .folder-card.active .folder-paper:nth-child(1) {
+            transform: translate(-120%, -70%) rotate(-15deg);
+        }
+        .folder-card.active .folder-paper:nth-child(2) {
+            transform: translate(10%, -70%) rotate(15deg);
+            height: 80%;
+        }
+        .folder-card.active .folder-paper:nth-child(3) {
+            transform: translate(-50%, -100%) rotate(5deg);
+            height: 80%;
+        }
+        .folder-front {
+            position: absolute;
+            z-index: 3;
+            inset: 0;
+            background: var(--folder-color);
+            border-radius: 5px 10px 10px 10px;
+            transform-origin: bottom;
+            transition: transform .3s ease-in-out;
+        }
+        .folder-front.right {
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+        .folder-card:hover .folder-front,
+        .folder-card.active .folder-front {
+            transform: skew(15deg) scaleY(.6);
+        }
+        .folder-card:hover .folder-front.right,
+        .folder-card.active .folder-front.right {
+            transform: skew(-15deg) scaleY(.6);
+        }
+        .folder-meta {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 4px;
+        }
+        .folder-title {
+            font-size: 1.08rem;
+            font-weight: 800;
+        }
+        .folder-count {
+            color: #99f6e4;
+            font-weight: 750;
+        }
+        .folder-desc {
+            color: var(--text-secondary);
+            font-size: .84rem;
+            line-height: 1.45;
+        }
+        .folder-panel {
+            display: none;
+            margin-top: 18px;
+        }
+        .folder-panel.active {
+            display: block;
+        }
+        .folder-panel-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .folder-panel-title {
+            color: #fff;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+        .folder-panel-note {
+            color: var(--text-secondary);
+            font-size: .88rem;
+            margin-top: 3px;
+        }
+        .folder-search {
+            width: min(100%, 360px);
+            padding: 11px 16px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 999px;
+            background: rgba(255,255,255,.92);
+            color: #111827;
+            outline: 0;
+            font-size: .95rem;
+        }
+        .folder-search:focus {
+            border-color: #40ffaa;
+            box-shadow: 0 0 0 3px rgba(64,255,170,.18);
+        }
+
+        #contentArea,
+        #tourismBoard {
+            scroll-margin-top: 86px;
         }
 
         /* Job Cards */
@@ -484,6 +695,7 @@
         }
         .tag-clip { background: var(--tag-clip); color: var(--tag-clip-text); }
         .tag-shoot { background: var(--tag-shoot); color: var(--tag-shoot-text); }
+        .tag-tourism { background: #dcfce7; color: #166534; }
         .tag-subway {
             background: #fef3c7;
             color: #92400e;
@@ -627,6 +839,52 @@
             margin-left: auto;
         }
 
+        .tourism-board {
+            margin-top: 42px;
+            padding-top: 8px;
+        }
+        .tourism-board-head {
+            display: grid;
+            gap: 8px;
+            margin: 0 0 18px;
+        }
+        .tourism-board-kicker {
+            width: fit-content;
+            border: 1px solid rgba(94,234,212,.35);
+            background: rgba(20,184,166,.12);
+            color: #99f6e4;
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-size: .78rem;
+            font-weight: 750;
+        }
+        .tourism-board-head h2 {
+            color: #fff;
+            font-size: 1.55rem;
+            line-height: 1.25;
+            margin: 0;
+        }
+        .tourism-board-head p {
+            color: var(--text-secondary);
+            font-size: .92rem;
+            max-width: 780px;
+        }
+        .verify-badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: .7rem;
+            margin-left: 4px;
+        }
+        .verify-badge.verified {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .verify-badge.candidate {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
         .footer {
             text-align: center;
             padding: 32px 24px;
@@ -663,6 +921,12 @@
             .stat-item { padding: 12px 18px; min-width: 90px; }
             .stat-item .number { font-size: 1.5rem; }
             .new-badge { right: 4px; font-size: .7rem; }
+            .tourism-board-head h2 { font-size: 1.28rem; }
+            .job-folders { grid-template-columns: 1fr; }
+            .folder-card { min-height: 190px; grid-template-rows: 96px auto; }
+            .folder-stage { height: 96px; transform: scale(.78); }
+            .folder-panel-head { align-items: stretch; }
+            .folder-search { width: 100%; }
         }
 
         .line-4 { background: #00843D; color: #fff; padding: 1px 6px; border-radius: 3px; font-size: .75rem; font-weight: 700; }
@@ -747,7 +1011,7 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 14px;
         }
         .hub-cat {
@@ -819,7 +1083,9 @@
         .hub-btn .arrow { font-size: 1rem; opacity: .5; }
         .hub-btn.boss { border-left: 4px solid #00bebd; }
         .hub-btn.job51 { border-left: 4px solid #ff704f; }
+        .hub-btn.zhilian { border-left: 4px solid #2563eb; }
         .hub-btn.c58 { border-left: 4px solid #ffd100; }
+        .hub-btn.liepin { border-left: 4px solid #111827; }
         .live-hub .hub-foot {
             position: relative;
             z-index: 1;
@@ -876,15 +1142,16 @@
                     <span class="hamburger-line"></span>
                 </span>
             </button>
-            <div class="nav-logo">黄村剪辑 / 拍摄岗位</div>
+            <div class="nav-logo">黄村岗位更新</div>
             <button class="card-nav-cta-button" type="button" onclick="document.getElementById('searchInput')?.focus()">搜索岗位</button>
         </div>
         <div class="card-nav-content">
             <div class="nav-card" style="background:#1B1722;color:#fff;">
                 <div class="nav-card-label">岗位</div>
-                <div class="nav-card-links">
+            <div class="nav-card-links">
                     <a class="nav-card-link" href="#contentArea">查看已核验岗位 ↗</a>
                     <a class="nav-card-link" href="#searchInput">搜索公司/地点 ↗</a>
+                    <a class="nav-card-link" href="#tourismBoard">入境游销售 ↗</a>
                 </div>
             </div>
             <div class="nav-card" style="background:#2F293A;color:#fff;">
@@ -908,27 +1175,31 @@
 <main class="page-shell">
 <!-- Header -->
 <div class="header">
-    <h1>广州天河黄村附近 · 剪辑/拍摄最新工作</h1>
+    <h1>广州天河黄村附近 · 今日最新工作</h1>
     <div class="subtitle">
-        <span class="gradient-subtitle">只保留视频剪辑、摄影摄像岗位；范围扩展到黄村地铁约2-5站可达，每天核验具体岗位来源页</span>
+        <span class="gradient-subtitle">剪辑/拍摄保持原筛选；入境游销售单独成板块，范围覆盖东圃、黄村及地铁可达区域，每天核验具体岗位来源页</span>
     </div>
     <div class="update-time" id="updateBadge">正在加载今日数据...</div>
 </div>
 
 <!-- Stats -->
 <div class="stats-bar">
-    <div class="stat-item">
+    <button class="stat-item stat-action" type="button" data-stat-jump="all" aria-label="查看全部剪辑和摄影岗位">
         <div class="number" id="totalCount">-</div>
         <div class="label">具体岗位</div>
-    </div>
-    <div class="stat-item">
+    </button>
+    <button class="stat-item stat-action" type="button" data-stat-jump="剪辑" aria-label="查看视频剪辑岗位">
         <div class="number" id="clipCount">-</div>
         <div class="label">视频剪辑</div>
-    </div>
-    <div class="stat-item">
+    </button>
+    <button class="stat-item stat-action" type="button" data-stat-jump="拍摄" aria-label="查看摄影摄像岗位">
         <div class="number" id="shootCount">-</div>
         <div class="label">摄影摄像</div>
-    </div>
+    </button>
+    <button class="stat-item stat-action" type="button" data-stat-jump="入境游销售" aria-label="查看入境游销售岗位">
+        <div class="number" id="tourismCount">-</div>
+        <div class="label">入境游销售</div>
+    </button>
 </div>
 
 <!-- Main Content -->
@@ -948,7 +1219,9 @@
                 <div class="plat-row">
                     <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
                     <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn zhilian" target="_blank" rel="noopener" href="https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91">智联招聘 <span class="arrow">→</span></a>
                     <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/yingshizhizuo/?key=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91">58同城 <span class="arrow">→</span></a>
+                    <a class="hub-btn liepin" target="_blank" rel="noopener" href="https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91">猎聘 <span class="arrow">→</span></a>
                 </div>
             </div>
             <div class="hub-cat">
@@ -957,7 +1230,20 @@
                 <div class="plat-row">
                     <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
                     <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%20%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn zhilian" target="_blank" rel="noopener" href="https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%A4%A9%E6%B2%B3%E9%BB%84%E6%9D%91%20%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F">智联招聘 <span class="arrow">→</span></a>
                     <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/tianhe/sheying/?key=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F">58同城 <span class="arrow">→</span></a>
+                    <a class="hub-btn liepin" target="_blank" rel="noopener" href="https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F">猎聘 <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <div class="hub-cat">
+                <div class="cat-title">入境游销售</div>
+                <div class="cat-desc">旅游销售 / 地接 / 同业 / 英语客户</div>
+                <div class="plat-row">
+                    <a class="hub-btn boss" target="_blank" rel="noopener" href="https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E4%B8%9C%E5%9C%83%20%E9%BB%84%E6%9D%91%20%E5%85%A5%E5%A2%83%E6%B8%B8%E9%94%80%E5%94%AE&city=101280100&district=440106">BOSS直聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn job51" target="_blank" rel="noopener" href="https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E4%B8%9C%E5%9C%83%20%E9%BB%84%E6%9D%91%20%E5%85%A5%E5%A2%83%E6%B8%B8%E9%94%80%E5%94%AE&jobArea=030200">前程无忧 <span class="arrow">→</span></a>
+                    <a class="hub-btn zhilian" target="_blank" rel="noopener" href="https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E4%B8%9C%E5%9C%83%20%E9%BB%84%E6%9D%91%20%E5%85%A5%E5%A2%83%E6%B8%B8%E9%94%80%E5%94%AE">智联招聘 <span class="arrow">→</span></a>
+                    <a class="hub-btn c58" target="_blank" rel="noopener" href="https://gz.58.com/job/?key=%E5%85%A5%E5%A2%83%E6%B8%B8%E9%94%80%E5%94%AE">58同城 <span class="arrow">→</span></a>
+                    <a class="hub-btn liepin" target="_blank" rel="noopener" href="https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%85%A5%E5%A2%83%E6%B8%B8%E9%94%80%E5%94%AE">猎聘 <span class="arrow">→</span></a>
                 </div>
             </div>
         </div>
@@ -972,34 +1258,91 @@
         <span>下面只展示当天核验通过的具体岗位；范围含黄村地铁约2-5站可达区域，下架、无法访问或来源不匹配的岗位会自动剔除。</span>
     </div>
 
-    <div class="filter-bar">
-        <input type="text" id="searchInput" placeholder="搜索岗位、平台、地点...">
-        <div class="filter-tags">
-            <span class="filter-tag active" data-filter="all">全部</span>
-            <span class="filter-tag" data-filter="剪辑">视频剪辑</span>
-            <span class="filter-tag" data-filter="拍摄">摄影摄像</span>
+    <section class="folder-workspace" id="folderWorkspace">
+        <div class="job-folders" id="jobFolders" aria-label="岗位分类文件夹">
+            <button class="folder-card" type="button" data-folder="剪辑" style="--folder-color:#5227FF;--folder-back-color:#431ad4;" aria-expanded="false">
+                <span class="folder-stage" aria-hidden="true">
+                    <span class="folder-shape">
+                        <span class="folder-back">
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-front"></span>
+                            <span class="folder-front right"></span>
+                        </span>
+                    </span>
+                </span>
+                <span class="folder-meta">
+                    <span class="folder-title">视频剪辑</span>
+                    <span class="folder-count" id="folderClipCount">- 个岗位</span>
+                    <span class="folder-desc">后期、信息流、短视频、AI漫剧方向</span>
+                </span>
+            </button>
+            <button class="folder-card" type="button" data-folder="拍摄" style="--folder-color:#06B6D4;--folder-back-color:#0891B2;" aria-expanded="false">
+                <span class="folder-stage" aria-hidden="true">
+                    <span class="folder-shape">
+                        <span class="folder-back">
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-front"></span>
+                            <span class="folder-front right"></span>
+                        </span>
+                    </span>
+                </span>
+                <span class="folder-meta">
+                    <span class="folder-title">摄影摄像</span>
+                    <span class="folder-count" id="folderShootCount">- 个岗位</span>
+                    <span class="folder-desc">摄像师、摄影助理、拍剪一体、电商摄影</span>
+                </span>
+            </button>
+            <button class="folder-card" type="button" data-folder="入境游销售" style="--folder-color:#14B8A6;--folder-back-color:#0F766E;" aria-expanded="false">
+                <span class="folder-stage" aria-hidden="true">
+                    <span class="folder-shape">
+                        <span class="folder-back">
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-paper"></span>
+                            <span class="folder-front"></span>
+                            <span class="folder-front right"></span>
+                        </span>
+                    </span>
+                </span>
+                <span class="folder-meta">
+                    <span class="folder-title">入境游销售</span>
+                    <span class="folder-count" id="folderTourismCount">- 个岗位</span>
+                    <span class="folder-desc">入境游、地接、同业销售、旅游顾问</span>
+                </span>
+            </button>
         </div>
-    </div>
-    <div class="result-count" id="resultCount"></div>
 
-    <div id="contentArea">
-        <div class="status-box">
-            <div class="spinner"></div>
-            <p>正在加载今日招聘入口...</p>
+        <div class="folder-panel" id="folderPanel">
+            <div class="folder-panel-head">
+                <div>
+                    <div class="folder-panel-title" id="folderPanelTitle">选择一个岗位文件夹</div>
+                    <div class="folder-panel-note" id="folderPanelNote">打开文件夹后显示对应岗位列表。</div>
+                </div>
+                <input class="folder-search" type="text" id="folderSearchInput" placeholder="在当前文件夹中搜索岗位、公司、地点...">
+            </div>
+            <div class="result-count" id="resultCount"></div>
+            <div id="folderContentArea">
+                <div class="status-box">请选择上方文件夹查看岗位</div>
+            </div>
         </div>
-    </div>
+    </section>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-    <p><strong>来源说明：</strong>卡片主按钮打开具体招聘来源页面，辅助按钮用于到其他平台核验同公司/同岗位。</p>
+    <p><strong>来源说明：</strong>卡片主按钮打开具体招聘来源页面；平台按钮只保留该岗位真实来源平台。</p>
     <p>求职请注意：不要缴纳任何费用，不转账，不交押金，先核实公司和岗位真实性。</p>
 </div>
 </main>
 
 <script>
 let allJobs = [];
-let currentFilter = 'all';
+let tourismJobs = [];
+let currentFolder = '';
 
 function initCardNav() {
     const nav = document.getElementById('cardNav');
@@ -1014,8 +1357,7 @@ function initCardNav() {
     document.querySelectorAll('[data-nav-filter]').forEach(link => {
         link.addEventListener('click', () => {
             const filter = link.dataset.navFilter;
-            const tag = document.querySelector(`.filter-tag[data-filter="${filter}"]`);
-            if (tag) tag.click();
+            openJobFolder(filter);
             nav.classList.remove('open');
             nav.style.height = '60px';
             toggle.setAttribute('aria-expanded', 'false');
@@ -1196,17 +1538,25 @@ const areaConfig = {
     'tianhe': { title: '天河区其他（地铁可达）', order: 5 },
 };
 
+const tourismAreaConfig = {
+    'huangcun': { title: '东圃 / 黄村短通勤优先', order: 1 },
+    'nearby2': { title: '车陂 / 珠吉 / 东圃周边', order: 2 },
+    'nearby5': { title: '地铁可达重点岗位', order: 3 },
+    'tianhe': { title: '天河区旅游销售', order: 4 },
+    'guangzhou': { title: '广州其他区可投递', order: 5 },
+};
+
 async function loadJobs() {
     try {
         const response = await fetch('jobs.json?' + Date.now());
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const data = await response.json();
         allJobs = (data.jobs || []).filter(job => job.category === '剪辑' || job.category === '拍摄');
+        tourismJobs = (data.tourismJobs || []).filter(job => job.category === '入境游销售');
         updateHeaderBadge(data);
-        renderAllSections();
         updateStats();
     } catch (err) {
-        document.getElementById('contentArea').innerHTML = `
+        document.getElementById('folderContentArea').innerHTML = `
             <div class="status-box error">
                 <p>无法加载 jobs.json：${err.message}</p>
                 <button onclick="location.reload()">重新加载</button>
@@ -1262,26 +1612,36 @@ function actionLink(label, href, className, key) {
     return `<a href="${safeHref}" target="_blank" rel="noopener" class="${className}" data-platform-action="${key}">${label}${hint ? `<span class="btn-hint">${hint}</span>` : ''}</a>`;
 }
 
+function sourcePlatform(job) {
+    const source = job.source || '';
+    if (source.includes('BOSS')) return { key: 'boss', label: 'BOSS直聘' };
+    if (source.includes('前程') || source.includes('51')) return { key: '51job', label: '前程无忧' };
+    if (source.includes('58')) return { key: '58', label: '58同城' };
+    if (source.includes('猎聘')) return { key: 'liepin', label: '猎聘' };
+    return { key: 'zhilian', label: '智联招聘' };
+}
+
 function createJobCard(job) {
-    const categoryClass = job.category === '剪辑' ? 'tag-clip' : 'tag-shoot';
+    const categoryClass = job.category === '剪辑' ? 'tag-clip' : (job.category === '拍摄' ? 'tag-shoot' : 'tag-tourism');
     const subwayLinesHTML = (job.subwayLines || []).map(l => `<span class="line-${l}">${l}号线</span>`).join(' ');
     const tagsHTML = (job.tags || []).map(t => `<span class="tag tag-subway">${t}</span>`).join('');
     const mapURL = `https://uri.amap.com/search?keyword=${encodeURIComponent(job.location || '广州天河区黄村')}`;
     const pl = job.platformLinks || {};
     const primaryWebLink = job.directLink || pl.boss || pl.job51 || pl['51job'] || '#';
     const primaryLink = pickActionLink(job, 'direct', primaryWebLink);
-    const bossLink = pickActionLink(job, 'boss', pl.boss || primaryWebLink);
-    const job51Link = pickActionLink(job, '51job', pl.job51 || pl['51job'] || primaryWebLink);
-    const link58 = pl['58'] || pl.boss58 || '';
-    const freshness = job.lastChecked ? `核验时间：${new Date(job.lastChecked).toLocaleDateString('zh-CN')}` : '已核验';
+    const sourceInfo = sourcePlatform(job);
+    const sourcePlatformLink = pickActionLink(job, sourceInfo.key, primaryWebLink);
     const searchText = [job.title, job.category, job.location, job.subway, job.requirements, job.sourceKeyword, Object.keys(pl).join(' ')].join(' ');
+    const isVerified = job.verificationStatus === 'verified-active' || job.verified === true;
+    const freshness = isVerified && job.lastChecked
+        ? `核验时间：${new Date(job.lastChecked).toLocaleDateString('zh-CN')}`
+        : '平台候选：已改为搜索公司名称，请打开平台核对是否仍在招';
+    const primaryLabel = isVerified ? '查看岗位' : '搜索公司';
+    const verifyBadge = isVerified
+        ? '<span class="verify-badge verified">已核验</span>'
+        : '<span class="verify-badge candidate">平台候选</span>';
 
-    let secondaryBtnsHTML = `
-        ${actionLink('BOSS直聘', bossLink, 'btn btn-outline', 'boss')}
-        ${actionLink('前程无忧', job51Link, 'btn btn-outline', '51job')}`;
-    if (link58) {
-        secondaryBtnsHTML += `<a href="${link58}" target="_blank" rel="noopener" class="btn btn-outline">58同城</a>`;
-    }
+    const secondaryBtnsHTML = actionLink(sourceInfo.label, sourcePlatformLink, 'btn btn-outline', sourceInfo.key);
 
     return `
     <div class="border-glow-card" data-category="${job.category}" data-area="${job.area}" data-search="${searchText.toLowerCase()}">
@@ -1293,7 +1653,7 @@ function createJobCard(job) {
                 ${job.title}
                 <span class="tag ${categoryClass}">${job.category}</span>
                 ${tagsHTML}
-                <span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-size:.7rem;margin-left:4px;">已核验</span>
+                ${verifyBadge}
             </h3>
             <div class="company">${job.company || '招聘公司'}</div>
             <div class="job-meta">
@@ -1314,7 +1674,7 @@ function createJobCard(job) {
             </div>
           </div>
           <div class="job-actions">
-            ${actionLink('查看岗位', primaryLink, 'btn btn-primary', 'direct')}
+            ${actionLink(primaryLabel, primaryLink, 'btn btn-primary', 'direct')}
             ${secondaryBtnsHTML}
             <a href="${mapURL}" target="_blank" rel="noopener" class="btn btn-outline">地图</a>
           </div>
@@ -1323,52 +1683,85 @@ function createJobCard(job) {
     </div>`;
 }
 
-function renderAllSections() {
-    const contentArea = document.getElementById('contentArea');
+function renderGroupedSections(containerId, jobs, configMap, emptyText) {
+    const contentArea = document.getElementById(containerId);
     const grouped = {};
-    allJobs.forEach(job => {
+    jobs.forEach(job => {
         const area = job.area || 'tianhe';
         if (!grouped[area]) grouped[area] = [];
         grouped[area].push(job);
     });
 
-    const sortedAreas = Object.keys(grouped).sort((a, b) => (areaConfig[a]?.order || 99) - (areaConfig[b]?.order || 99));
+    const sortedAreas = Object.keys(grouped).sort((a, b) => (configMap[a]?.order || 99) - (configMap[b]?.order || 99));
     let html = '';
     sortedAreas.forEach(area => {
-        const config = areaConfig[area] || { title: '其他入口' };
+        const config = configMap[area] || { title: '其他入口' };
         const jobs = grouped[area];
         html += `<h2 class="section-title"><span>${config.title}</span> <span class="count">${jobs.length}个岗位</span></h2>`;
         html += `<div class="job-list" data-area="${area}">`;
         jobs.forEach(job => { html += createJobCard(job); });
         html += '</div>';
     });
-    contentArea.innerHTML = html || '<div class="status-box">暂无剪辑/拍摄岗位</div>';
+    contentArea.innerHTML = html || `<div class="status-box">${emptyText}</div>`;
     initBorderGlow(contentArea);
-    updateStats();
 }
 
 function updateStats() {
-    const visibleCards = document.querySelectorAll('.border-glow-card:not(.hidden)');
     const total = allJobs.length;
     const clipJobs = allJobs.filter(j => j.category === '剪辑').length;
     const shootJobs = allJobs.filter(j => j.category === '拍摄').length;
-    document.getElementById('totalCount').textContent = total;
+    document.getElementById('totalCount').textContent = total + tourismJobs.length;
     document.getElementById('clipCount').textContent = clipJobs;
     document.getElementById('shootCount').textContent = shootJobs;
-    document.getElementById('resultCount').textContent = `共 ${visibleCards.length} 个岗位（总计 ${total} 个）`;
+    document.getElementById('tourismCount').textContent = tourismJobs.length;
+    document.getElementById('folderClipCount').textContent = `${clipJobs} 个岗位`;
+    document.getElementById('folderShootCount').textContent = `${shootJobs} 个岗位`;
+    document.getElementById('folderTourismCount').textContent = `${tourismJobs.length} 个岗位`;
 }
 
-function applyFilters() {
-    const searchText = document.getElementById('searchInput').value.trim().toLowerCase();
-    document.querySelectorAll('.border-glow-card').forEach(card => {
-        const category = card.dataset.category;
+function folderJobs(folder) {
+    if (folder === '入境游销售') return tourismJobs;
+    return allJobs.filter(job => job.category === folder);
+}
+
+function folderConfig(folder) {
+    if (folder === '入境游销售') {
+        return {
+            title: '入境游销售',
+            note: '入境游、地接、同业销售、旅游顾问相关岗位',
+            config: tourismAreaConfig,
+            empty: '暂无入境游销售岗位',
+        };
+    }
+    if (folder === '拍摄') {
+        return {
+            title: '摄影摄像',
+            note: '摄影师、摄像师、拍剪一体、电商摄影相关岗位',
+            config: areaConfig,
+            empty: '暂无摄影摄像岗位',
+        };
+    }
+    return {
+        title: '视频剪辑',
+        note: '后期、信息流、短视频、AI漫剧相关岗位',
+        config: areaConfig,
+        empty: '暂无视频剪辑岗位',
+    };
+}
+
+function updateFolderFilter() {
+    const panel = document.getElementById('folderPanel');
+    if (!panel.classList.contains('active')) return;
+    const searchInput = document.getElementById('folderSearchInput');
+    const searchText = searchInput.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('#folderContentArea .border-glow-card');
+    cards.forEach(card => {
         const cardText = card.dataset.search || '';
-        const matchFilter = currentFilter === 'all' || category === currentFilter;
         const matchSearch = !searchText || cardText.includes(searchText);
-        card.classList.toggle('hidden', !(matchFilter && matchSearch));
+        card.classList.toggle('hidden', !matchSearch);
     });
 
-    document.querySelectorAll('.job-list').forEach(list => {
+    document.querySelectorAll('#folderContentArea .job-list').forEach(list => {
         const visibleCards = list.querySelectorAll('.border-glow-card:not(.hidden)');
         const prevH2 = list.previousElementSibling;
         if (prevH2 && prevH2.tagName === 'H2') {
@@ -1379,19 +1772,43 @@ function applyFilters() {
         list.style.display = visibleCards.length === 0 ? 'none' : '';
     });
 
-    updateStats();
+    const visibleCount = document.querySelectorAll('#folderContentArea .border-glow-card:not(.hidden)').length;
+    const totalCount = document.querySelectorAll('#folderContentArea .border-glow-card').length;
+    document.getElementById('resultCount').textContent = `当前文件夹显示 ${visibleCount} 个岗位（共 ${totalCount} 个）`;
 }
 
-document.getElementById('searchInput').addEventListener('input', applyFilters);
+function openJobFolder(folder) {
+    const normalized = folder === 'all' ? '剪辑' : folder;
+    currentFolder = normalized;
+    const config = folderConfig(normalized);
+    const jobs = folderJobs(normalized);
+    const panel = document.getElementById('folderPanel');
+    const content = document.getElementById('folderContentArea');
+    const searchInput = document.getElementById('folderSearchInput');
 
-document.querySelectorAll('.filter-tag').forEach(tag => {
-    tag.addEventListener('click', () => {
-        document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
-        tag.classList.add('active');
-        const filter = tag.dataset.filter;
-        currentFilter = filter === 'all' ? 'all' : filter;
-        applyFilters();
+    document.querySelectorAll('.folder-card').forEach(card => {
+        const active = card.dataset.folder === normalized;
+        card.classList.toggle('active', active);
+        card.setAttribute('aria-expanded', String(active));
     });
+
+    panel.classList.add('active');
+    document.getElementById('folderPanelTitle').textContent = config.title;
+    document.getElementById('folderPanelNote').textContent = config.note;
+    searchInput.value = '';
+    renderGroupedSections('folderContentArea', jobs, config.config, config.empty);
+    updateFolderFilter();
+    document.getElementById('folderWorkspace')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('folderSearchInput').addEventListener('input', updateFolderFilter);
+
+document.querySelectorAll('.folder-card').forEach(card => {
+    card.addEventListener('click', () => openJobFolder(card.dataset.folder));
+});
+
+document.querySelectorAll('[data-stat-jump]').forEach(item => {
+    item.addEventListener('click', () => scrollToJobs(item.dataset.statJump));
 });
 
 initCardNav();

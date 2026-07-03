@@ -1,13 +1,16 @@
 {
-  "updateTime": "2026-07-03T14:35:09+08:00",
+  "updateTime": "2026-07-03T16:48:45+08:00",
   "updateMethod": "github-actions-daily-verified-job-cards",
-  "totalCount": 14,
+  "totalCount": 28,
+  "tourismCount": 21,
   "removedCount": 1,
-  "dataNote": "本站仅保留剪辑/拍摄行业。每次自动更新都会打开来源页核验；无法访问、疑似下架、或页面不再匹配岗位/公司的卡片会自动剔除。",
+  "dataNote": "本站保留剪辑/拍摄岗位，并新增独立的入境游销售板块。每天自动打开具体来源页核验；无法访问、疑似下架或页面不再匹配岗位/公司的卡片会自动剔除。",
   "sources": [
+    "BOSS直聘",
+    "前程无忧",
     "智联招聘",
-    "BOSS直聘搜索",
-    "前程无忧搜索"
+    "58同城",
+    "猎聘"
   ],
   "removedJobs": [
     {
@@ -18,6 +21,7 @@
       "reason": "source page no longer matches title/company"
     }
   ],
+  "removedTourismJobs": [],
   "jobs": [
     {
       "id": "job-20260703-001",
@@ -44,24 +48,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "上周",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1281652160J40596384804.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1281652160J40596384804.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1281652160J40596384804.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1281652160J40596384804.htm"
     },
@@ -90,24 +100,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "2周内",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1525435800J40857563611.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40857563611.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40857563611.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525435800J40857563611.htm"
     },
@@ -136,24 +152,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "上周",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1525435800J40858756911.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40858756911.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40858756911.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525435800J40858756911.htm"
     },
@@ -182,24 +204,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1495809540J40747711801.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1495809540J40747711801.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1495809540J40747711801.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1495809540J40747711801.htm"
     },
@@ -228,24 +256,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "3天内",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CC464221920J40810353713.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
         "51job": "https://m.51job.com/search/joblist.php?keyword=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CC464221920J40810353713.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CC464221920J40810353713.htm",
+        "58": "https://m.58.com/gz/job/?key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC464221920J40810353713.htm"
     },
@@ -274,24 +308,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1524900740J41012160804.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1524900740J41012160804.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1524900740J41012160804.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1524900740J41012160804.htm"
     },
@@ -320,24 +360,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "上周",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1525387210J40856800411.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1525387210J40856800411.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525387210J40856800411.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525387210J40856800411.htm"
     },
@@ -366,24 +412,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1293253300J40866134205.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1293253300J40866134205.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1293253300J40866134205.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1293253300J40866134205.htm"
     },
@@ -412,24 +464,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F",
+        "58": "https://gz.58.com/job/?key=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1511498490J40867280210.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1511498490J40867280210.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1511498490J40867280210.htm",
+        "58": "https://m.58.com/gz/job/?key=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%89%E5%88%B0%E4%B9%A6%E6%88%BF%28%E5%B9%BF%E5%B7%9E%29%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E7%94%9F"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1511498490J40867280210.htm"
     },
@@ -460,24 +518,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "6月23日",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1513938220J40863267902.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1513938220J40863267902.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1513938220J40863267902.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BA%91%E8%8A%92%E7%94%B5%E5%AA%92%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1513938220J40863267902.htm"
     },
@@ -509,24 +573,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98",
+        "58": "https://gz.58.com/job/?key=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1515562090J40839247310.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1515562090J40839247310.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1515562090J40839247310.htm",
+        "58": "https://m.58.com/gz/job/?key=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%99%BA%E7%BB%98%E4%BC%A0%E5%AA%92%28%E5%B9%BF%E5%B7%9E%29%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E6%B7%B7%E5%89%AA%E4%B8%93%E5%91%98"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1515562090J40839247310.htm"
     },
@@ -558,24 +628,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "6月18日",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1524925070J40890257513.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1524925070J40890257513.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1524925070J40890257513.htm",
+        "58": "https://m.58.com/gz/job/?key=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%9C%E8%8E%9E%E5%B8%82%E7%A7%91%E8%AF%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E4%B8%BB%E7%AE%A1/%E7%BB%8F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E3%80%81%E5%8F%8C%E4%BC%91%EF%BC%89"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1524925070J40890257513.htm"
     },
@@ -606,24 +682,30 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "今日",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1522602060J40857536610.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1522602060J40857536610.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1522602060J40857536610.htm",
+        "58": "https://m.58.com/gz/job/?key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1522602060J40857536610.htm"
     },
@@ -654,26 +736,1915 @@
       "verified": true,
       "source": "智联招聘",
       "sourcePublished": "今日",
-      "lastChecked": "2026-07-03T14:35:09+08:00",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
       "verificationStatus": "verified-active",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86&city=101280100&district=440106",
         "51job": "https://we.51job.com/pc/search?keyword=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86&jobArea=030200",
-        "zhilian": "https://sou.zhaopin.com/?jl=765&kw=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86"
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86"
       },
       "mobilePlatformLinks": {
         "direct": "https://m.zhaopin.com/jobs/CCL1522602060J40857284710.htm",
         "boss": "https://m.zhipin.com/gz/job/?query=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86",
         "51job": "https://m.51job.com/search/joblist.php?keyword=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86&jobarea=030200",
-        "zhilian": "https://m.zhaopin.com/jobs/CCL1522602060J40857284710.htm"
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1522602060J40857284710.htm",
+        "58": "https://m.58.com/gz/job/?key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%95%BF%E6%B2%99%E5%9B%9E%E5%A3%B0%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86"
       },
       "miniProgramLinks": {
         "direct": "",
         "boss": "",
         "51job": "",
-        "zhilian": ""
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
       },
       "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1522602060J40857284710.htm"
+    },
+    {
+      "id": "boss-media-20260703-001",
+      "title": "短视频剪辑师",
+      "company": "有媒有传媒",
+      "salary": "薪资以平台为准",
+      "category": "剪辑",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "短视频剪辑方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "短视频剪辑",
+        "平台候选",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/a03e4b1f1c92b6901nx42967E1VY.html",
+        "58": "https://m.58.com/gz/job/?key=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/a03e4b1f1c92b6901nx42967E1VY.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-002",
+      "title": "视频剪辑师",
+      "company": "广州心合教育投资",
+      "salary": "薪资以平台为准",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "视频剪辑师方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "视频剪辑",
+        "天河",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/e2bb6f95c959cb411nx_2du8FVVX.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/e2bb6f95c959cb411nx_2du8FVVX.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-003",
+      "title": "短视频拍摄剪辑",
+      "company": "华研外语",
+      "salary": "薪资以平台为准",
+      "category": "拍摄",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "短视频拍摄剪辑方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "拍摄剪辑",
+        "短视频",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91",
+        "58": "https://gz.58.com/job/?key=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/dafee20b851fdacc1nJ429y7FVVV.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/dafee20b851fdacc1nJ429y7FVVV.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-004",
+      "title": "拍摄剪辑岗（双休）",
+      "company": "拾优科技",
+      "salary": "薪资以平台为准",
+      "category": "拍摄",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "拍摄剪辑岗，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "拍摄剪辑",
+        "双休",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/893d7debd30b98571nN43dW6FFZZ.html",
+        "58": "https://m.58.com/gz/job/?key=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B2%97%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/893d7debd30b98571nN43dW6FFZZ.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-005",
+      "title": "服装摄影师-合成/静物【天河东圃地铁口】",
+      "company": "莫生气科技",
+      "salary": "5-8K",
+      "category": "拍摄",
+      "location": "广州天河区东圃地铁口",
+      "subway": "东圃",
+      "subwayLines": [
+        "5"
+      ],
+      "subwayDistance": "东圃地铁口，黄村/车陂方向短通勤优先",
+      "area": "nearby2",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "1-3年，大专；服装静物摄影/合成方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "东圃",
+        "服装摄影",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "2天内",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91",
+        "58": "https://gz.58.com/job/?key=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/a23a2b36df1ac19e1nJ52ty9E1FX.html",
+        "58": "https://m.58.com/gz/job/?key=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80%20%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88-%E5%90%88%E6%88%90/%E9%9D%99%E7%89%A9%E3%80%90%E5%A4%A9%E6%B2%B3%E4%B8%9C%E5%9C%83%E5%9C%B0%E9%93%81%E5%8F%A3%E3%80%91"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/a23a2b36df1ac19e1nJ52ty9E1FX.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-006",
+      "title": "产品摄影摄像师",
+      "company": "时光量子",
+      "salary": "薪资以平台为准",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "产品摄影摄像师方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "产品摄影",
+        "摄像",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/ed4622adf4387a7e1nR83N29E1FX.html",
+        "58": "https://m.58.com/gz/job/?key=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90%20%E4%BA%A7%E5%93%81%E6%91%84%E5%BD%B1%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/ed4622adf4387a7e1nR83N29E1FX.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-007",
+      "title": "电商服装摄影师/剪辑",
+      "company": "广州曜灿明科技有限公司",
+      "salary": "5-8K",
+      "category": "拍摄",
+      "location": "广州天河区天河城",
+      "subway": "天河城",
+      "subwayLines": [
+        "1",
+        "3"
+      ],
+      "subwayDistance": "天河商圈，需核对从黄村/东圃通勤",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "1-3年；电商服装摄影、剪辑方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "电商摄影",
+        "剪辑",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/30972a3aab05f6201nV_0tS6GFNY.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%94%B5%E5%95%86%E6%9C%8D%E8%A3%85%E6%91%84%E5%BD%B1%E5%B8%88/%E5%89%AA%E8%BE%91"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/30972a3aab05f6201nV_0tS6GFNY.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-008",
+      "title": "拍摄剪辑实习助理",
+      "company": "派德汽车配件",
+      "salary": "薪资以平台为准",
+      "category": "拍摄",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "拍摄剪辑实习助理方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "实习助理",
+        "拍摄剪辑",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/e1805a13cd620c8703d83Nu9E1JS.html",
+        "58": "https://m.58.com/gz/job/?key=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6%20%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%AE%9E%E4%B9%A0%E5%8A%A9%E7%90%86"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/e1805a13cd620c8703d83Nu9E1JS.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-009",
+      "title": "抖音信息流剪辑",
+      "company": "娜丽丝",
+      "salary": "薪资以平台为准",
+      "category": "剪辑",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E5%A8%9C%E4%B8%BD%E4%B8%9D&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "抖音信息流剪辑方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "信息流",
+        "抖音",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%A8%9C%E4%B8%BD%E4%B8%9D&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91",
+        "58": "https://gz.58.com/job/?key=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E5%A8%9C%E4%B8%BD%E4%B8%9D",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%A8%9C%E4%B8%BD%E4%B8%9D",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/ebe5cef5ff1c7d5e1nx_29y9EFFW.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%A8%9C%E4%B8%BD%E4%B8%9D%20%E6%8A%96%E9%9F%B3%E4%BF%A1%E6%81%AF%E6%B5%81%E5%89%AA%E8%BE%91"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/ebe5cef5ff1c7d5e1nx_29y9EFFW.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-media-20260703-010",
+      "title": "摄影/摄像师",
+      "company": "香云故里",
+      "salary": "薪资以平台为准",
+      "category": "拍摄",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "摄影/摄像师方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "摄影摄像",
+        "平台候选",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/b744f5e62e3dcfac1nJ939S9GVJW.html",
+        "58": "https://m.58.com/gz/job/?key=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C%20%E6%91%84%E5%BD%B1/%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/b744f5e62e3dcfac1nJ939S9GVJW.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-media-20260703-001",
+      "title": "摄影剪辑师",
+      "company": "广东路卡服装集团有限公司",
+      "salary": "10-15k",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "3-5年，大专；摄影剪辑师，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "摄影剪辑",
+        "天河",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "今日更新",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1978112193.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1978112193.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-media-20260703-002",
+      "title": "视频剪辑师",
+      "company": "广州来音广告有限公司",
+      "salary": "4-6k",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "视频剪辑师方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "视频剪辑",
+        "天河",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1967554207.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1967554207.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-media-20260703-004",
+      "title": "短视频剪辑",
+      "company": "广州斯伯特生物科技有限公司",
+      "salary": "8-12k",
+      "category": "剪辑",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "短视频剪辑方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "短视频",
+        "剪辑",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1979235723.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1979235723.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "job51-media-20260703-001",
+      "title": "摄影师（会设计，双休）",
+      "company": "广东拓必拓科技股份有限公司",
+      "salary": "6-8千",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河",
+      "subwayLines": [],
+      "subwayDistance": "前程无忧候选岗位，打开平台核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobArea=030200",
+      "linkType": "platform-candidate",
+      "requirements": "摄影师方向，前程无忧搜索结果候选。",
+      "tags": [
+        "前程无忧",
+        "摄影师",
+        "双休",
+        "前程无忧",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "前程无忧",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobarea=030200",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&jobarea=030200",
+        "zhilian": "https://jobs.51job.com/guangzhou-thq/170970923.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://jobs.51job.com/guangzhou-thq/170970923.html",
+      "verificationReason": "前程无忧 详情页可能需要登录、安全验证或已下架；按钮改为在前程无忧搜索公司名称，请打开平台核对。"
+    }
+  ],
+  "tourismJobs": [
+    {
+      "id": "tourism-20260703-001",
+      "title": "销售顾问（入境游）",
+      "company": "广东华畅国际旅行社有限公司",
+      "salary": "5000-10000元",
+      "category": "入境游销售",
+      "location": "广州越秀区梅花村",
+      "subway": "越秀 / 杨箕方向",
+      "subwayLines": [
+        "1",
+        "5"
+      ],
+      "subwayDistance": "从东圃、车陂可接5号线方向通勤，投递前核对具体地址",
+      "area": "nearby5",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC445823180J40920272715.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，本科；入境游销售顾问，负责人刚在线。",
+      "tags": [
+        "入境游",
+        "销售顾问",
+        "旅行社",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC445823180J40920272715.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC445823180J40920272715.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E9%94%80%E5%94%AE%E9%A1%BE%E9%97%AE%EF%BC%88%E5%85%A5%E5%A2%83%E6%B8%B8%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC445823180J40920272715.htm"
+    },
+    {
+      "id": "tourism-20260703-002",
+      "title": "入境游计调",
+      "company": "广之旅",
+      "salary": "8000-12000元",
+      "category": "入境游销售",
+      "location": "广州白云区棠景",
+      "subway": "白云棠景",
+      "subwayLines": [
+        "2"
+      ],
+      "subwayDistance": "广州范围可投递，距离东圃/黄村较远，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC136781110J40886618913.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，本科；入境游计调，交通便利，负责人刚在线。",
+      "tags": [
+        "入境游",
+        "计调",
+        "广之旅",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC136781110J40886618913.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC136781110J40886618913.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC136781110J40886618913.htm"
+    },
+    {
+      "id": "tourism-20260703-003",
+      "title": "定制计调员（来粤地接方向）",
+      "company": "广之旅",
+      "salary": "6000-9000元",
+      "category": "入境游销售",
+      "location": "广州白云区棠景",
+      "subway": "白云棠景",
+      "subwayLines": [
+        "2"
+      ],
+      "subwayDistance": "广州范围可投递，来粤地接方向，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC136781110J40790158613.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，本科；来粤地接方向定制计调，负责人刚在线。",
+      "tags": [
+        "地接",
+        "定制计调",
+        "广之旅",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC136781110J40790158613.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC136781110J40790158613.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E5%AE%9A%E5%88%B6%E8%AE%A1%E8%B0%83%E5%91%98%EF%BC%88%E6%9D%A5%E7%B2%A4%E5%9C%B0%E6%8E%A5%E6%96%B9%E5%90%91%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC136781110J40790158613.htm"
+    },
+    {
+      "id": "tourism-20260703-004",
+      "title": "旅游销售经理",
+      "company": "广州普昕酒店有限公司",
+      "salary": "8000-16000元",
+      "category": "入境游销售",
+      "location": "广州天河区冼村",
+      "subway": "冼村 / 猎德方向",
+      "subwayLines": [
+        "5"
+      ],
+      "subwayDistance": "天河5号线方向，东圃/车陂到冼村一线可达",
+      "area": "nearby5",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1451168770J40737363816.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，大专；旅游销售经理，负责人刚在线。",
+      "tags": [
+        "旅游销售",
+        "经理",
+        "天河",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1451168770J40737363816.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1451168770J40737363816.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%99%AE%E6%98%95%E9%85%92%E5%BA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E7%BB%8F%E7%90%86"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1451168770J40737363816.htm"
+    },
+    {
+      "id": "tourism-20260703-005",
+      "title": "旅行社销售专员",
+      "company": "五月花(广州)旅行社有限公司",
+      "salary": "6000-9000元",
+      "category": "入境游销售",
+      "location": "广州天河区林和",
+      "subway": "林和 / 广州东站",
+      "subwayLines": [
+        "1",
+        "3"
+      ],
+      "subwayDistance": "天河区地铁可达，需核对从黄村/东圃通勤时间",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1246011670J40661126911.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，大专；旅行社销售专员，负责人刚在线。",
+      "tags": [
+        "旅行社",
+        "销售专员",
+        "天河",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98",
+        "58": "https://gz.58.com/job/?key=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1246011670J40661126911.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1246011670J40661126911.htm",
+        "58": "https://m.58.com/gz/job/?key=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%BA%94%E6%9C%88%E8%8A%B1%28%E5%B9%BF%E5%B7%9E%29%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E8%A1%8C%E7%A4%BE%E9%94%80%E5%94%AE%E4%B8%93%E5%91%98"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1246011670J40661126911.htm"
+    },
+    {
+      "id": "tourism-20260703-006",
+      "title": "旅游产品经理（薪酬面议）",
+      "company": "广州市智能网联汽车示范区运营中心",
+      "salary": "8000-12000元",
+      "category": "入境游销售",
+      "location": "广州天河区五山",
+      "subway": "五山",
+      "subwayLines": [
+        "3"
+      ],
+      "subwayDistance": "天河区地铁可达，偏产品/线路方向",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1386489560J40866179509.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，本科；旅游产品经理，负责人刚在线。",
+      "tags": [
+        "旅游产品",
+        "产品经理",
+        "天河",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1386489560J40866179509.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1386489560J40866179509.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%99%BA%E8%83%BD%E7%BD%91%E8%81%94%E6%B1%BD%E8%BD%A6%E7%A4%BA%E8%8C%83%E5%8C%BA%E8%BF%90%E8%90%A5%E4%B8%AD%E5%BF%83%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E8%96%AA%E9%85%AC%E9%9D%A2%E8%AE%AE%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1386489560J40866179509.htm"
+    },
+    {
+      "id": "tourism-20260703-007",
+      "title": "旅游业务销售",
+      "company": "广东省中国青年旅行社有限公司永泰分公司",
+      "salary": "7000-8000元",
+      "category": "入境游销售",
+      "location": "广州白云区永平",
+      "subway": "白云永平",
+      "subwayLines": [
+        "3"
+      ],
+      "subwayDistance": "广州范围可投递，距离东圃/黄村较远，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1479577250J40849174509.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验；旅游业务销售，负责人刚在线。",
+      "tags": [
+        "旅游销售",
+        "旅行社",
+        "业务销售",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1479577250J40849174509.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1479577250J40849174509.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%B8%9A%E5%8A%A1%E9%94%80%E5%94%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1479577250J40849174509.htm"
+    },
+    {
+      "id": "tourism-20260703-008",
+      "title": "旅游销售",
+      "company": "广东亚太国际旅行社有限公司",
+      "salary": "4000-8000元",
+      "category": "入境游销售",
+      "location": "广州越秀区人民街道",
+      "subway": "越秀人民街道",
+      "subwayLines": [
+        "6"
+      ],
+      "subwayDistance": "广州范围可投递，先核对通勤和门店地址",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC299814580J40778114806.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，大专；旅游销售，负责人刚在线。",
+      "tags": [
+        "旅游销售",
+        "旅行社",
+        "越秀",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC299814580J40778114806.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC299814580J40778114806.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC299814580J40778114806.htm"
+    },
+    {
+      "id": "tourism-20260703-009",
+      "title": "旅游销售助理-广州",
+      "company": "MIKI TRAVEL LIMITED",
+      "salary": "6000-8000元·13薪",
+      "category": "入境游销售",
+      "location": "广州越秀区人民街道",
+      "subway": "越秀人民街道",
+      "subwayLines": [
+        "6"
+      ],
+      "subwayDistance": "广州范围可投递，偏入境/旅游销售助理方向",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC310294510J40785236106.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，本科；旅游销售助理，13薪，负责人刚在线。",
+      "tags": [
+        "旅游销售助理",
+        "13薪",
+        "外企",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E",
+        "58": "https://gz.58.com/job/?key=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC310294510J40785236106.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC310294510J40785236106.htm",
+        "58": "https://m.58.com/gz/job/?key=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=MIKI%20TRAVEL%20LIMITED%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E5%8A%A9%E7%90%86-%E5%B9%BF%E5%B7%9E"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC310294510J40785236106.htm"
+    },
+    {
+      "id": "tourism-20260703-010",
+      "title": "旅游同业销售",
+      "company": "广东亚太国际旅行社有限公司",
+      "salary": "5000-9000元",
+      "category": "入境游销售",
+      "location": "广州越秀区人民街道",
+      "subway": "越秀人民街道",
+      "subwayLines": [
+        "6"
+      ],
+      "subwayDistance": "广州范围可投递，同业销售方向，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC299814580J40782549406.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，大专；旅游同业销售，负责人刚在线。",
+      "tags": [
+        "同业销售",
+        "旅行社",
+        "旅游",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC299814580J40782549406.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC299814580J40782549406.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E5%90%8C%E4%B8%9A%E9%94%80%E5%94%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC299814580J40782549406.htm"
+    },
+    {
+      "id": "tourism-20260703-011",
+      "title": "旅游保险顾问",
+      "company": "中国人寿保险股份有限公司广州市天河支公司",
+      "salary": "1-2万",
+      "category": "入境游销售",
+      "location": "广州天河区猎德",
+      "subway": "猎德",
+      "subwayLines": [
+        "5"
+      ],
+      "subwayDistance": "天河5号线方向，东圃/车陂到猎德一线可达",
+      "area": "nearby5",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC482881230J40836551901.htm",
+      "linkType": "verified",
+      "requirements": "经验不限，大专；旅游保险顾问，负责人刚在线。",
+      "tags": [
+        "旅游保险",
+        "顾问",
+        "天河",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE",
+        "58": "https://gz.58.com/job/?key=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC482881230J40836551901.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC482881230J40836551901.htm",
+        "58": "https://m.58.com/gz/job/?key=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%AF%BF%E4%BF%9D%E9%99%A9%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E6%94%AF%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BF%9D%E9%99%A9%E9%A1%BE%E9%97%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC482881230J40836551901.htm"
+    },
+    {
+      "id": "tourism-20260703-012",
+      "title": "旅游顾问",
+      "company": "广东省中国青年旅行社有限公司永泰分公司",
+      "salary": "5000-9000元",
+      "category": "入境游销售",
+      "location": "广州白云区永平",
+      "subway": "白云永平",
+      "subwayLines": [
+        "3"
+      ],
+      "subwayDistance": "广州范围可投递，旅行社旅游顾问方向",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1479577250J40831556409.htm",
+      "linkType": "verified",
+      "requirements": "经验不限；旅游顾问，负责人刚在线。",
+      "tags": [
+        "旅游顾问",
+        "旅行社",
+        "销售",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1479577250J40831556409.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1479577250J40831556409.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E7%9C%81%E4%B8%AD%E5%9B%BD%E9%9D%92%E5%B9%B4%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%B0%B8%E6%B3%B0%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1479577250J40831556409.htm"
+    },
+    {
+      "id": "tourism-20260703-013",
+      "title": "旅游顾问",
+      "company": "广东亚太国际旅行社有限公司",
+      "salary": "4000-8000元",
+      "category": "入境游销售",
+      "location": "广州越秀区人民街道",
+      "subway": "越秀人民街道",
+      "subwayLines": [
+        "6"
+      ],
+      "subwayDistance": "广州范围可投递，旅游顾问方向，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC299814580J40782438006.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，大专；旅游顾问，负责人刚在线。",
+      "tags": [
+        "旅游顾问",
+        "旅行社",
+        "越秀",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC299814580J40782438006.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC299814580J40782438006.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E4%BA%9A%E5%A4%AA%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC299814580J40782438006.htm"
+    },
+    {
+      "id": "tourism-20260703-014",
+      "title": "旅游顾问（门店销售员）(J10047)",
+      "company": "广之旅",
+      "salary": "5000-10000元",
+      "category": "入境游销售",
+      "location": "广州白云区棠景",
+      "subway": "白云棠景",
+      "subwayLines": [
+        "2"
+      ],
+      "subwayDistance": "广州范围可投递，门店销售方向，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC136781110J40475537913.htm",
+      "linkType": "verified",
+      "requirements": "3-5年经验，中专/中技；门店旅游顾问，负责人刚在线。",
+      "tags": [
+        "旅游顾问",
+        "门店销售",
+        "广之旅",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "本周",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC136781110J40475537913.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC136781110J40475537913.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%20%E6%97%85%E6%B8%B8%E9%A1%BE%E9%97%AE%EF%BC%88%E9%97%A8%E5%BA%97%E9%94%80%E5%94%AE%E5%91%98%EF%BC%89%28J10047%29"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC136781110J40475537913.htm"
+    },
+    {
+      "id": "boss-tourism-20260703-001",
+      "title": "入境游计调",
+      "company": "广之旅国际旅行社",
+      "salary": "8-12K",
+      "category": "入境游销售",
+      "location": "广州白云区棠景",
+      "subway": "白云棠景",
+      "subwayLines": [
+        "2"
+      ],
+      "subwayDistance": "BOSS直聘候选岗位，广州范围可投递，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "入境游计调方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "入境游",
+        "计调",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/e7cefdfb581347b11nZ509y7GVZR.html",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8%E8%AE%A1%E8%B0%83"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/e7cefdfb581347b11nZ509y7GVZR.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-tourism-20260703-002",
+      "title": "入境游OP",
+      "company": "三国国际旅行社",
+      "salary": "4-6K",
+      "category": "入境游销售",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "BOSS直聘候选岗位，打开平台核对具体地址",
+      "area": "guangzhou",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "1-3年；入境游OP方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "入境游",
+        "OP",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP",
+        "58": "https://gz.58.com/job/?key=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/3a4063fe5822ce1f1nd40tS6EFdU.html",
+        "58": "https://m.58.com/gz/job/?key=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%20%E5%85%A5%E5%A2%83%E6%B8%B8OP"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/3a4063fe5822ce1f1nd40tS6EFdU.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "boss-tourism-20260703-003",
+      "title": "旅游定制师",
+      "company": "不遛湾",
+      "salary": "10-15K",
+      "category": "入境游销售",
+      "location": "广州天河区珠江新城",
+      "subway": "珠江新城",
+      "subwayLines": [
+        "3",
+        "5"
+      ],
+      "subwayDistance": "天河5号线方向，东圃/车陂可接5号线",
+      "area": "nearby5",
+      "directLink": "https://www.zhipin.com/web/geek/job?query=%E4%B8%8D%E9%81%9B%E6%B9%BE&city=101280100&district=440106",
+      "linkType": "platform-candidate",
+      "requirements": "旅游定制师方向，BOSS直聘搜索结果候选。",
+      "tags": [
+        "BOSS",
+        "旅游定制",
+        "天河",
+        "BOSS直聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "BOSS直聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%8D%E9%81%9B%E6%B9%BE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhipin.com/gz/job/?query=%E4%B8%8D%E9%81%9B%E6%B9%BE",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E4%B8%8D%E9%81%9B%E6%B9%BE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88&jobarea=030200",
+        "zhilian": "https://www.zhipin.com/job_detail/9f03bd5717c79d711XB-29S8F1RX.html",
+        "58": "https://m.58.com/gz/job/?key=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E4%B8%8D%E9%81%9B%E6%B9%BE%20%E6%97%85%E6%B8%B8%E5%AE%9A%E5%88%B6%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.zhipin.com/job_detail/9f03bd5717c79d711XB-29S8F1RX.html",
+      "verificationReason": "BOSS直聘 详情页可能需要登录、安全验证或已下架；按钮改为在BOSS直聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-tourism-20260703-001",
+      "title": "旅游销售总助（出境&入境定制游方向）",
+      "company": "深圳市好旅途国际旅行社有限公司广州分公司",
+      "salary": "8-13k",
+      "category": "入境游销售",
+      "location": "广州越秀区",
+      "subway": "越秀",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，广州范围可投递，先核对通勤",
+      "area": "guangzhou",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "出境&入境定制游方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "入境定制游",
+        "旅游销售",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "近期",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1981654891.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1981654891.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-tourism-20260703-002",
+      "title": "旅游销售",
+      "company": "Topalways Group",
+      "salary": "5-10k",
+      "category": "入境游销售",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "guangzhou",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=Topalways%20Group",
+      "linkType": "platform-candidate",
+      "requirements": "旅游销售方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "旅游销售",
+        "平台候选",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "58": "https://gz.58.com/job/?key=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=Topalways%20Group"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=Topalways%20Group",
+        "boss": "https://m.zhipin.com/gz/job/?query=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1965468071.shtml",
+        "58": "https://m.58.com/gz/job/?key=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=Topalways%20Group"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1965468071.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-tourism-20260703-003",
+      "title": "旅游产品销售",
+      "company": "广州市途喜文化传播有限公司",
+      "salary": "7-8k",
+      "category": "入境游销售",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "guangzhou",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "旅游产品销售方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "旅游产品",
+        "销售",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "平台候选",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1963547543.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1963547543.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
+    },
+    {
+      "id": "liepin-tourism-20260703-004",
+      "title": "出境计调",
+      "company": "广东华畅国际旅行社有限公司",
+      "salary": "6-10k",
+      "category": "入境游销售",
+      "location": "广州",
+      "subway": "广州",
+      "subwayLines": [],
+      "subwayDistance": "猎聘候选岗位，打开平台核对具体地址",
+      "area": "guangzhou",
+      "directLink": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "linkType": "platform-candidate",
+      "requirements": "旅行社计调方向，猎聘搜索结果候选。",
+      "tags": [
+        "猎聘",
+        "旅行社",
+        "计调",
+        "猎聘",
+        "搜索公司"
+      ],
+      "isNew": false,
+      "verified": false,
+      "source": "猎聘",
+      "sourcePublished": "近期",
+      "lastChecked": "2026-07-03T16:48:45+08:00",
+      "verificationStatus": "platform-candidate",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83&jobarea=030200",
+        "zhilian": "https://www.liepin.com/job/1982161255.shtml",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "originalDetailLink": "https://www.liepin.com/job/1982161255.shtml",
+      "verificationReason": "猎聘 详情页可能需要登录、安全验证或已下架；按钮改为在猎聘搜索公司名称，请打开平台核对。"
     }
   ]
 }
