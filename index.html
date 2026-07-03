@@ -200,8 +200,25 @@
         }
         .header .subtitle {
             font-size: 1rem;
-            opacity: .85;
             margin-bottom: 16px;
+            font-weight: 650;
+            line-height: 1.8;
+        }
+        .gradient-subtitle {
+            display: inline-block;
+            max-width: min(860px, 92vw);
+            background-image: linear-gradient(90deg, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa);
+            background-size: 300% 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient-text-flow 3s ease-in-out infinite alternate;
+            text-shadow: 0 0 18px rgba(64,255,170,.18);
+        }
+        @keyframes gradient-text-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
         .header .update-time {
             display: inline-block;
@@ -493,33 +510,86 @@
         .job-actions {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             align-items: flex-end;
             flex-shrink: 0;
         }
         .btn {
-            padding: 10px 20px;
-            border-radius: 8px;
+            --pill-base: rgba(255,255,255,.08);
+            --pill-text: #f8fafc;
+            --pill-hover-bg: #f8fafc;
+            --pill-hover-text: #120f17;
+            padding: 11px 22px;
+            border-radius: 9999px;
             font-size: .9rem;
-            font-weight: 600;
+            font-weight: 750;
             text-decoration: none;
             text-align: center;
-            transition: all .2s;
-            display: inline-block;
+            transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease, color .24s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             white-space: nowrap;
+            min-width: 112px;
+            line-height: 1;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .btn::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -125%;
+            width: 170%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--pill-hover-bg);
+            transform: translateX(-50%) scale(0);
+            transform-origin: 50% 82%;
+            transition: transform .42s cubic-bezier(.22,1,.36,1);
+            z-index: -1;
+        }
+        .btn::after {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            border-radius: inherit;
+            background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.2), transparent 80%);
+            transform: translateX(-120%);
+            transition: transform .42s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .btn:hover {
+            color: var(--pill-hover-text);
+            transform: translateY(-2px);
+        }
+        .btn:hover::before { transform: translateX(-50%) scale(1); }
+        .btn:hover::after { transform: translateX(120%); }
+        .btn:focus-visible {
+            outline: 2px solid rgba(64,255,170,.85);
+            outline-offset: 3px;
         }
         .btn-primary {
-            background: var(--primary);
+            --pill-base: linear-gradient(135deg, #7c3aed, #5227ff);
+            --pill-hover-bg: #f8fafc;
+            --pill-hover-text: #120f17;
+            background: var(--pill-base);
             color: #fff;
-            border: none;
+            border: 1px solid rgba(255,255,255,.18);
+            box-shadow: 0 10px 24px rgba(82,39,255,.34);
         }
-        .btn-primary:hover { background: var(--primary-dark); transform: scale(1.03); }
+        .btn-primary:hover { box-shadow: 0 14px 32px rgba(64,255,170,.22); }
         .btn-outline {
-            background: rgba(255,255,255,.08);
-            color: #dbeafe;
-            border: 1px solid rgba(219,234,254,.34);
+            --pill-base: rgba(255,255,255,.075);
+            --pill-hover-bg: #f8fafc;
+            --pill-hover-text: #120f17;
+            background: var(--pill-base);
+            color: #f8fafc;
+            border: 1px solid rgba(248,250,252,.38);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
         }
-        .btn-outline:hover { background: rgba(219,234,254,.16); }
         .btn .btn-hint {
             display: block;
             font-size: .68rem;
@@ -601,14 +671,54 @@
 
         /* ===== 实时职位搜索台 ===== */
         .live-hub {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #2563eb 100%);
-            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            background:
+                linear-gradient(135deg, rgba(15,23,42,.74) 0%, rgba(30,58,95,.62) 52%, rgba(37,99,235,.66) 100%),
+                radial-gradient(circle at 12% 0%, rgba(64,255,170,.22), transparent 30%),
+                radial-gradient(circle at 88% 20%, rgba(64,121,255,.35), transparent 36%);
+            border: 1px solid rgba(255,255,255,.22);
+            border-radius: 18px;
             padding: 24px 22px;
             margin-bottom: 22px;
             color: #fff;
-            box-shadow: 0 8px 24px rgba(30,58,95,.25);
+            box-shadow: 0 24px 70px rgba(4,8,20,.36), inset 0 1px 0 rgba(255,255,255,.2);
+            backdrop-filter: blur(22px) saturate(1.35);
+        }
+        .live-hub::before,
+        .live-hub::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .live-hub::before {
+            inset: -45%;
+            background:
+                linear-gradient(115deg, transparent 24%, rgba(255,255,255,.18) 36%, transparent 48%),
+                linear-gradient(72deg, transparent 30%, rgba(64,255,170,.18) 42%, rgba(64,121,255,.22) 54%, transparent 66%);
+            filter: blur(12px);
+            opacity: .82;
+            animation: fluid-glass-drift 8s ease-in-out infinite alternate;
+        }
+        .live-hub::after {
+            inset: 1px;
+            border-radius: inherit;
+            background:
+                radial-gradient(circle at var(--glass-x, 30%) var(--glass-y, 20%), rgba(255,255,255,.34), transparent 18%),
+                linear-gradient(180deg, rgba(255,255,255,.16), transparent 38%),
+                linear-gradient(90deg, rgba(64,255,170,.1), transparent 38%, rgba(124,58,237,.12));
+            mix-blend-mode: screen;
+            opacity: .78;
+        }
+        @keyframes fluid-glass-drift {
+            0% { transform: translate3d(-8%, -4%, 0) rotate(-8deg) scale(1); }
+            100% { transform: translate3d(8%, 5%, 0) rotate(8deg) scale(1.08); }
         }
         .live-hub .hub-head {
+            position: relative;
+            z-index: 1;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -626,22 +736,30 @@
             animation: pulse-dot 1.6s infinite;
         }
         .live-hub .hub-sub {
+            position: relative;
+            z-index: 1;
             font-size: .88rem;
-            opacity: .85;
+            opacity: .92;
             margin-bottom: 18px;
             line-height: 1.5;
         }
         .live-hub .hub-grid {
+            position: relative;
+            z-index: 1;
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px;
         }
         .hub-cat {
+            position: relative;
+            overflow: hidden;
             background: rgba(255,255,255,.08);
-            border: 1px solid rgba(255,255,255,.18);
+            border: 1px solid rgba(255,255,255,.2);
             border-radius: 12px;
             padding: 16px 14px;
             transition: all .2s;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
+            backdrop-filter: blur(14px);
         }
         .hub-cat:hover {
             background: rgba(255,255,255,.14);
@@ -663,27 +781,48 @@
             gap: 7px;
         }
         .hub-btn {
+            position: relative;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #fff;
-            color: #1e293b;
+            background: rgba(255,255,255,.92);
+            color: #120f17;
             text-decoration: none;
             padding: 9px 13px;
-            border-radius: 8px;
+            border-radius: 9999px;
             font-size: .86rem;
-            font-weight: 600;
-            transition: all .15s;
+            font-weight: 750;
+            transition: transform .2s ease, box-shadow .2s ease, color .2s ease;
+            isolation: isolate;
+        }
+        .hub-btn::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -130%;
+            width: 170%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #120f17;
+            transform: translateX(-50%) scale(0);
+            transform-origin: 50% 82%;
+            transition: transform .38s cubic-bezier(.22,1,.36,1);
+            z-index: -1;
         }
         .hub-btn:hover {
             transform: scale(1.03);
             box-shadow: 0 4px 12px rgba(0,0,0,.2);
+            color: #fff;
         }
+        .hub-btn:hover::before { transform: translateX(-50%) scale(1); }
         .hub-btn .arrow { font-size: 1rem; opacity: .5; }
         .hub-btn.boss { border-left: 4px solid #00bebd; }
         .hub-btn.job51 { border-left: 4px solid #ff704f; }
         .hub-btn.c58 { border-left: 4px solid #ffd100; }
         .live-hub .hub-foot {
+            position: relative;
+            z-index: 1;
             margin-top: 16px;
             font-size: .8rem;
             opacity: .8;
@@ -770,7 +909,9 @@
 <!-- Header -->
 <div class="header">
     <h1>广州天河黄村附近 · 剪辑/拍摄最新工作</h1>
-    <div class="subtitle">只保留视频剪辑、摄影摄像岗位；范围扩展到黄村地铁约2-5站可达，每天核验具体岗位来源页</div>
+    <div class="subtitle">
+        <span class="gradient-subtitle">只保留视频剪辑、摄影摄像岗位；范围扩展到黄村地铁约2-5站可达，每天核验具体岗位来源页</span>
+    </div>
     <div class="update-time" id="updateBadge">正在加载今日数据...</div>
 </div>
 
@@ -1035,6 +1176,18 @@ function initBorderGlow(root = document) {
     });
 }
 
+function initFluidGlassHub() {
+    const hub = document.querySelector('.live-hub');
+    if (!hub) return;
+    hub.addEventListener('pointermove', e => {
+        const rect = hub.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / Math.max(rect.width, 1) * 100).toFixed(2);
+        const y = ((e.clientY - rect.top) / Math.max(rect.height, 1) * 100).toFixed(2);
+        hub.style.setProperty('--glass-x', `${x}%`);
+        hub.style.setProperty('--glass-y', `${y}%`);
+    }, { passive: true });
+}
+
 const areaConfig = {
     'huangcun': { title: '黄村 / 珠吉 / 车陂附近优先', order: 1 },
     'nearby1': { title: '地铁1-2站范围（大观南路 / 奥体）', order: 2 },
@@ -1243,6 +1396,7 @@ document.querySelectorAll('.filter-tag').forEach(tag => {
 
 initCardNav();
 initLiquidBackground();
+initFluidGlassHub();
 loadJobs();
 </script>
 
