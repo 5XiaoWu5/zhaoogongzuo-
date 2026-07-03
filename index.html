@@ -338,25 +338,6 @@
         }
         .filter-bar input:focus { border-color: var(--primary); }
 
-        .filter-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .filter-tag {
-            padding: 8px 16px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,.18);
-            background: rgba(255,255,255,.9);
-            cursor: pointer;
-            font-size: .9rem;
-            transition: all .2s;
-            white-space: nowrap;
-            color: #1e293b;
-        }
-        .filter-tag:hover { border-color: var(--primary); color: var(--primary); }
-        .filter-tag.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-
         .result-count {
             font-size: .9rem;
             color: var(--text-secondary);
@@ -554,8 +535,7 @@
             box-shadow: 0 0 0 3px rgba(64,255,170,.18);
         }
 
-        #contentArea,
-        #tourismBoard {
+        #folderWorkspace {
             scroll-margin-top: 86px;
         }
 
@@ -1143,29 +1123,29 @@
                 </span>
             </button>
             <div class="nav-logo">黄村岗位更新</div>
-            <button class="card-nav-cta-button" type="button" onclick="document.getElementById('searchInput')?.focus()">搜索岗位</button>
+            <button class="card-nav-cta-button" type="button" onclick="openJobFolder(currentFolder || '剪辑'); document.getElementById('folderSearchInput')?.focus()">搜索岗位</button>
         </div>
         <div class="card-nav-content">
             <div class="nav-card" style="background:#1B1722;color:#fff;">
                 <div class="nav-card-label">岗位</div>
             <div class="nav-card-links">
-                    <a class="nav-card-link" href="#contentArea">查看已核验岗位 ↗</a>
-                    <a class="nav-card-link" href="#searchInput">搜索公司/地点 ↗</a>
-                    <a class="nav-card-link" href="#tourismBoard">入境游销售 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace" data-nav-filter="剪辑">视频剪辑文件夹 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace" data-nav-filter="拍摄">摄影摄像文件夹 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace" data-nav-filter="入境游销售">入境游销售 ↗</a>
                 </div>
             </div>
             <div class="nav-card" style="background:#2F293A;color:#fff;">
                 <div class="nav-card-label">筛选</div>
                 <div class="nav-card-links">
-                    <a class="nav-card-link" href="#contentArea" data-nav-filter="剪辑">视频剪辑 ↗</a>
-                    <a class="nav-card-link" href="#contentArea" data-nav-filter="拍摄">摄影摄像 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace" data-nav-filter="剪辑">视频剪辑 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace" data-nav-filter="拍摄">摄影摄像 ↗</a>
                 </div>
             </div>
             <div class="nav-card" style="background:#17324D;color:#fff;">
                 <div class="nav-card-label">安全</div>
                 <div class="nav-card-links">
                     <a class="nav-card-link" href="#autoBanner">每日核验规则 ↗</a>
-                    <a class="nav-card-link" href="#contentArea">只投递来源页 ↗</a>
+                    <a class="nav-card-link" href="#folderWorkspace">只投递来源页 ↗</a>
                 </div>
             </div>
         </div>
@@ -1631,7 +1611,17 @@ function createJobCard(job) {
     const primaryLink = pickActionLink(job, 'direct', primaryWebLink);
     const sourceInfo = sourcePlatform(job);
     const sourcePlatformLink = pickActionLink(job, sourceInfo.key, primaryWebLink);
-    const searchText = [job.title, job.category, job.location, job.subway, job.requirements, job.sourceKeyword, Object.keys(pl).join(' ')].join(' ');
+    const searchText = [
+        job.title,
+        job.company,
+        job.category,
+        job.location,
+        job.subway,
+        job.requirements,
+        job.source,
+        job.sourceKeyword,
+        (job.tags || []).join(' ')
+    ].join(' ');
     const isVerified = job.verificationStatus === 'verified-active' || job.verified === true;
     const freshness = isVerified && job.lastChecked
         ? `核验时间：${new Date(job.lastChecked).toLocaleDateString('zh-CN')}`
@@ -1778,7 +1768,11 @@ function updateFolderFilter() {
 }
 
 function openJobFolder(folder) {
-    const normalized = folder === 'all' ? '剪辑' : folder;
+    const normalized = folder || '剪辑';
+    if (normalized === 'all') {
+        document.getElementById('folderWorkspace')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+    }
     currentFolder = normalized;
     const config = folderConfig(normalized);
     const jobs = folderJobs(normalized);
@@ -1808,7 +1802,7 @@ document.querySelectorAll('.folder-card').forEach(card => {
 });
 
 document.querySelectorAll('[data-stat-jump]').forEach(item => {
-    item.addEventListener('click', () => scrollToJobs(item.dataset.statJump));
+    item.addEventListener('click', () => openJobFolder(item.dataset.statJump));
 });
 
 initCardNav();
