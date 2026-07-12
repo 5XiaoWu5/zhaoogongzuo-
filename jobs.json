@@ -1,9 +1,9 @@
 {
-  "updateTime": "2026-07-11T18:55:18+08:00",
+  "updateTime": "2026-07-12T09:50:03+08:00",
   "updateMethod": "github-actions-daily-verified-job-cards",
-  "totalCount": 14,
+  "totalCount": 22,
   "tourismCount": 7,
-  "removedCount": 29,
+  "removedCount": 21,
   "dataNote": "本站保留剪辑/拍摄岗位，并新增独立的入境游销售板块。每天自动打开具体来源页核验；无法访问、疑似下架或页面不再匹配岗位/公司的卡片会自动剔除。",
   "sources": [
     "BOSS直聘",
@@ -13,62 +13,6 @@
     "猎聘"
   ],
   "removedJobs": [
-    {
-      "id": "job-20260703-001",
-      "title": "短视频拍摄剪辑师13薪（双休）",
-      "company": "广州市雅俗共赏文化传媒有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1281652160J40596384804.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-002",
-      "title": "Ai漫剧剪辑师助理",
-      "company": "广州汇智云人工智能科技有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525435800J40857563611.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-003",
-      "title": "短视频制作剪辑助理",
-      "company": "广州汇智云人工智能科技有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525435800J40858756911.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-004",
-      "title": "信息流短视频剪辑师",
-      "company": "广州用心选供应链有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1495809540J40747711801.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-005",
-      "title": "摄像师",
-      "company": "ZAKER",
-      "directLink": "https://www.zhaopin.com/jobdetail/CC464221920J40810353713.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-006",
-      "title": "影视后期剪辑师",
-      "company": "广州哔然文化科技有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1524900740J41012160804.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-007",
-      "title": "影楼摄影助理可接受新人",
-      "company": "广州侬淇科技有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525387210J40856800411.htm",
-      "reason": "source page no longer matches title/company"
-    },
-    {
-      "id": "job-20260703-008",
-      "title": "TikTok短视频剪辑/拍摄/跨境电商",
-      "company": "广东全球拼购电子商务有限公司",
-      "directLink": "https://www.zhaopin.com/jobdetail/CCL1293253300J40866134205.htm",
-      "reason": "source page no longer matches title/company"
-    },
     {
       "id": "job-20260703-009",
       "title": "视频设计专员（双体）",
@@ -221,6 +165,422 @@
   ],
   "jobs": [
     {
+      "id": "job-20260703-001",
+      "title": "短视频拍摄剪辑师13薪（双休）",
+      "company": "广州市雅俗共赏文化传媒有限公司",
+      "salary": "9000-13000元/月",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1281652160J40596384804.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，大专；短视频拍摄剪辑岗位，13薪、双休。",
+      "tags": [
+        "13薪",
+        "双休",
+        "拍剪一体",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "上周",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1281652160J40596384804.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1281652160J40596384804.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E6%8B%8D%E6%91%84%E5%89%AA%E8%BE%91%E5%B8%8813%E8%96%AA%EF%BC%88%E5%8F%8C%E4%BC%91%EF%BC%89"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1281652160J40596384804.htm"
+    },
+    {
+      "id": "job-20260703-002",
+      "title": "Ai漫剧剪辑师助理",
+      "company": "广州汇智云人工智能科技有限公司",
+      "salary": "6000-8000元/月",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525435800J40857563611.htm",
+      "linkType": "verified",
+      "requirements": "经验不限，大专；AI漫剧剪辑助理，招聘负责人刚在线。",
+      "tags": [
+        "经验不限",
+        "AI漫剧",
+        "助理",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "2周内",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1525435800J40857563611.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40857563611.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20Ai%E6%BC%AB%E5%89%A7%E5%89%AA%E8%BE%91%E5%B8%88%E5%8A%A9%E7%90%86"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525435800J40857563611.htm"
+    },
+    {
+      "id": "job-20260703-003",
+      "title": "短视频制作剪辑助理",
+      "company": "广州汇智云人工智能科技有限公司",
+      "salary": "5000-8000元/月",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525435800J40858756911.htm",
+      "linkType": "verified",
+      "requirements": "协助完成短视频素材整理与粗剪，适合剪辑助理方向。",
+      "tags": [
+        "剪辑助理",
+        "短视频",
+        "本周",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "上周",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1525435800J40858756911.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525435800J40858756911.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E6%B1%87%E6%99%BA%E4%BA%91%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E5%89%AA%E8%BE%91%E5%8A%A9%E7%90%86"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525435800J40858756911.htm"
+    },
+    {
+      "id": "job-20260703-004",
+      "title": "信息流短视频剪辑师",
+      "company": "广州用心选供应链有限公司",
+      "salary": "6000-8000元/月",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1495809540J40747711801.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，学历不限；信息流短视频剪辑，负责人刚在线。",
+      "tags": [
+        "信息流",
+        "短视频",
+        "学历不限",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "近期",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1495809540J40747711801.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1495809540J40747711801.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E7%94%A8%E5%BF%83%E9%80%89%E4%BE%9B%E5%BA%94%E9%93%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E4%BF%A1%E6%81%AF%E6%B5%81%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1495809540J40747711801.htm"
+    },
+    {
+      "id": "job-20260703-005",
+      "title": "摄像师",
+      "company": "ZAKER",
+      "salary": "6000-11000元/月",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CC464221920J40810353713.htm",
+      "linkType": "verified",
+      "requirements": "经验不限，大专；摄像师岗位，发布较新，负责人刚在线。",
+      "tags": [
+        "摄像师",
+        "经验不限",
+        "3天内",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": true,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "3天内",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CC464221920J40810353713.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CC464221920J40810353713.htm",
+        "58": "https://m.58.com/gz/job/?key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=ZAKER%20%E6%91%84%E5%83%8F%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CC464221920J40810353713.htm"
+    },
+    {
+      "id": "job-20260703-006",
+      "title": "影视后期剪辑师",
+      "company": "广州哔然文化科技有限公司",
+      "salary": "7000-10000元/月",
+      "category": "剪辑",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1524900740J41012160804.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，学历不限；影视后期剪辑方向。",
+      "tags": [
+        "影视后期",
+        "学历不限",
+        "剪辑师",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "近期",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1524900740J41012160804.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1524900740J41012160804.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E5%93%94%E7%84%B6%E6%96%87%E5%8C%96%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F%E5%89%AA%E8%BE%91%E5%B8%88"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1524900740J41012160804.htm"
+    },
+    {
+      "id": "job-20260703-007",
+      "title": "影楼摄影助理可接受新人",
+      "company": "广州侬淇科技有限公司",
+      "salary": "5000-7000元/月",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1525387210J40856800411.htm",
+      "linkType": "verified",
+      "requirements": "经验不限，学历不限；影楼摄影助理，可接受新人。",
+      "tags": [
+        "摄影助理",
+        "接受新人",
+        "经验不限",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "上周",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1525387210J40856800411.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1525387210J40856800411.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E5%B7%9E%E4%BE%AC%E6%B7%87%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%BD%B1%E6%A5%BC%E6%91%84%E5%BD%B1%E5%8A%A9%E7%90%86%E5%8F%AF%E6%8E%A5%E5%8F%97%E6%96%B0%E4%BA%BA"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1525387210J40856800411.htm"
+    },
+    {
+      "id": "job-20260703-008",
+      "title": "TikTok短视频剪辑/拍摄/跨境电商",
+      "company": "广东全球拼购电子商务有限公司",
+      "salary": "6000-8000元/月",
+      "category": "拍摄",
+      "location": "广州天河区",
+      "subway": "天河区",
+      "subwayLines": [],
+      "subwayDistance": "天河区范围，需打开来源核对具体地址",
+      "area": "tianhe",
+      "directLink": "https://www.zhaopin.com/jobdetail/CCL1293253300J40866134205.htm",
+      "linkType": "verified",
+      "requirements": "1-3年经验，大专；TikTok短视频剪辑/拍摄，周末休息。",
+      "tags": [
+        "TikTok",
+        "拍摄剪辑",
+        "周末休息",
+        "智联招聘",
+        "每日核验"
+      ],
+      "isNew": false,
+      "verified": true,
+      "source": "智联招聘",
+      "sourcePublished": "近期",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
+      "verificationStatus": "verified-active",
+      "platformLinks": {
+        "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&city=101280100&district=440106",
+        "51job": "https://we.51job.com/pc/search?keyword=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&jobArea=030200",
+        "zhilian": "https://sou.zhaopin.com/?jl=763&kw=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "58": "https://gz.58.com/job/?key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86"
+      },
+      "mobilePlatformLinks": {
+        "direct": "https://m.zhaopin.com/jobs/CCL1293253300J40866134205.htm",
+        "boss": "https://m.zhipin.com/gz/job/?query=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "51job": "https://m.51job.com/search/joblist.php?keyword=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86&jobarea=030200",
+        "zhilian": "https://m.zhaopin.com/jobs/CCL1293253300J40866134205.htm",
+        "58": "https://m.58.com/gz/job/?key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86",
+        "liepin": "https://www.liepin.com/zhaopin/?city=050020&dq=050020&key=%E5%B9%BF%E4%B8%9C%E5%85%A8%E7%90%83%E6%8B%BC%E8%B4%AD%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20TikTok%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/%E6%8B%8D%E6%91%84/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86"
+      },
+      "miniProgramLinks": {
+        "direct": "",
+        "boss": "",
+        "51job": "",
+        "zhilian": "",
+        "58": "",
+        "liepin": ""
+      },
+      "verificationReason": "ok 200 https://www.zhaopin.com/jobdetail/CCL1293253300J40866134205.htm"
+    },
+    {
       "id": "boss-media-20260703-001",
       "title": "短视频剪辑师",
       "company": "有媒有传媒",
@@ -245,7 +605,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%9C%89%E5%AA%92%E6%9C%89%E4%BC%A0%E5%AA%92&city=101280100&district=440106",
@@ -298,7 +658,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%BF%83%E5%90%88%E6%95%99%E8%82%B2%E6%8A%95%E8%B5%84&city=101280100&district=440106",
@@ -351,7 +711,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%8D%8E%E7%A0%94%E5%A4%96%E8%AF%AD&city=101280100&district=440106",
@@ -404,7 +764,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%8B%BE%E4%BC%98%E7%A7%91%E6%8A%80&city=101280100&district=440106",
@@ -459,7 +819,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "2天内",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E8%8E%AB%E7%94%9F%E6%B0%94%E7%A7%91%E6%8A%80&city=101280100&district=440106",
@@ -512,7 +872,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%97%B6%E5%85%89%E9%87%8F%E5%AD%90&city=101280100&district=440106",
@@ -568,7 +928,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%9B%9C%E7%81%BF%E6%98%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&city=101280100&district=440106",
@@ -621,7 +981,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%B4%BE%E5%BE%B7%E6%B1%BD%E8%BD%A6%E9%85%8D%E4%BB%B6&city=101280100&district=440106",
@@ -674,7 +1034,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%A8%9C%E4%B8%BD%E4%B8%9D&city=101280100&district=440106",
@@ -727,7 +1087,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E9%A6%99%E4%BA%91%E6%95%85%E9%87%8C&city=101280100&district=440106",
@@ -780,7 +1140,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "今日更新",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E8%B7%AF%E5%8D%A1%E6%9C%8D%E8%A3%85%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
@@ -833,7 +1193,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%9D%A5%E9%9F%B3%E5%B9%BF%E5%91%8A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B8%88&city=101280100&district=440106",
@@ -886,7 +1246,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E6%96%AF%E4%BC%AF%E7%89%B9%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E7%9F%AD%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91&city=101280100&district=440106",
@@ -939,7 +1299,7 @@
       "verified": false,
       "source": "前程无忧",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E6%8B%93%E5%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%91%84%E5%BD%B1%E5%B8%88%EF%BC%88%E4%BC%9A%E8%AE%BE%E8%AE%A1%EF%BC%8C%E5%8F%8C%E4%BC%91%EF%BC%89&city=101280100&district=440106",
@@ -996,7 +1356,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B9%8B%E6%97%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
@@ -1049,7 +1409,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%89%E5%9B%BD%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE&city=101280100&district=440106",
@@ -1105,7 +1465,7 @@
       "verified": false,
       "source": "BOSS直聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E4%B8%8D%E9%81%9B%E6%B9%BE&city=101280100&district=440106",
@@ -1158,7 +1518,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%A5%BD%E6%97%85%E9%80%94%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%B9%BF%E5%B7%9E%E5%88%86%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE%E6%80%BB%E5%8A%A9%EF%BC%88%E5%87%BA%E5%A2%83%26%E5%85%A5%E5%A2%83%E5%AE%9A%E5%88%B6%E6%B8%B8%E6%96%B9%E5%90%91%EF%BC%89&city=101280100&district=440106",
@@ -1211,7 +1571,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=Topalways%20Group%20%E6%97%85%E6%B8%B8%E9%94%80%E5%94%AE&city=101280100&district=440106",
@@ -1264,7 +1624,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "平台候选",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E5%B7%9E%E5%B8%82%E9%80%94%E5%96%9C%E6%96%87%E5%8C%96%E4%BC%A0%E6%92%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E6%97%85%E6%B8%B8%E4%BA%A7%E5%93%81%E9%94%80%E5%94%AE&city=101280100&district=440106",
@@ -1317,7 +1677,7 @@
       "verified": false,
       "source": "猎聘",
       "sourcePublished": "近期",
-      "lastChecked": "2026-07-11T18:55:18+08:00",
+      "lastChecked": "2026-07-12T09:50:03+08:00",
       "verificationStatus": "platform-candidate",
       "platformLinks": {
         "boss": "https://www.zhipin.com/web/geek/job?query=%E5%B9%BF%E4%B8%9C%E5%8D%8E%E7%95%85%E5%9B%BD%E9%99%85%E6%97%85%E8%A1%8C%E7%A4%BE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20%E5%87%BA%E5%A2%83%E8%AE%A1%E8%B0%83&city=101280100&district=440106",
