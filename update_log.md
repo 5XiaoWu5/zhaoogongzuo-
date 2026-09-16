@@ -6546,3 +6546,36 @@
 - 旅游顾问 / 广东亚太国际旅行社有限公司：source page no longer matches title/company
 - 旅游顾问（门店销售员）(J10047) / 广之旅：source page no longer matches title/company
 
+
+## 2026-09-16 22:27 自动更新
+
+| 项目 | 数值 |
+|------|------|
+| 更新方式 | GitHub Actions 每日核验 |
+| 数据策略 | 具体岗位卡片 + 来源页有效性检查 |
+| 行业范围 | 剪辑、拍摄 |
+| 保留岗位数 | 31 |
+| 剔除岗位数 | 19 |
+
+剔除明细：
+
+- 视频设计专员（双体） / 广州贤易达信息科技有限公司：HTTP 404
+- 视频混剪专员 / 智绘传媒(广州)有限公司：source page no longer matches title/company
+- 电商短视频剪辑主管/经理（高薪、双休） / 东莞市科询信息科技有限公司：source page no longer matches title/company
+- 短视频剪辑师（中级） / 长沙回声网络科技有限公司：source page no longer matches title/company
+- 产品摄影助理 / 长沙回声网络科技有限公司：source page no longer matches title/company
+- 销售顾问（入境游） / 广东华畅国际旅行社有限公司：source page no longer matches title/company
+- 入境游计调 / 广之旅：source page no longer matches title/company
+- 定制计调员（来粤地接方向） / 广之旅：source page no longer matches title/company
+- 旅游销售经理 / 广州普昕酒店有限公司：source page no longer matches title/company
+- 旅行社销售专员 / 五月花(广州)旅行社有限公司：source page no longer matches title/company
+- 旅游产品经理（薪酬面议） / 广州市智能网联汽车示范区运营中心：source page no longer matches title/company
+- 旅游业务销售 / 广东省中国青年旅行社有限公司永泰分公司：source page no longer matches title/company
+- 旅游销售 / 广东亚太国际旅行社有限公司：source page no longer matches title/company
+- 旅游销售助理-广州 / MIKI TRAVEL LIMITED：source page no longer matches title/company
+- 旅游同业销售 / 广东亚太国际旅行社有限公司：source page no longer matches title/company
+- 旅游保险顾问 / 中国人寿保险股份有限公司广州市天河支公司：source page no longer matches title/company
+- 旅游顾问 / 广东省中国青年旅行社有限公司永泰分公司：source page no longer matches title/company
+- 旅游顾问 / 广东亚太国际旅行社有限公司：source page no longer matches title/company
+- 旅游顾问（门店销售员）(J10047) / 广之旅：source page no longer matches title/company
+
