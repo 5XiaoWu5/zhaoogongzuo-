@@ -11217,3 +11217,19 @@
 - 旅游顾问 / 广东亚太国际旅行社有限公司：source page no longer matches title/company
 - 旅游顾问（门店销售员）(J10047) / 广之旅：source page no longer matches title/company
 
+
+## 2026-11-14 01:25 自动更新
+
+| 项目 | 数值 |
+|------|------|
+| 更新方式 | GitHub Actions 每日核验 |
+| 数据策略 | 具体岗位卡片 + 来源页有效性检查 |
+| 行业范围 | 剪辑、拍摄 |
+| 保留岗位数 | 48 |
+| 剔除岗位数 | 2 |
+
+剔除明细：
+
+- 视频设计专员（双体） / 广州贤易达信息科技有限公司：HTTP 404
+- 短视频剪辑师（中级） / 长沙回声网络科技有限公司：source page no longer matches title/company
+
